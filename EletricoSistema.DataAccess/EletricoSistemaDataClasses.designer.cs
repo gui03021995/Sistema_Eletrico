@@ -22,7 +22,7 @@ namespace EletricoSistema.DataAccess
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dbEletrico")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dbEletric")]
 	public partial class EletricoSistemaDataClassesDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,12 +30,12 @@ namespace EletricoSistema.DataAccess
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Inserttb_venda(tb_venda instance);
-    partial void Updatetb_venda(tb_venda instance);
-    partial void Deletetb_venda(tb_venda instance);
     partial void Inserttb_categoria(tb_categoria instance);
     partial void Updatetb_categoria(tb_categoria instance);
     partial void Deletetb_categoria(tb_categoria instance);
+    partial void Inserttb_venda(tb_venda instance);
+    partial void Updatetb_venda(tb_venda instance);
+    partial void Deletetb_venda(tb_venda instance);
     partial void Inserttb_contas_receber(tb_contas_receber instance);
     partial void Updatetb_contas_receber(tb_contas_receber instance);
     partial void Deletetb_contas_receber(tb_contas_receber instance);
@@ -57,7 +57,7 @@ namespace EletricoSistema.DataAccess
     #endregion
 		
 		public EletricoSistemaDataClassesDataContext() : 
-				base(global::EletricoSistema.DataAccess.Properties.Settings.Default.dbEletricoConnectionString, mappingSource)
+				base(global::EletricoSistema.DataAccess.Properties.Settings.Default.dbEletricConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -86,19 +86,19 @@ namespace EletricoSistema.DataAccess
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<tb_venda> tb_venda
-		{
-			get
-			{
-				return this.GetTable<tb_venda>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tb_categoria> tb_categoria
 		{
 			get
 			{
 				return this.GetTable<tb_categoria>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tb_venda> tb_venda
+		{
+			get
+			{
+				return this.GetTable<tb_venda>();
 			}
 		}
 		
@@ -148,6 +148,144 @@ namespace EletricoSistema.DataAccess
 			{
 				return this.GetTable<tb_usuario>();
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_categoria")]
+	public partial class tb_categoria : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id_categoria;
+		
+		private string _desc_categoria;
+		
+		private string _nome_categoria;
+		
+		private EntitySet<tb_produto> _tb_produto;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onid_categoriaChanging(int value);
+    partial void Onid_categoriaChanged();
+    partial void Ondesc_categoriaChanging(string value);
+    partial void Ondesc_categoriaChanged();
+    partial void Onnome_categoriaChanging(string value);
+    partial void Onnome_categoriaChanged();
+    #endregion
+		
+		public tb_categoria()
+		{
+			this._tb_produto = new EntitySet<tb_produto>(new Action<tb_produto>(this.attach_tb_produto), new Action<tb_produto>(this.detach_tb_produto));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_categoria", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_categoria
+		{
+			get
+			{
+				return this._id_categoria;
+			}
+			set
+			{
+				if ((this._id_categoria != value))
+				{
+					this.Onid_categoriaChanging(value);
+					this.SendPropertyChanging();
+					this._id_categoria = value;
+					this.SendPropertyChanged("id_categoria");
+					this.Onid_categoriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_desc_categoria", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string desc_categoria
+		{
+			get
+			{
+				return this._desc_categoria;
+			}
+			set
+			{
+				if ((this._desc_categoria != value))
+				{
+					this.Ondesc_categoriaChanging(value);
+					this.SendPropertyChanging();
+					this._desc_categoria = value;
+					this.SendPropertyChanged("desc_categoria");
+					this.Ondesc_categoriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome_categoria", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string nome_categoria
+		{
+			get
+			{
+				return this._nome_categoria;
+			}
+			set
+			{
+				if ((this._nome_categoria != value))
+				{
+					this.Onnome_categoriaChanging(value);
+					this.SendPropertyChanging();
+					this._nome_categoria = value;
+					this.SendPropertyChanged("nome_categoria");
+					this.Onnome_categoriaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_categoria_tb_produto", Storage="_tb_produto", ThisKey="id_categoria", OtherKey="id_categoria")]
+		public EntitySet<tb_produto> tb_produto
+		{
+			get
+			{
+				return this._tb_produto;
+			}
+			set
+			{
+				this._tb_produto.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tb_produto(tb_produto entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_categoria = this;
+		}
+		
+		private void detach_tb_produto(tb_produto entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_categoria = null;
 		}
 	}
 	
@@ -403,144 +541,6 @@ namespace EletricoSistema.DataAccess
 		{
 			this.SendPropertyChanging();
 			entity.tb_venda = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_categoria")]
-	public partial class tb_categoria : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_categoria;
-		
-		private string _nome;
-		
-		private string _descricao_categoria;
-		
-		private EntitySet<tb_produto> _tb_produto;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_categoriaChanging(int value);
-    partial void Onid_categoriaChanged();
-    partial void OnnomeChanging(string value);
-    partial void OnnomeChanged();
-    partial void Ondescricao_categoriaChanging(string value);
-    partial void Ondescricao_categoriaChanged();
-    #endregion
-		
-		public tb_categoria()
-		{
-			this._tb_produto = new EntitySet<tb_produto>(new Action<tb_produto>(this.attach_tb_produto), new Action<tb_produto>(this.detach_tb_produto));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_categoria", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_categoria
-		{
-			get
-			{
-				return this._id_categoria;
-			}
-			set
-			{
-				if ((this._id_categoria != value))
-				{
-					this.Onid_categoriaChanging(value);
-					this.SendPropertyChanging();
-					this._id_categoria = value;
-					this.SendPropertyChanged("id_categoria");
-					this.Onid_categoriaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string nome
-		{
-			get
-			{
-				return this._nome;
-			}
-			set
-			{
-				if ((this._nome != value))
-				{
-					this.OnnomeChanging(value);
-					this.SendPropertyChanging();
-					this._nome = value;
-					this.SendPropertyChanged("nome");
-					this.OnnomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricao_categoria", DbType="VarChar(256)")]
-		public string descricao_categoria
-		{
-			get
-			{
-				return this._descricao_categoria;
-			}
-			set
-			{
-				if ((this._descricao_categoria != value))
-				{
-					this.Ondescricao_categoriaChanging(value);
-					this.SendPropertyChanging();
-					this._descricao_categoria = value;
-					this.SendPropertyChanged("descricao_categoria");
-					this.Ondescricao_categoriaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_categoria_tb_produto", Storage="_tb_produto", ThisKey="id_categoria", OtherKey="id_categoria")]
-		public EntitySet<tb_produto> tb_produto
-		{
-			get
-			{
-				return this._tb_produto;
-			}
-			set
-			{
-				this._tb_produto.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_tb_produto(tb_produto entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_categoria = this;
-		}
-		
-		private void detach_tb_produto(tb_produto entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_categoria = null;
 		}
 	}
 	
@@ -1056,11 +1056,11 @@ namespace EletricoSistema.DataAccess
 		
 		private int _id_pessoas;
 		
-		private System.Nullable<System.DateTime> _data_nascimento;
+		private System.DateTime _data_nascimento;
 		
 		private string _CPF_CNPJ;
 		
-		private System.Nullable<System.DateTime> _data_cadastro;
+		private System.DateTime _data_cadastro;
 		
 		private string _situacao_cadastro;
 		
@@ -1088,11 +1088,11 @@ namespace EletricoSistema.DataAccess
     partial void OnCreated();
     partial void Onid_pessoasChanging(int value);
     partial void Onid_pessoasChanged();
-    partial void Ondata_nascimentoChanging(System.Nullable<System.DateTime> value);
+    partial void Ondata_nascimentoChanging(System.DateTime value);
     partial void Ondata_nascimentoChanged();
     partial void OnCPF_CNPJChanging(string value);
     partial void OnCPF_CNPJChanged();
-    partial void Ondata_cadastroChanging(System.Nullable<System.DateTime> value);
+    partial void Ondata_cadastroChanging(System.DateTime value);
     partial void Ondata_cadastroChanged();
     partial void Onsituacao_cadastroChanging(string value);
     partial void Onsituacao_cadastroChanged();
@@ -1140,8 +1140,8 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_data_nascimento", DbType="DateTime")]
-		public System.Nullable<System.DateTime> data_nascimento
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_data_nascimento", DbType="DateTime NOT NULL")]
+		public System.DateTime data_nascimento
 		{
 			get
 			{
@@ -1180,8 +1180,8 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_data_cadastro", DbType="DateTime")]
-		public System.Nullable<System.DateTime> data_cadastro
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_data_cadastro", DbType="DateTime NOT NULL")]
+		public System.DateTime data_cadastro
 		{
 			get
 			{
@@ -1200,7 +1200,7 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacao_cadastro", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_situacao_cadastro", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string situacao_cadastro
 		{
 			get
@@ -1220,7 +1220,7 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo_cadastro", DbType="VarChar(14) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo_cadastro", DbType="VarChar(18) NOT NULL", CanBeNull=false)]
 		public string tipo_cadastro
 		{
 			get
@@ -1434,19 +1434,13 @@ namespace EletricoSistema.DataAccess
 		
 		private int _id_produto;
 		
-		private string _codigo;
+		private string _desc_produto;
 		
-		private decimal _valor;
-		
-		private string _nome;
-		
-		private string _descricao;
-		
-		private System.Data.Linq.Binary _imagem;
+		private string _valor;
 		
 		private int _id_categoria;
 		
-		private int _id_apresentacao;
+		private string _nome;
 		
 		private EntitySet<tb_itens_venda> _tb_itens_venda;
 		
@@ -1458,20 +1452,14 @@ namespace EletricoSistema.DataAccess
     partial void OnCreated();
     partial void Onid_produtoChanging(int value);
     partial void Onid_produtoChanged();
-    partial void OncodigoChanging(string value);
-    partial void OncodigoChanged();
-    partial void OnvalorChanging(decimal value);
+    partial void Ondesc_produtoChanging(string value);
+    partial void Ondesc_produtoChanged();
+    partial void OnvalorChanging(string value);
     partial void OnvalorChanged();
-    partial void OnnomeChanging(string value);
-    partial void OnnomeChanged();
-    partial void OndescricaoChanging(string value);
-    partial void OndescricaoChanged();
-    partial void OnimagemChanging(System.Data.Linq.Binary value);
-    partial void OnimagemChanged();
     partial void Onid_categoriaChanging(int value);
     partial void Onid_categoriaChanged();
-    partial void Onid_apresentacaoChanging(int value);
-    partial void Onid_apresentacaoChanged();
+    partial void OnnomeChanging(string value);
+    partial void OnnomeChanged();
     #endregion
 		
 		public tb_produto()
@@ -1501,28 +1489,28 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigo", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string codigo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_desc_produto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string desc_produto
 		{
 			get
 			{
-				return this._codigo;
+				return this._desc_produto;
 			}
 			set
 			{
-				if ((this._codigo != value))
+				if ((this._desc_produto != value))
 				{
-					this.OncodigoChanging(value);
+					this.Ondesc_produtoChanging(value);
 					this.SendPropertyChanging();
-					this._codigo = value;
-					this.SendPropertyChanged("codigo");
-					this.OncodigoChanged();
+					this._desc_produto = value;
+					this.SendPropertyChanged("desc_produto");
+					this.Ondesc_produtoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor", DbType="Decimal(25,2) NOT NULL")]
-		public decimal valor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string valor
 		{
 			get
 			{
@@ -1537,66 +1525,6 @@ namespace EletricoSistema.DataAccess
 					this._valor = value;
 					this.SendPropertyChanged("valor");
 					this.OnvalorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string nome
-		{
-			get
-			{
-				return this._nome;
-			}
-			set
-			{
-				if ((this._nome != value))
-				{
-					this.OnnomeChanging(value);
-					this.SendPropertyChanging();
-					this._nome = value;
-					this.SendPropertyChanged("nome");
-					this.OnnomeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descricao", DbType="VarChar(500)")]
-		public string descricao
-		{
-			get
-			{
-				return this._descricao;
-			}
-			set
-			{
-				if ((this._descricao != value))
-				{
-					this.OndescricaoChanging(value);
-					this.SendPropertyChanging();
-					this._descricao = value;
-					this.SendPropertyChanged("descricao");
-					this.OndescricaoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imagem", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary imagem
-		{
-			get
-			{
-				return this._imagem;
-			}
-			set
-			{
-				if ((this._imagem != value))
-				{
-					this.OnimagemChanging(value);
-					this.SendPropertyChanging();
-					this._imagem = value;
-					this.SendPropertyChanged("imagem");
-					this.OnimagemChanged();
 				}
 			}
 		}
@@ -1625,22 +1553,22 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_apresentacao", DbType="Int NOT NULL")]
-		public int id_apresentacao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string nome
 		{
 			get
 			{
-				return this._id_apresentacao;
+				return this._nome;
 			}
 			set
 			{
-				if ((this._id_apresentacao != value))
+				if ((this._nome != value))
 				{
-					this.Onid_apresentacaoChanging(value);
+					this.OnnomeChanging(value);
 					this.SendPropertyChanging();
-					this._id_apresentacao = value;
-					this.SendPropertyChanged("id_apresentacao");
-					this.Onid_apresentacaoChanged();
+					this._nome = value;
+					this.SendPropertyChanged("nome");
+					this.OnnomeChanged();
 				}
 			}
 		}
@@ -1845,71 +1773,31 @@ namespace EletricoSistema.DataAccess
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_user;
-		
-		private int _id_pessoas;
-		
 		private string _usuario;
 		
 		private string _senha;
+		
+		private int _id_user;
+		
+		private int _id_pessoas;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_userChanging(int value);
-    partial void Onid_userChanged();
-    partial void Onid_pessoasChanging(int value);
-    partial void Onid_pessoasChanged();
     partial void OnusuarioChanging(string value);
     partial void OnusuarioChanged();
     partial void OnsenhaChanging(string value);
     partial void OnsenhaChanged();
+    partial void Onid_userChanging(int value);
+    partial void Onid_userChanged();
+    partial void Onid_pessoasChanging(int value);
+    partial void Onid_pessoasChanged();
     #endregion
 		
 		public tb_usuario()
 		{
 			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_user
-		{
-			get
-			{
-				return this._id_user;
-			}
-			set
-			{
-				if ((this._id_user != value))
-				{
-					this.Onid_userChanging(value);
-					this.SendPropertyChanging();
-					this._id_user = value;
-					this.SendPropertyChanged("id_user");
-					this.Onid_userChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoas", DbType="Int NOT NULL")]
-		public int id_pessoas
-		{
-			get
-			{
-				return this._id_pessoas;
-			}
-			set
-			{
-				if ((this._id_pessoas != value))
-				{
-					this.Onid_pessoasChanging(value);
-					this.SendPropertyChanging();
-					this._id_pessoas = value;
-					this.SendPropertyChanged("id_pessoas");
-					this.Onid_pessoasChanged();
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
@@ -1948,6 +1836,46 @@ namespace EletricoSistema.DataAccess
 					this._senha = value;
 					this.SendPropertyChanged("senha");
 					this.OnsenhaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_user
+		{
+			get
+			{
+				return this._id_user;
+			}
+			set
+			{
+				if ((this._id_user != value))
+				{
+					this.Onid_userChanging(value);
+					this.SendPropertyChanging();
+					this._id_user = value;
+					this.SendPropertyChanged("id_user");
+					this.Onid_userChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoas", DbType="Int NOT NULL")]
+		public int id_pessoas
+		{
+			get
+			{
+				return this._id_pessoas;
+			}
+			set
+			{
+				if ((this._id_pessoas != value))
+				{
+					this.Onid_pessoasChanging(value);
+					this.SendPropertyChanging();
+					this._id_pessoas = value;
+					this.SendPropertyChanged("id_pessoas");
+					this.Onid_pessoasChanged();
 				}
 			}
 		}

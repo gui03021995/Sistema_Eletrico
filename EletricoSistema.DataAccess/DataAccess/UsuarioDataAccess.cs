@@ -54,7 +54,24 @@ namespace EletricoSistema.DataAccess
             return oUser;
         }
 
-        public static List<tb_usuario> ObterCategoria()
+        public static bool Att_Senha(int id_pessoa, string senha)
+        {
+            try
+            {
+                EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
+                tb_usuario oUser = (from Selecao in oDB.tb_usuario where Selecao.id_pessoas == id_pessoa select Selecao).SingleOrDefault();
+                oUser.senha = senha;
+                oDB.SubmitChanges();
+                oDB.Dispose();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }                      
+        }
+
+        public static List<tb_usuario> ObterUsuario()
         {
             EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
             List<tb_usuario> oUser = (from Selecao in oDB.tb_usuario orderby Selecao.id_pessoas select Selecao).ToList<tb_usuario>();

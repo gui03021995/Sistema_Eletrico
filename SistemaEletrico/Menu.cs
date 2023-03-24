@@ -66,11 +66,10 @@ namespace SistemaEletrico
             {
                 tb_produto NovoProduto = new tb_produto();
 
-                NovoProduto.valor = Convert.ToDecimal(txt_valor_produto.Text);
+                NovoProduto.valor = txt_valor_produto.Text;
                 NovoProduto.nome = txtNome_Produto.Text;
-                NovoProduto.descricao = Txt_descricao_produto.Text;
+                NovoProduto.desc_produto = Txt_descricao_produto.Text;
                 NovoProduto.id_categoria = Convert.ToInt32(txtCategoria_Prod.Text); 
-
 
                 if (!ProdutoDataAccess.Insere(NovoProduto))
                     MessageBox.Show("Falha ao tentar inserir o novo Produto no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -101,8 +100,8 @@ namespace SistemaEletrico
             {
                 tb_categoria NovaCategoria = new tb_categoria();
 
-                NovaCategoria.descricao_categoria = txt_desc_categoria.Text;
-                NovaCategoria.nome = Txt_nome_categoria.Text;
+                NovaCategoria.desc_categoria = txt_desc_categoria.Text;
+                NovaCategoria.nome_categoria = Txt_nome_categoria.Text;
 
 
                 if (!CategoriaDataAccess.Insere(NovaCategoria))

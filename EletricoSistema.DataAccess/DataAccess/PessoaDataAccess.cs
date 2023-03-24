@@ -18,9 +18,9 @@ namespace EletricoSistema.DataAccess
                 oDB.Dispose();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                throw new ApplicationException(ex.Message);
             }
         }
 
@@ -47,7 +47,34 @@ namespace EletricoSistema.DataAccess
             return oPessoa;
         }
 
-        public static List<tb_pessoas> ObterCategoria()
+        public static bool CPF_existe(string cpf)
+        {
+            EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
+            tb_pessoas oPessoa = (from Selecao in oDB.tb_pessoas where Selecao.CPF_CNPJ == cpf select Selecao).SingleOrDefault();
+            return oPessoa != null ;
+        }
+
+        public static string Email_existe(string email)
+        {
+            
+            EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
+            tb_pessoas oPessoa = (from Selecao in oDB.tb_pessoas where Selecao.email == email select Selecao).SingleOrDefault();
+            //this.oPessoa.CPF_CNPJ = oPessoa.CPF_CNPJ;
+            var NvPessoa = oPessoa;
+            if (NvPessoa != null)
+            {
+                string NovaSenha =  oPessoa.CPF_CNPJ;
+                //= (from Selecao in oDB.tb_pessoas where Selecao.email == email select Selecao).SingleOrDefault();
+                return NovaSenha;
+
+            }
+            else
+            {
+                return "0";
+            }
+        }
+
+        public static List<tb_pessoas> ObterPessoa()
         {
             EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
             List<tb_pessoas> oPessoa = (from Selecao in oDB.tb_pessoas orderby Selecao.id_pessoas select Selecao).ToList<tb_pessoas>();

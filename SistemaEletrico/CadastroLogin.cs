@@ -43,6 +43,7 @@ namespace SistemaEletrico
         {
             if (ValidarForms())
             {
+                
                 Salvar();
             }
             else
@@ -73,11 +74,9 @@ namespace SistemaEletrico
                 NovaPessoa.data_admissao = Convert.ToDateTime(mt_dt_admissao.Text);
 
 
-                NovaPessoa.situacao_cadastro = mlb_situacao_cadastro.Text;
+                //NovaPessoa.situacao_cadastro = mlb_situacao_cadastro.Text;
                 NovoUser.usuario = SLT_User.Text;
                 NovoUser.senha = ms_Senha.Text;
-
-                //NovoUser.id_pessoas = NovaPessoa.id_pessoas;
 
                 if (!PessoaDataAccess.InserePessoa(NovaPessoa))                    
                     MessageBox.Show("Falha ao tentar inserir a nova Pessoa no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -102,19 +101,14 @@ namespace SistemaEletrico
                 MessageBox.Show("Informe o CPF no cadastro");
                 mtxt_Cpf_Cnpj.Focus();
                 return false;
-            }
+            }                                   
+            
             else if (mtxtb_Nome.Text == "")
             {
                 MessageBox.Show("Informe o NOME no cadastro");
                 mtxtb_Nome.Focus();
                 return false;
-            }
-            else if (mtxtb_Nome.Text == "")
-            {
-                MessageBox.Show("Informe o NOME no cadastro");
-                mtxtb_Nome.Focus();
-                return false;
-            }
+            }           
             else if (cb_Sexo.Text == "")
             {
                 MessageBox.Show("Informe o SEXO no cadastro");
@@ -127,9 +121,9 @@ namespace SistemaEletrico
                 dt_dt_nasc.Focus();
                 return false;
             }
-            else if (dt_dt_nasc.Text == "")
+            else if (mt_dt_admissao.Text == "")
             {
-                MessageBox.Show("Informe a DATA DE NASCIMENTO no cadastro");
+                MessageBox.Show("Informe a DATA DE ADMISSAO no cadastro");
                 dt_dt_nasc.Focus();
                 return false;
             }
@@ -150,7 +144,8 @@ namespace SistemaEletrico
                 MessageBox.Show("Informe o EMAIL no cadastro");
                 mtxt_Email.Focus();
                 return false;
-            }
+            }        
+
             else if (SLT_User.Text == "")
             {
                 MessageBox.Show("Informe o USUÁRIO no cadastro");
@@ -163,14 +158,37 @@ namespace SistemaEletrico
                 ms_Senha.Focus();
                 return false;
             }
+
+            else if(mtxt_Cpf_Cnpj.Text != "" || mtxt_Email.Text != "")
+            {
+                if (PessoaDataAccess.CPF_existe(mtxt_Cpf_Cnpj.Text))
+                {
+                    MessageBox.Show("CPF existente na base de dados", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxt_Cpf_Cnpj.Focus();
+                    return false;
+                }
+                if (PessoaDataAccess.Email_existe(mtxt_Email.Text) != "0")
+                {
+                    MessageBox.Show("Email já existente na base de dados", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxt_Email.Focus();
+                    return false;
+                }               
+                return true;
+            }
             return true;
-
-
         }
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
             // Definir o valor fixo para "ON = 1" e "OFF = 0"
+            //if (metroToggle1.Checked)
+            //{
+            //    metroToggle1 = '1';
+            //}
+            //else
+            //{
+            //    metroToggle1 = 0;
+            //}
             int valorFixo = metroToggle1.Checked ? 1 : 0;
         }
     }

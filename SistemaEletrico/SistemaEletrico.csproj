@@ -79,6 +79,12 @@
     <Compile Include="CadastroLogin.Designer.cs">
       <DependentUpon>CadastroLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginEsqueceuSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginEsqueceuSenha.Designer.cs">
+      <DependentUpon>LoginEsqueceuSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CadastroLogin.resx">
       <DependentUpon>CadastroLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginEsqueceuSenha.resx">
+      <DependentUpon>LoginEsqueceuSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

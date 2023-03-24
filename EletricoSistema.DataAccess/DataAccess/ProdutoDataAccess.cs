@@ -18,9 +18,9 @@ namespace EletricoSistema.DataAccess
                 oDB.Dispose();
                 return true;
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                return false;
+                throw new ApplicationException(ex.Message); //return false;
             }
         }
 
@@ -62,7 +62,7 @@ namespace EletricoSistema.DataAccess
                 tb_produto oProduto = (from Selecao in oDB.tb_produto where Selecao.id_produto == pProduto.id_produto select Selecao).SingleOrDefault();
 
                 //oProduto.id_produto = pProduto.id_produto;
-                oProduto.descricao = pProduto.descricao;
+                oProduto.desc_produto = pProduto.desc_produto;
                 oProduto.valor = pProduto.valor;
                 oDB.SubmitChanges();
                 oDB.Dispose();

@@ -62,8 +62,8 @@ namespace EletricoSistema.DataAccess
                 tb_categoria oCategoria = (from Selecao in oDB.tb_categoria where Selecao.id_categoria == pCategoria.id_categoria select Selecao).SingleOrDefault();
 
                 //oProduto.id_produto = pProduto.id_produto;
-                oCategoria.nome = pCategoria.nome;
-                oCategoria.descricao_categoria = pCategoria.descricao_categoria;
+                oCategoria.nome_categoria = pCategoria.nome_categoria;
+                oCategoria.desc_categoria = pCategoria.desc_categoria;
                 oDB.SubmitChanges();
                 oDB.Dispose();
                 return true;

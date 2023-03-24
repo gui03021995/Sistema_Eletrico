@@ -56,7 +56,21 @@ namespace SistemaEletrico
             //clg.Show();
         }
 
+        private void enviarSMTP(Object obj)
+        {
+            Application.Run(new LoginEsqueceuSenha());
+        }
+
         private void RBtn_Login_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(enviarSMTP);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+
+        }
+
+        private void Login_Load_1(object sender, EventArgs e)
         {
 
         }

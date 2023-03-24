@@ -29,3 +29,15 @@ C:\Users\55379\Desktop\unimed\SysEletrico\SysEletrico\EletricoSistema.DataAccess
 C:\Users\55379\Desktop\unimed\SysEletrico\SysEletrico\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.CopyComplete
 C:\Users\55379\Desktop\unimed\SysEletrico\SysEletrico\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.dll
 C:\Users\55379\Desktop\unimed\SysEletrico\SysEletrico\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.pdb
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\EletricoSistema.DataAccess.dll.config
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\EletricoSistema.DataAccess.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\EletricoSistema.DataAccess.pdb
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\MaterialSkin.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\MetroFramework.Design.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\MetroFramework.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\bin\Debug\MetroFramework.Fonts.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.AssemblyReference.cache
+C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.CoreCompileInputs.cache
+C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.CopyComplete
+C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.dll
+C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.pdb

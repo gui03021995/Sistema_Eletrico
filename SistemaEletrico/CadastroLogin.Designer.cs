@@ -42,7 +42,6 @@ namespace SistemaEletrico
             this.txt_Cargo = new System.Windows.Forms.TextBox();
             this.cb_setor = new MetroFramework.Controls.MetroComboBox();
             this.gb_Pessoal = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.mlb_situacao_cadastro = new MaterialSkin.Controls.MaterialLabel();
             this.mtxt_Email = new MetroFramework.Controls.MetroTextBox();
             this.mlb_Email = new MaterialSkin.Controls.MaterialLabel();
@@ -62,7 +61,6 @@ namespace SistemaEletrico
             this.dt_dt_nasc = new MetroFramework.Controls.MetroDateTime();
             this.mt_dt_cadastro = new MetroFramework.Controls.MetroDateTime();
             this.mbt_alterar_cad = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.mbt_salvar = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.Cadastrar.SuspendLayout();
@@ -77,11 +75,10 @@ namespace SistemaEletrico
             // 
             this.Cadastrar.Controls.Add(this.groupBox2);
             this.Cadastrar.ImageKey = "icons8-add-user-male-32.png";
-            this.Cadastrar.Location = new System.Drawing.Point(4, 25);
-            this.Cadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.Cadastrar.Location = new System.Drawing.Point(4, 22);
             this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Padding = new System.Windows.Forms.Padding(4);
-            this.Cadastrar.Size = new System.Drawing.Size(1677, 657);
+            this.Cadastrar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Cadastrar.Size = new System.Drawing.Size(1172, 531);
             this.Cadastrar.TabIndex = 5;
             this.Cadastrar.Text = "CADASTRAR";
             this.Cadastrar.UseVisualStyleBackColor = true;
@@ -93,13 +90,10 @@ namespace SistemaEletrico
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.gb_Pessoal);
             this.groupBox2.Controls.Add(this.mbt_alterar_cad);
-            this.groupBox2.Controls.Add(this.materialCheckBox1);
             this.groupBox2.Controls.Add(this.mbt_salvar);
-            this.groupBox2.Location = new System.Drawing.Point(8, 18);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(21, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1507, 597);
+            this.groupBox2.Size = new System.Drawing.Size(1130, 485);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Novo Cadastro";
@@ -108,11 +102,9 @@ namespace SistemaEletrico
             // 
             this.groupBox1.Controls.Add(this.ms_Senha);
             this.groupBox1.Controls.Add(this.SLT_User);
-            this.groupBox1.Location = new System.Drawing.Point(23, 451);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(17, 366);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(716, 106);
+            this.groupBox1.Size = new System.Drawing.Size(537, 86);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuário";
@@ -121,8 +113,8 @@ namespace SistemaEletrico
             // 
             this.ms_Senha.Depth = 0;
             this.ms_Senha.Hint = "SENHA";
-            this.ms_Senha.Location = new System.Drawing.Point(431, 45);
-            this.ms_Senha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ms_Senha.Location = new System.Drawing.Point(323, 37);
+            this.ms_Senha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ms_Senha.MaxLength = 32767;
             this.ms_Senha.MouseState = MaterialSkin.MouseState.HOVER;
             this.ms_Senha.Name = "ms_Senha";
@@ -130,7 +122,7 @@ namespace SistemaEletrico
             this.ms_Senha.SelectedText = "";
             this.ms_Senha.SelectionLength = 0;
             this.ms_Senha.SelectionStart = 0;
-            this.ms_Senha.Size = new System.Drawing.Size(217, 28);
+            this.ms_Senha.Size = new System.Drawing.Size(163, 23);
             this.ms_Senha.TabIndex = 13;
             this.ms_Senha.TabStop = false;
             this.ms_Senha.UseSystemPasswordChar = false;
@@ -139,8 +131,8 @@ namespace SistemaEletrico
             // 
             this.SLT_User.Depth = 0;
             this.SLT_User.Hint = "USUÁRIO";
-            this.SLT_User.Location = new System.Drawing.Point(34, 45);
-            this.SLT_User.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SLT_User.Location = new System.Drawing.Point(26, 37);
+            this.SLT_User.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SLT_User.MaxLength = 32767;
             this.SLT_User.MouseState = MaterialSkin.MouseState.HOVER;
             this.SLT_User.Name = "SLT_User";
@@ -148,7 +140,7 @@ namespace SistemaEletrico
             this.SLT_User.SelectedText = "";
             this.SLT_User.SelectionLength = 0;
             this.SLT_User.SelectionStart = 0;
-            this.SLT_User.Size = new System.Drawing.Size(217, 28);
+            this.SLT_User.Size = new System.Drawing.Size(163, 23);
             this.SLT_User.TabIndex = 12;
             this.SLT_User.TabStop = false;
             this.SLT_User.UseSystemPasswordChar = false;
@@ -161,11 +153,9 @@ namespace SistemaEletrico
             this.groupBox3.Controls.Add(this.mt_dt_admissao);
             this.groupBox3.Controls.Add(this.txt_Cargo);
             this.groupBox3.Controls.Add(this.cb_setor);
-            this.groupBox3.Location = new System.Drawing.Point(23, 343);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(17, 279);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1459, 106);
+            this.groupBox3.Size = new System.Drawing.Size(1094, 86);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Profissional";
@@ -176,11 +166,10 @@ namespace SistemaEletrico
             this.mlb_dt_admissao.Depth = 0;
             this.mlb_dt_admissao.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_dt_admissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_dt_admissao.Location = new System.Drawing.Point(959, 47);
-            this.mlb_dt_admissao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_dt_admissao.Location = new System.Drawing.Point(719, 38);
             this.mlb_dt_admissao.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_dt_admissao.Name = "mlb_dt_admissao";
-            this.mlb_dt_admissao.Size = new System.Drawing.Size(165, 24);
+            this.mlb_dt_admissao.Size = new System.Drawing.Size(132, 19);
             this.mlb_dt_admissao.TabIndex = 69;
             this.mlb_dt_admissao.Text = "Data de Admissão";
             // 
@@ -190,11 +179,10 @@ namespace SistemaEletrico
             this.mlb_Cargo.Depth = 0;
             this.mlb_Cargo.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Cargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Cargo.Location = new System.Drawing.Point(463, 42);
-            this.mlb_Cargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Cargo.Location = new System.Drawing.Point(347, 34);
             this.mlb_Cargo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cargo.Name = "mlb_Cargo";
-            this.mlb_Cargo.Size = new System.Drawing.Size(60, 24);
+            this.mlb_Cargo.Size = new System.Drawing.Size(49, 19);
             this.mlb_Cargo.TabIndex = 68;
             this.mlb_Cargo.Text = "Cargo";
             // 
@@ -204,52 +192,47 @@ namespace SistemaEletrico
             this.mlb_setor.Depth = 0;
             this.mlb_setor.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_setor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_setor.Location = new System.Drawing.Point(48, 43);
-            this.mlb_setor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_setor.Location = new System.Drawing.Point(36, 35);
             this.mlb_setor.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_setor.Name = "mlb_setor";
-            this.mlb_setor.Size = new System.Drawing.Size(54, 24);
+            this.mlb_setor.Size = new System.Drawing.Size(45, 19);
             this.mlb_setor.TabIndex = 67;
             this.mlb_setor.Text = "Setor";
             // 
             // mt_dt_admissao
             // 
             this.mt_dt_admissao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mt_dt_admissao.Location = new System.Drawing.Point(1161, 37);
-            this.mt_dt_admissao.Margin = new System.Windows.Forms.Padding(4);
-            this.mt_dt_admissao.MinimumSize = new System.Drawing.Size(0, 30);
+            this.mt_dt_admissao.Location = new System.Drawing.Point(871, 30);
+            this.mt_dt_admissao.MinimumSize = new System.Drawing.Size(0, 29);
             this.mt_dt_admissao.Name = "mt_dt_admissao";
-            this.mt_dt_admissao.Size = new System.Drawing.Size(273, 30);
+            this.mt_dt_admissao.Size = new System.Drawing.Size(206, 30);
             this.mt_dt_admissao.TabIndex = 11;
             this.mt_dt_admissao.Value = new System.DateTime(2023, 3, 18, 0, 0, 0, 0);
             // 
             // txt_Cargo
             // 
-            this.txt_Cargo.Location = new System.Drawing.Point(536, 42);
-            this.txt_Cargo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Cargo.Location = new System.Drawing.Point(402, 34);
             this.txt_Cargo.Name = "txt_Cargo";
-            this.txt_Cargo.Size = new System.Drawing.Size(367, 22);
+            this.txt_Cargo.Size = new System.Drawing.Size(276, 20);
             this.txt_Cargo.TabIndex = 9;
             // 
             // cb_setor
             // 
             this.cb_setor.FormattingEnabled = true;
-            this.cb_setor.ItemHeight = 24;
+            this.cb_setor.ItemHeight = 23;
             this.cb_setor.Items.AddRange(new object[] {
             "Vendas",
             "Financeiro",
             "Gerencia"});
-            this.cb_setor.Location = new System.Drawing.Point(123, 34);
-            this.cb_setor.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_setor.Location = new System.Drawing.Point(92, 28);
             this.cb_setor.Name = "cb_setor";
-            this.cb_setor.Size = new System.Drawing.Size(260, 30);
+            this.cb_setor.Size = new System.Drawing.Size(196, 29);
             this.cb_setor.TabIndex = 8;
             this.cb_setor.UseSelectable = true;
             // 
             // gb_Pessoal
             // 
             this.gb_Pessoal.BackColor = System.Drawing.Color.White;
-            this.gb_Pessoal.Controls.Add(this.comboBox1);
             this.gb_Pessoal.Controls.Add(this.mlb_situacao_cadastro);
             this.gb_Pessoal.Controls.Add(this.mtxt_Email);
             this.gb_Pessoal.Controls.Add(this.mlb_Email);
@@ -268,27 +251,12 @@ namespace SistemaEletrico
             this.gb_Pessoal.Controls.Add(this.cb_Sexo);
             this.gb_Pessoal.Controls.Add(this.dt_dt_nasc);
             this.gb_Pessoal.Controls.Add(this.mt_dt_cadastro);
-            this.gb_Pessoal.Location = new System.Drawing.Point(23, 39);
-            this.gb_Pessoal.Margin = new System.Windows.Forms.Padding(4);
+            this.gb_Pessoal.Location = new System.Drawing.Point(17, 32);
             this.gb_Pessoal.Name = "gb_Pessoal";
-            this.gb_Pessoal.Padding = new System.Windows.Forms.Padding(4);
-            this.gb_Pessoal.Size = new System.Drawing.Size(1459, 281);
+            this.gb_Pessoal.Size = new System.Drawing.Size(1094, 228);
             this.gb_Pessoal.TabIndex = 51;
             this.gb_Pessoal.TabStop = false;
             this.gb_Pessoal.Text = "Pessoal";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino",
-            "Analberto"});
-            this.comboBox1.Location = new System.Drawing.Point(755, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 71;
             // 
             // mlb_situacao_cadastro
             // 
@@ -296,11 +264,10 @@ namespace SistemaEletrico
             this.mlb_situacao_cadastro.Depth = 0;
             this.mlb_situacao_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_situacao_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(1197, 191);
-            this.mlb_situacao_cadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(898, 155);
             this.mlb_situacao_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_situacao_cadastro.Name = "mlb_situacao_cadastro";
-            this.mlb_situacao_cadastro.Size = new System.Drawing.Size(164, 24);
+            this.mlb_situacao_cadastro.Size = new System.Drawing.Size(133, 19);
             this.mlb_situacao_cadastro.TabIndex = 70;
             this.mlb_situacao_cadastro.Text = "Situação Cadastro";
             // 
@@ -310,18 +277,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Email.CustomButton.Image = null;
-            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(409, 2);
-            this.mtxt_Email.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(228, 1);
             this.mtxt_Email.CustomButton.Name = "";
-            this.mtxt_Email.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.mtxt_Email.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxt_Email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Email.CustomButton.TabIndex = 1;
             this.mtxt_Email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Email.CustomButton.UseSelectable = true;
             this.mtxt_Email.CustomButton.Visible = false;
             this.mtxt_Email.Lines = new string[0];
-            this.mtxt_Email.Location = new System.Drawing.Point(621, 212);
-            this.mtxt_Email.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Email.Location = new System.Drawing.Point(466, 172);
             this.mtxt_Email.MaxLength = 32767;
             this.mtxt_Email.Name = "mtxt_Email";
             this.mtxt_Email.PasswordChar = '\0';
@@ -330,7 +295,7 @@ namespace SistemaEletrico
             this.mtxt_Email.SelectionLength = 0;
             this.mtxt_Email.SelectionStart = 0;
             this.mtxt_Email.ShortcutsEnabled = true;
-            this.mtxt_Email.Size = new System.Drawing.Size(435, 28);
+            this.mtxt_Email.Size = new System.Drawing.Size(326, 23);
             this.mtxt_Email.TabIndex = 7;
             this.mtxt_Email.UseSelectable = true;
             this.mtxt_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -342,11 +307,10 @@ namespace SistemaEletrico
             this.mlb_Email.Depth = 0;
             this.mlb_Email.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Email.Location = new System.Drawing.Point(531, 217);
-            this.mlb_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Email.Location = new System.Drawing.Point(398, 176);
             this.mlb_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Email.Name = "mlb_Email";
-            this.mlb_Email.Size = new System.Drawing.Size(58, 24);
+            this.mlb_Email.Size = new System.Drawing.Size(47, 19);
             this.mlb_Email.TabIndex = 68;
             this.mlb_Email.Text = "Email";
             // 
@@ -356,18 +320,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Contato.CustomButton.Image = null;
-            this.mtxt_Contato.CustomButton.Location = new System.Drawing.Point(274, 2);
-            this.mtxt_Contato.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Contato.CustomButton.Location = new System.Drawing.Point(152, 1);
             this.mtxt_Contato.CustomButton.Name = "";
-            this.mtxt_Contato.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.mtxt_Contato.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxt_Contato.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Contato.CustomButton.TabIndex = 1;
             this.mtxt_Contato.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Contato.CustomButton.UseSelectable = true;
             this.mtxt_Contato.CustomButton.Visible = false;
             this.mtxt_Contato.Lines = new string[0];
-            this.mtxt_Contato.Location = new System.Drawing.Point(157, 212);
-            this.mtxt_Contato.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Contato.Location = new System.Drawing.Point(118, 172);
             this.mtxt_Contato.MaxLength = 32767;
             this.mtxt_Contato.Name = "mtxt_Contato";
             this.mtxt_Contato.PasswordChar = '\0';
@@ -376,7 +338,7 @@ namespace SistemaEletrico
             this.mtxt_Contato.SelectionLength = 0;
             this.mtxt_Contato.SelectionStart = 0;
             this.mtxt_Contato.ShortcutsEnabled = true;
-            this.mtxt_Contato.Size = new System.Drawing.Size(300, 28);
+            this.mtxt_Contato.Size = new System.Drawing.Size(225, 23);
             this.mtxt_Contato.TabIndex = 6;
             this.mtxt_Contato.UseSelectable = true;
             this.mtxt_Contato.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -388,11 +350,10 @@ namespace SistemaEletrico
             this.mlb_Contato.Depth = 0;
             this.mlb_Contato.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Contato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Contato.Location = new System.Drawing.Point(48, 217);
-            this.mlb_Contato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Contato.Location = new System.Drawing.Point(36, 176);
             this.mlb_Contato.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Contato.Name = "mlb_Contato";
-            this.mlb_Contato.Size = new System.Drawing.Size(76, 24);
+            this.mlb_Contato.Size = new System.Drawing.Size(63, 19);
             this.mlb_Contato.TabIndex = 66;
             this.mlb_Contato.Text = "Contato";
             // 
@@ -402,11 +363,10 @@ namespace SistemaEletrico
             this.mlb_tp_cadastro.Depth = 0;
             this.mlb_tp_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_tp_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_tp_cadastro.Location = new System.Drawing.Point(1000, 138);
-            this.mlb_tp_cadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_tp_cadastro.Location = new System.Drawing.Point(750, 112);
             this.mlb_tp_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_tp_cadastro.Name = "mlb_tp_cadastro";
-            this.mlb_tp_cadastro.Size = new System.Drawing.Size(129, 24);
+            this.mlb_tp_cadastro.Size = new System.Drawing.Size(104, 19);
             this.mlb_tp_cadastro.TabIndex = 65;
             this.mlb_tp_cadastro.Text = "Tipo Cadastro";
             // 
@@ -416,11 +376,10 @@ namespace SistemaEletrico
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(959, 47);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(719, 38);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(182, 24);
+            this.materialLabel1.Size = new System.Drawing.Size(146, 19);
             this.materialLabel1.TabIndex = 64;
             this.materialLabel1.Text = "Data de Nascimento";
             // 
@@ -430,11 +389,10 @@ namespace SistemaEletrico
             this.mlb_Sexo.Depth = 0;
             this.mlb_Sexo.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Sexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Sexo.Location = new System.Drawing.Point(616, 47);
-            this.mlb_Sexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Sexo.Location = new System.Drawing.Point(462, 38);
             this.mlb_Sexo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Sexo.Name = "mlb_Sexo";
-            this.mlb_Sexo.Size = new System.Drawing.Size(51, 24);
+            this.mlb_Sexo.Size = new System.Drawing.Size(42, 19);
             this.mlb_Sexo.TabIndex = 63;
             this.mlb_Sexo.Text = "Sexo";
             // 
@@ -444,11 +402,10 @@ namespace SistemaEletrico
             this.mlb_Dt_Cadastro.Depth = 0;
             this.mlb_Dt_Cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Dt_Cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(492, 138);
-            this.mlb_Dt_Cadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(369, 112);
             this.mlb_Dt_Cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Dt_Cadastro.Name = "mlb_Dt_Cadastro";
-            this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(156, 24);
+            this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(126, 19);
             this.mlb_Dt_Cadastro.TabIndex = 62;
             this.mlb_Dt_Cadastro.Text = "Data do Cadastro";
             // 
@@ -458,18 +415,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Cpf_Cnpj.CustomButton.Image = null;
-            this.mtxt_Cpf_Cnpj.CustomButton.Location = new System.Drawing.Point(274, 2);
-            this.mtxt_Cpf_Cnpj.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Cpf_Cnpj.CustomButton.Location = new System.Drawing.Point(152, 1);
             this.mtxt_Cpf_Cnpj.CustomButton.Name = "";
-            this.mtxt_Cpf_Cnpj.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.mtxt_Cpf_Cnpj.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxt_Cpf_Cnpj.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Cpf_Cnpj.CustomButton.TabIndex = 1;
             this.mtxt_Cpf_Cnpj.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Cpf_Cnpj.CustomButton.UseSelectable = true;
             this.mtxt_Cpf_Cnpj.CustomButton.Visible = false;
             this.mtxt_Cpf_Cnpj.Lines = new string[0];
-            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(123, 138);
-            this.mtxt_Cpf_Cnpj.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(92, 112);
             this.mtxt_Cpf_Cnpj.MaxLength = 32767;
             this.mtxt_Cpf_Cnpj.Name = "mtxt_Cpf_Cnpj";
             this.mtxt_Cpf_Cnpj.PasswordChar = '\0';
@@ -478,7 +433,7 @@ namespace SistemaEletrico
             this.mtxt_Cpf_Cnpj.SelectionLength = 0;
             this.mtxt_Cpf_Cnpj.SelectionStart = 0;
             this.mtxt_Cpf_Cnpj.ShortcutsEnabled = true;
-            this.mtxt_Cpf_Cnpj.Size = new System.Drawing.Size(300, 28);
+            this.mtxt_Cpf_Cnpj.Size = new System.Drawing.Size(225, 23);
             this.mtxt_Cpf_Cnpj.TabIndex = 3;
             this.mtxt_Cpf_Cnpj.UseSelectable = true;
             this.mtxt_Cpf_Cnpj.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -490,11 +445,10 @@ namespace SistemaEletrico
             this.mlb_Cpf_Cnpj.Depth = 0;
             this.mlb_Cpf_Cnpj.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Cpf_Cnpj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(48, 138);
-            this.mlb_Cpf_Cnpj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(36, 112);
             this.mlb_Cpf_Cnpj.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cpf_Cnpj.Name = "mlb_Cpf_Cnpj";
-            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(45, 24);
+            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(36, 19);
             this.mlb_Cpf_Cnpj.TabIndex = 59;
             this.mlb_Cpf_Cnpj.Text = "CPF";
             // 
@@ -504,18 +458,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxtb_Nome.CustomButton.Image = null;
-            this.mtxtb_Nome.CustomButton.Location = new System.Drawing.Point(445, 2);
-            this.mtxtb_Nome.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtb_Nome.CustomButton.Location = new System.Drawing.Point(248, 1);
             this.mtxtb_Nome.CustomButton.Name = "";
-            this.mtxtb_Nome.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.mtxtb_Nome.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxtb_Nome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxtb_Nome.CustomButton.TabIndex = 1;
             this.mtxtb_Nome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxtb_Nome.CustomButton.UseSelectable = true;
             this.mtxtb_Nome.CustomButton.Visible = false;
             this.mtxtb_Nome.Lines = new string[0];
-            this.mtxtb_Nome.Location = new System.Drawing.Point(123, 47);
-            this.mtxtb_Nome.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtb_Nome.Location = new System.Drawing.Point(92, 38);
             this.mtxtb_Nome.MaxLength = 32767;
             this.mtxtb_Nome.Name = "mtxtb_Nome";
             this.mtxtb_Nome.PasswordChar = '\0';
@@ -524,7 +476,7 @@ namespace SistemaEletrico
             this.mtxtb_Nome.SelectionLength = 0;
             this.mtxtb_Nome.SelectionStart = 0;
             this.mtxtb_Nome.ShortcutsEnabled = true;
-            this.mtxtb_Nome.Size = new System.Drawing.Size(471, 28);
+            this.mtxtb_Nome.Size = new System.Drawing.Size(353, 23);
             this.mtxtb_Nome.TabIndex = 0;
             this.mtxtb_Nome.UseSelectable = true;
             this.mtxtb_Nome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -536,26 +488,24 @@ namespace SistemaEletrico
             this.mlb_Nome.Depth = 0;
             this.mlb_Nome.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Nome.Location = new System.Drawing.Point(48, 47);
-            this.mlb_Nome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mlb_Nome.Location = new System.Drawing.Point(36, 38);
             this.mlb_Nome.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Nome.Name = "mlb_Nome";
-            this.mlb_Nome.Size = new System.Drawing.Size(62, 24);
+            this.mlb_Nome.Size = new System.Drawing.Size(50, 19);
             this.mlb_Nome.TabIndex = 57;
             this.mlb_Nome.Text = "Nome";
             // 
             // cb_tp_cadastro
             // 
             this.cb_tp_cadastro.FormattingEnabled = true;
-            this.cb_tp_cadastro.ItemHeight = 24;
+            this.cb_tp_cadastro.ItemHeight = 23;
             this.cb_tp_cadastro.Items.AddRange(new object[] {
             "Administrador",
             "Funcionário I",
             "Funcionário II"});
-            this.cb_tp_cadastro.Location = new System.Drawing.Point(1161, 126);
-            this.cb_tp_cadastro.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_tp_cadastro.Location = new System.Drawing.Point(871, 102);
             this.cb_tp_cadastro.Name = "cb_tp_cadastro";
-            this.cb_tp_cadastro.Size = new System.Drawing.Size(260, 30);
+            this.cb_tp_cadastro.Size = new System.Drawing.Size(196, 29);
             this.cb_tp_cadastro.TabIndex = 5;
             this.cb_tp_cadastro.UseSelectable = true;
             // 
@@ -565,10 +515,9 @@ namespace SistemaEletrico
             this.metroToggle1.AutoSize = true;
             this.metroToggle1.Checked = true;
             this.metroToggle1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggle1.Location = new System.Drawing.Point(1227, 226);
-            this.metroToggle1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroToggle1.Location = new System.Drawing.Point(920, 184);
             this.metroToggle1.Name = "metroToggle1";
-            this.metroToggle1.Size = new System.Drawing.Size(80, 21);
+            this.metroToggle1.Size = new System.Drawing.Size(80, 17);
             this.metroToggle1.TabIndex = 53;
             this.metroToggle1.Tag = "1";
             this.metroToggle1.Text = "On";
@@ -580,15 +529,14 @@ namespace SistemaEletrico
             // 
             this.cb_Sexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Sexo.FormattingEnabled = true;
-            this.cb_Sexo.ItemHeight = 24;
+            this.cb_Sexo.ItemHeight = 23;
             this.cb_Sexo.Items.AddRange(new object[] {
             "Analberto",
             "Feminino",
             "Masculino"});
-            this.cb_Sexo.Location = new System.Drawing.Point(755, 36);
-            this.cb_Sexo.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_Sexo.Location = new System.Drawing.Point(566, 29);
             this.cb_Sexo.Name = "cb_Sexo";
-            this.cb_Sexo.Size = new System.Drawing.Size(160, 30);
+            this.cb_Sexo.Size = new System.Drawing.Size(121, 29);
             this.cb_Sexo.Sorted = true;
             this.cb_Sexo.TabIndex = 1;
             this.cb_Sexo.UseSelectable = true;
@@ -596,11 +544,10 @@ namespace SistemaEletrico
             // dt_dt_nasc
             // 
             this.dt_dt_nasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_dt_nasc.Location = new System.Drawing.Point(1161, 34);
-            this.dt_dt_nasc.Margin = new System.Windows.Forms.Padding(4);
-            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 30);
+            this.dt_dt_nasc.Location = new System.Drawing.Point(871, 28);
+            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 29);
             this.dt_dt_nasc.Name = "dt_dt_nasc";
-            this.dt_dt_nasc.Size = new System.Drawing.Size(273, 30);
+            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 30);
             this.dt_dt_nasc.TabIndex = 2;
             this.dt_dt_nasc.Value = new System.DateTime(2023, 3, 18, 0, 0, 0, 0);
             // 
@@ -609,11 +556,10 @@ namespace SistemaEletrico
             this.mt_dt_cadastro.CustomFormat = "  /  /    ";
             this.mt_dt_cadastro.Enabled = false;
             this.mt_dt_cadastro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mt_dt_cadastro.Location = new System.Drawing.Point(668, 126);
-            this.mt_dt_cadastro.Margin = new System.Windows.Forms.Padding(4);
-            this.mt_dt_cadastro.MinimumSize = new System.Drawing.Size(0, 30);
+            this.mt_dt_cadastro.Location = new System.Drawing.Point(501, 102);
+            this.mt_dt_cadastro.MinimumSize = new System.Drawing.Size(0, 29);
             this.mt_dt_cadastro.Name = "mt_dt_cadastro";
-            this.mt_dt_cadastro.Size = new System.Drawing.Size(273, 30);
+            this.mt_dt_cadastro.Size = new System.Drawing.Size(206, 30);
             this.mt_dt_cadastro.TabIndex = 4;
             this.mt_dt_cadastro.Value = new System.DateTime(2023, 3, 9, 0, 0, 0, 0);
             // 
@@ -623,31 +569,15 @@ namespace SistemaEletrico
             this.mbt_alterar_cad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbt_alterar_cad.Depth = 0;
             this.mbt_alterar_cad.Icon = null;
-            this.mbt_alterar_cad.Location = new System.Drawing.Point(1241, 496);
-            this.mbt_alterar_cad.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.mbt_alterar_cad.Location = new System.Drawing.Point(825, 403);
+            this.mbt_alterar_cad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbt_alterar_cad.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbt_alterar_cad.Name = "mbt_alterar_cad";
             this.mbt_alterar_cad.Primary = false;
-            this.mbt_alterar_cad.Size = new System.Drawing.Size(96, 36);
+            this.mbt_alterar_cad.Size = new System.Drawing.Size(80, 36);
             this.mbt_alterar_cad.TabIndex = 47;
             this.mbt_alterar_cad.Text = "Alterar";
             this.mbt_alterar_cad.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckBox1
-            // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(760, 501);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(181, 30);
-            this.materialCheckBox1.TabIndex = 45;
-            this.materialCheckBox1.Text = "materialCheckBox1";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
             // 
             // mbt_salvar
             // 
@@ -657,12 +587,12 @@ namespace SistemaEletrico
             this.mbt_salvar.Depth = 0;
             this.mbt_salvar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.mbt_salvar.Icon = null;
-            this.mbt_salvar.Location = new System.Drawing.Point(1385, 496);
-            this.mbt_salvar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.mbt_salvar.Location = new System.Drawing.Point(1012, 403);
+            this.mbt_salvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbt_salvar.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbt_salvar.Name = "mbt_salvar";
             this.mbt_salvar.Primary = false;
-            this.mbt_salvar.Size = new System.Drawing.Size(86, 36);
+            this.mbt_salvar.Size = new System.Drawing.Size(72, 36);
             this.mbt_salvar.TabIndex = 51;
             this.mbt_salvar.Text = "Salvar";
             this.mbt_salvar.UseVisualStyleBackColor = false;
@@ -672,21 +602,20 @@ namespace SistemaEletrico
             // 
             this.materialTabControl1.Controls.Add(this.Cadastrar);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(3, 65);
-            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.materialTabControl1.Location = new System.Drawing.Point(2, 53);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1685, 686);
+            this.materialTabControl1.Size = new System.Drawing.Size(1180, 557);
             this.materialTabControl1.TabIndex = 11;
             // 
             // CadastroLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1583, 751);
+            this.ClientSize = new System.Drawing.Size(1187, 610);
             this.Controls.Add(this.materialTabControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "CadastroLogin";
             this.Sizable = false;
@@ -737,13 +666,11 @@ namespace SistemaEletrico
         private MetroFramework.Controls.MetroToggle metroToggle1;
         private MetroFramework.Controls.MetroDateTime dt_dt_nasc;
         private MaterialSkin.Controls.MaterialFlatButton mbt_alterar_cad;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private MaterialSkin.Controls.MaterialFlatButton mbt_salvar;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private MaterialSkin.Controls.MaterialSingleLineTextField ms_Senha;
         private MaterialSkin.Controls.MaterialSingleLineTextField SLT_User;
         protected MetroFramework.Controls.MetroDateTime mt_dt_cadastro;
-        private System.Windows.Forms.ComboBox comboBox1;
         public MetroFramework.Controls.MetroComboBox cb_Sexo;
     }
 }
