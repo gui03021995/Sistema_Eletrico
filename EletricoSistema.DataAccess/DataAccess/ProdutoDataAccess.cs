@@ -53,7 +53,12 @@ namespace EletricoSistema.DataAccess
             List<tb_produto> oProduto = (from Selecao in oDB.tb_produto orderby Selecao.id_produto select Selecao).ToList<tb_produto>();
             return oProduto;
         }
-
+        public static tb_produto ObterProduto_unique(int id_produto)
+        {
+            EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
+            tb_produto oProduto = (from Selecao in oDB.tb_produto where Selecao.id_produto == id_produto select Selecao).SingleOrDefault();
+            return oProduto;
+        }
         public static bool Atualiza(tb_produto pProduto)
         {
             try
@@ -64,6 +69,10 @@ namespace EletricoSistema.DataAccess
                 //oProduto.id_produto = pProduto.id_produto;
                 oProduto.desc_produto = pProduto.desc_produto;
                 oProduto.valor = pProduto.valor;
+                oProduto.quantidade = pProduto.quantidade;
+                oProduto.nome = pProduto.nome;
+                oProduto.id_categoria = pProduto.id_categoria;
+
                 oDB.SubmitChanges();
                 oDB.Dispose();
                 return true;

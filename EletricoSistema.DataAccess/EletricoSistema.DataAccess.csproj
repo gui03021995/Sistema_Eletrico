@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\EnderecoDataAccess.cs" />
     <Compile Include="DataAccess\UsuarioDataAccess.cs" />
     <Compile Include="DataAccess\PessoaDataAccess.cs" />
     <Compile Include="DataAccess\CategoriaDataAccess.cs" />

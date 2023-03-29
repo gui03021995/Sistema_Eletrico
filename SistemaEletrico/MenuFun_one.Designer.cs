@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaEletrico
 {
-    partial class Menu
+    partial class MenuFun_one
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,60 +30,68 @@ namespace SistemaEletrico
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.Produto = new System.Windows.Forms.TabPage();
-            this.mtb_Limpar_Prod = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.mtxt_qt_prod = new MetroFramework.Controls.MetroTextBox();
-            this.btn_excluir_produtos = new MaterialSkin.Controls.MaterialFlatButton();
-            this.txtCategoria_Prod = new MetroFramework.Controls.MetroComboBox();
-            this.tbcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_valor_produto = new MetroFramework.Controls.MetroTextBox();
-            this.Txt_descricao_produto = new MetroFramework.Controls.MetroTextBox();
-            this.txtNome_Produto = new MetroFramework.Controls.MetroTextBox();
-            this.txt_cod_prod = new MetroFramework.Controls.MetroTextBox();
+            this.btn_excluir_produtos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btn_alterar_prod = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_cadastrar_produto = new MaterialSkin.Controls.MaterialFlatButton();
             this.mf_btn_buscar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.txtCategoria_Prod5 = new System.Windows.Forms.TextBox();
+            this.txtCategoria_Prod = new System.Windows.Forms.TextBox();
+            this.txtNome_Produto = new System.Windows.Forms.TextBox();
+            this.lb_nome_prod = new System.Windows.Forms.Label();
             this.dtgProdutos = new System.Windows.Forms.DataGridView();
             this.id_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desc_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tb_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idprodutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbprodutoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tbcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_alterar = new System.Windows.Forms.Button();
+            this.btn_excluir_produtos_1 = new System.Windows.Forms.Button();
+            this.btn_cadastrar_produto_1 = new System.Windows.Forms.Button();
+            this.txt_valor_produto = new System.Windows.Forms.TextBox();
             this.lb_cat_prod = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Txt_descricao_produto = new System.Windows.Forms.TextBox();
+            this.lb_desc_prod = new System.Windows.Forms.Label();
             this.Categoria = new System.Windows.Forms.TabPage();
-            this.txt_desc_categoria = new MetroFramework.Controls.MetroTextBox();
-            this.Txt_nome_categoria = new MetroFramework.Controls.MetroTextBox();
-            this.txt_cod_categoria = new MetroFramework.Controls.MetroTextBox();
             this.btn_alterar_categoria = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_excluir_Categoria = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_buscar_categoria = new MaterialSkin.Controls.MaterialFlatButton();
             this.btn_cadastrar_Categoria = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txt_cod_categoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_desc_categoria = new System.Windows.Forms.TextBox();
             this.lb_desc_categoria = new System.Windows.Forms.Label();
             this.dtgCategorias = new System.Windows.Forms.DataGridView();
+            this.idcategoriaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alterar_categoria_1 = new System.Windows.Forms.Button();
             this.btn_excluir_Categoria_1 = new System.Windows.Forms.Button();
             this.btn_buscar_categoria_1 = new System.Windows.Forms.Button();
             this.btn_cadastrar_Categoria_1 = new System.Windows.Forms.Button();
+            this.Txt_nome_categoria = new System.Windows.Forms.TextBox();
             this.lb_nome_categoria = new System.Windows.Forms.Label();
             this.Vendas = new System.Windows.Forms.TabPage();
             this.mtb_venda_orcamento = new MaterialSkin.Controls.MaterialTabControl();
@@ -127,7 +135,6 @@ namespace SistemaEletrico
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mt_s_orcamento_venda = new MaterialSkin.Controls.MaterialTabSelector();
             this.Rela = new System.Windows.Forms.TabPage();
-            this.Financeiro = new System.Windows.Forms.TabPage();
             this.Cadastrar = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -169,11 +176,15 @@ namespace SistemaEletrico
             this.combo_produto_por_categoria = new System.Windows.Forms.ComboBox();
             this.Conf = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tbprodutoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tbcategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tbprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialTabControl1.SuspendLayout();
             this.Produto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
             this.Categoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategorias)).BeginInit();
             this.Vendas.SuspendLayout();
@@ -190,6 +201,9 @@ namespace SistemaEletrico
             this.gb_Pessoal.SuspendLayout();
             this.Consultar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -210,7 +224,6 @@ namespace SistemaEletrico
             this.materialTabControl1.Controls.Add(this.Categoria);
             this.materialTabControl1.Controls.Add(this.Vendas);
             this.materialTabControl1.Controls.Add(this.Rela);
-            this.materialTabControl1.Controls.Add(this.Financeiro);
             this.materialTabControl1.Controls.Add(this.Cadastrar);
             this.materialTabControl1.Controls.Add(this.Consultar);
             this.materialTabControl1.Controls.Add(this.Conf);
@@ -226,20 +239,22 @@ namespace SistemaEletrico
             // Produto
             // 
             this.Produto.BackColor = System.Drawing.Color.White;
-            this.Produto.Controls.Add(this.mtb_Limpar_Prod);
-            this.Produto.Controls.Add(this.mtxt_qt_prod);
             this.Produto.Controls.Add(this.btn_excluir_produtos);
-            this.Produto.Controls.Add(this.txtCategoria_Prod);
-            this.Produto.Controls.Add(this.txt_valor_produto);
-            this.Produto.Controls.Add(this.Txt_descricao_produto);
-            this.Produto.Controls.Add(this.txtNome_Produto);
-            this.Produto.Controls.Add(this.txt_cod_prod);
             this.Produto.Controls.Add(this.btn_alterar_prod);
             this.Produto.Controls.Add(this.btn_cadastrar_produto);
             this.Produto.Controls.Add(this.mf_btn_buscar);
-            this.Produto.Controls.Add(this.txtCategoria_Prod5);
+            this.Produto.Controls.Add(this.txtCategoria_Prod);
+            this.Produto.Controls.Add(this.txtNome_Produto);
+            this.Produto.Controls.Add(this.lb_nome_prod);
             this.Produto.Controls.Add(this.dtgProdutos);
+            this.Produto.Controls.Add(this.btn_alterar);
+            this.Produto.Controls.Add(this.btn_excluir_produtos_1);
+            this.Produto.Controls.Add(this.btn_cadastrar_produto_1);
+            this.Produto.Controls.Add(this.txt_valor_produto);
             this.Produto.Controls.Add(this.lb_cat_prod);
+            this.Produto.Controls.Add(this.label2);
+            this.Produto.Controls.Add(this.Txt_descricao_produto);
+            this.Produto.Controls.Add(this.lb_desc_prod);
             this.Produto.ImageKey = "icons8-product-hunt-32.png";
             this.Produto.Location = new System.Drawing.Point(4, 23);
             this.Produto.Name = "Produto";
@@ -248,219 +263,22 @@ namespace SistemaEletrico
             this.Produto.TabIndex = 0;
             this.Produto.Text = "PRODUTO";
             // 
-            // mtb_Limpar_Prod
-            // 
-            this.mtb_Limpar_Prod.AutoSize = true;
-            this.mtb_Limpar_Prod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mtb_Limpar_Prod.Depth = 0;
-            this.mtb_Limpar_Prod.Icon = null;
-            this.mtb_Limpar_Prod.Location = new System.Drawing.Point(358, 409);
-            this.mtb_Limpar_Prod.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mtb_Limpar_Prod.Name = "mtb_Limpar_Prod";
-            this.mtb_Limpar_Prod.Primary = true;
-            this.mtb_Limpar_Prod.Size = new System.Drawing.Size(71, 36);
-            this.mtb_Limpar_Prod.TabIndex = 44;
-            this.mtb_Limpar_Prod.Text = "Limpar ";
-            this.mtb_Limpar_Prod.UseVisualStyleBackColor = true;
-            this.mtb_Limpar_Prod.Click += new System.EventHandler(this.mtb_Limpar_Prod_Click);
-            // 
-            // mtxt_qt_prod
-            // 
-            // 
-            // 
-            // 
-            this.mtxt_qt_prod.CustomButton.Image = null;
-            this.mtxt_qt_prod.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.mtxt_qt_prod.CustomButton.Name = "";
-            this.mtxt_qt_prod.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.mtxt_qt_prod.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxt_qt_prod.CustomButton.TabIndex = 1;
-            this.mtxt_qt_prod.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxt_qt_prod.CustomButton.UseSelectable = true;
-            this.mtxt_qt_prod.CustomButton.Visible = false;
-            this.mtxt_qt_prod.Lines = new string[0];
-            this.mtxt_qt_prod.Location = new System.Drawing.Point(55, 270);
-            this.mtxt_qt_prod.MaxLength = 32767;
-            this.mtxt_qt_prod.Name = "mtxt_qt_prod";
-            this.mtxt_qt_prod.PasswordChar = '\0';
-            this.mtxt_qt_prod.PromptText = "Quantidade do Produto";
-            this.mtxt_qt_prod.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxt_qt_prod.SelectedText = "";
-            this.mtxt_qt_prod.SelectionLength = 0;
-            this.mtxt_qt_prod.SelectionStart = 0;
-            this.mtxt_qt_prod.ShortcutsEnabled = true;
-            this.mtxt_qt_prod.Size = new System.Drawing.Size(166, 23);
-            this.mtxt_qt_prod.TabIndex = 43;
-            this.mtxt_qt_prod.UseSelectable = true;
-            this.mtxt_qt_prod.WaterMark = "Quantidade do Produto";
-            this.mtxt_qt_prod.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxt_qt_prod.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // btn_excluir_produtos
             // 
             this.btn_excluir_produtos.AutoSize = true;
             this.btn_excluir_produtos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_excluir_produtos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_excluir_produtos.Depth = 0;
+            this.btn_excluir_produtos.ForeColor = System.Drawing.Color.Black;
             this.btn_excluir_produtos.Icon = null;
-            this.btn_excluir_produtos.Location = new System.Drawing.Point(886, 60);
-            this.btn_excluir_produtos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_excluir_produtos.Location = new System.Drawing.Point(640, 87);
             this.btn_excluir_produtos.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_excluir_produtos.Name = "btn_excluir_produtos";
-            this.btn_excluir_produtos.Primary = false;
+            this.btn_excluir_produtos.Primary = true;
             this.btn_excluir_produtos.Size = new System.Drawing.Size(75, 36);
-            this.btn_excluir_produtos.TabIndex = 42;
+            this.btn_excluir_produtos.TabIndex = 32;
             this.btn_excluir_produtos.Text = "Excluir";
             this.btn_excluir_produtos.UseVisualStyleBackColor = true;
-            this.btn_excluir_produtos.Click += new System.EventHandler(this.btn_excluir_produtos_Click);
-            // 
-            // txtCategoria_Prod
-            // 
-            this.txtCategoria_Prod.DataSource = this.tbcategoriaBindingSource;
-            this.txtCategoria_Prod.DisplayFocus = true;
-            this.txtCategoria_Prod.DisplayMember = "nome_categoria";
-            this.txtCategoria_Prod.FormattingEnabled = true;
-            this.txtCategoria_Prod.ItemHeight = 23;
-            this.txtCategoria_Prod.Location = new System.Drawing.Point(120, 349);
-            this.txtCategoria_Prod.Name = "txtCategoria_Prod";
-            this.txtCategoria_Prod.Size = new System.Drawing.Size(232, 29);
-            this.txtCategoria_Prod.Style = MetroFramework.MetroColorStyle.Black;
-            this.txtCategoria_Prod.TabIndex = 41;
-            this.txtCategoria_Prod.TabStop = false;
-            this.txtCategoria_Prod.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCategoria_Prod.UseSelectable = true;
-            this.txtCategoria_Prod.ValueMember = "id_categoria";
-            // 
-            // tbcategoriaBindingSource
-            // 
-            this.tbcategoriaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
-            // 
-            // txt_valor_produto
-            // 
-            // 
-            // 
-            // 
-            this.txt_valor_produto.CustomButton.Image = null;
-            this.txt_valor_produto.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.txt_valor_produto.CustomButton.Name = "";
-            this.txt_valor_produto.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_valor_produto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_valor_produto.CustomButton.TabIndex = 1;
-            this.txt_valor_produto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_valor_produto.CustomButton.UseSelectable = true;
-            this.txt_valor_produto.CustomButton.Visible = false;
-            this.txt_valor_produto.Lines = new string[0];
-            this.txt_valor_produto.Location = new System.Drawing.Point(263, 211);
-            this.txt_valor_produto.MaxLength = 32767;
-            this.txt_valor_produto.Name = "txt_valor_produto";
-            this.txt_valor_produto.PasswordChar = '\0';
-            this.txt_valor_produto.PromptText = "Valor do Produto";
-            this.txt_valor_produto.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_valor_produto.SelectedText = "";
-            this.txt_valor_produto.SelectionLength = 0;
-            this.txt_valor_produto.SelectionStart = 0;
-            this.txt_valor_produto.ShortcutsEnabled = true;
-            this.txt_valor_produto.Size = new System.Drawing.Size(166, 23);
-            this.txt_valor_produto.TabIndex = 40;
-            this.txt_valor_produto.UseSelectable = true;
-            this.txt_valor_produto.WaterMark = "Valor do Produto";
-            this.txt_valor_produto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_valor_produto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Txt_descricao_produto
-            // 
-            // 
-            // 
-            // 
-            this.Txt_descricao_produto.CustomButton.Image = null;
-            this.Txt_descricao_produto.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.Txt_descricao_produto.CustomButton.Name = "";
-            this.Txt_descricao_produto.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Txt_descricao_produto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_descricao_produto.CustomButton.TabIndex = 1;
-            this.Txt_descricao_produto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_descricao_produto.CustomButton.UseSelectable = true;
-            this.Txt_descricao_produto.CustomButton.Visible = false;
-            this.Txt_descricao_produto.Lines = new string[0];
-            this.Txt_descricao_produto.Location = new System.Drawing.Point(263, 110);
-            this.Txt_descricao_produto.MaxLength = 32767;
-            this.Txt_descricao_produto.Name = "Txt_descricao_produto";
-            this.Txt_descricao_produto.PasswordChar = '\0';
-            this.Txt_descricao_produto.PromptText = "Descrição Produto";
-            this.Txt_descricao_produto.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_descricao_produto.SelectedText = "";
-            this.Txt_descricao_produto.SelectionLength = 0;
-            this.Txt_descricao_produto.SelectionStart = 0;
-            this.Txt_descricao_produto.ShortcutsEnabled = true;
-            this.Txt_descricao_produto.Size = new System.Drawing.Size(166, 23);
-            this.Txt_descricao_produto.TabIndex = 39;
-            this.Txt_descricao_produto.UseSelectable = true;
-            this.Txt_descricao_produto.WaterMark = "Descrição Produto";
-            this.Txt_descricao_produto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_descricao_produto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtNome_Produto
-            // 
-            // 
-            // 
-            // 
-            this.txtNome_Produto.CustomButton.Image = null;
-            this.txtNome_Produto.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.txtNome_Produto.CustomButton.Name = "";
-            this.txtNome_Produto.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNome_Produto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNome_Produto.CustomButton.TabIndex = 1;
-            this.txtNome_Produto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNome_Produto.CustomButton.UseSelectable = true;
-            this.txtNome_Produto.CustomButton.Visible = false;
-            this.txtNome_Produto.Lines = new string[0];
-            this.txtNome_Produto.Location = new System.Drawing.Point(55, 60);
-            this.txtNome_Produto.MaxLength = 32767;
-            this.txtNome_Produto.Name = "txtNome_Produto";
-            this.txtNome_Produto.PasswordChar = '\0';
-            this.txtNome_Produto.PromptText = "Nome Produto";
-            this.txtNome_Produto.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNome_Produto.SelectedText = "";
-            this.txtNome_Produto.SelectionLength = 0;
-            this.txtNome_Produto.SelectionStart = 0;
-            this.txtNome_Produto.ShortcutsEnabled = true;
-            this.txtNome_Produto.Size = new System.Drawing.Size(166, 23);
-            this.txtNome_Produto.TabIndex = 38;
-            this.txtNome_Produto.UseSelectable = true;
-            this.txtNome_Produto.WaterMark = "Nome Produto";
-            this.txtNome_Produto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNome_Produto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_cod_prod
-            // 
-            // 
-            // 
-            // 
-            this.txt_cod_prod.CustomButton.Image = null;
-            this.txt_cod_prod.CustomButton.Location = new System.Drawing.Point(144, 1);
-            this.txt_cod_prod.CustomButton.Name = "";
-            this.txt_cod_prod.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_cod_prod.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_cod_prod.CustomButton.TabIndex = 1;
-            this.txt_cod_prod.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_cod_prod.CustomButton.UseSelectable = true;
-            this.txt_cod_prod.CustomButton.Visible = false;
-            this.txt_cod_prod.Lines = new string[0];
-            this.txt_cod_prod.Location = new System.Drawing.Point(55, 161);
-            this.txt_cod_prod.MaxLength = 32767;
-            this.txt_cod_prod.Name = "txt_cod_prod";
-            this.txt_cod_prod.PasswordChar = '\0';
-            this.txt_cod_prod.PromptText = "Codigo Produto";
-            this.txt_cod_prod.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_cod_prod.SelectedText = "";
-            this.txt_cod_prod.SelectionLength = 0;
-            this.txt_cod_prod.SelectionStart = 0;
-            this.txt_cod_prod.ShortcutsEnabled = true;
-            this.txt_cod_prod.Size = new System.Drawing.Size(166, 23);
-            this.txt_cod_prod.TabIndex = 37;
-            this.txt_cod_prod.UseSelectable = true;
-            this.txt_cod_prod.WaterMark = "Codigo Produto";
-            this.txt_cod_prod.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_cod_prod.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btn_alterar_prod
             // 
@@ -470,7 +288,7 @@ namespace SistemaEletrico
             this.btn_alterar_prod.Depth = 0;
             this.btn_alterar_prod.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_alterar_prod.Icon = null;
-            this.btn_alterar_prod.Location = new System.Drawing.Point(520, 60);
+            this.btn_alterar_prod.Location = new System.Drawing.Point(917, 87);
             this.btn_alterar_prod.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_alterar_prod.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_alterar_prod.Name = "btn_alterar_prod";
@@ -479,7 +297,6 @@ namespace SistemaEletrico
             this.btn_alterar_prod.TabIndex = 31;
             this.btn_alterar_prod.Text = "Alterar";
             this.btn_alterar_prod.UseVisualStyleBackColor = false;
-            this.btn_alterar_prod.Click += new System.EventHandler(this.btn_alterar_prod_Click);
             // 
             // btn_cadastrar_produto
             // 
@@ -487,7 +304,7 @@ namespace SistemaEletrico
             this.btn_cadastrar_produto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_cadastrar_produto.Depth = 0;
             this.btn_cadastrar_produto.Icon = null;
-            this.btn_cadastrar_produto.Location = new System.Drawing.Point(739, 60);
+            this.btn_cadastrar_produto.Location = new System.Drawing.Point(291, 87);
             this.btn_cadastrar_produto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_cadastrar_produto.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_cadastrar_produto.Name = "btn_cadastrar_produto";
@@ -496,7 +313,6 @@ namespace SistemaEletrico
             this.btn_cadastrar_produto.TabIndex = 29;
             this.btn_cadastrar_produto.Text = "Cadastrar";
             this.btn_cadastrar_produto.UseVisualStyleBackColor = true;
-            this.btn_cadastrar_produto.Click += new System.EventHandler(this.btn_cadastrar_produto_Click);
             // 
             // mf_btn_buscar
             // 
@@ -504,7 +320,7 @@ namespace SistemaEletrico
             this.mf_btn_buscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mf_btn_buscar.Depth = 0;
             this.mf_btn_buscar.Icon = null;
-            this.mf_btn_buscar.Location = new System.Drawing.Point(634, 60);
+            this.mf_btn_buscar.Location = new System.Drawing.Point(94, 87);
             this.mf_btn_buscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mf_btn_buscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.mf_btn_buscar.Name = "mf_btn_buscar";
@@ -513,55 +329,76 @@ namespace SistemaEletrico
             this.mf_btn_buscar.TabIndex = 28;
             this.mf_btn_buscar.Text = "Buscar";
             this.mf_btn_buscar.UseVisualStyleBackColor = true;
-            this.mf_btn_buscar.Click += new System.EventHandler(this.mf_btn_buscar_Click);
             // 
-            // txtCategoria_Prod5
+            // txtCategoria_Prod
             // 
-            this.txtCategoria_Prod5.Location = new System.Drawing.Point(1042, 40);
-            this.txtCategoria_Prod5.Name = "txtCategoria_Prod5";
-            this.txtCategoria_Prod5.Size = new System.Drawing.Size(58, 20);
-            this.txtCategoria_Prod5.TabIndex = 25;
+            this.txtCategoria_Prod.Location = new System.Drawing.Point(1042, 40);
+            this.txtCategoria_Prod.Name = "txtCategoria_Prod";
+            this.txtCategoria_Prod.Size = new System.Drawing.Size(58, 20);
+            this.txtCategoria_Prod.TabIndex = 25;
+            // 
+            // txtNome_Produto
+            // 
+            this.txtNome_Produto.Location = new System.Drawing.Point(94, 35);
+            this.txtNome_Produto.Name = "txtNome_Produto";
+            this.txtNome_Produto.Size = new System.Drawing.Size(68, 20);
+            this.txtNome_Produto.TabIndex = 24;
+            // 
+            // lb_nome_prod
+            // 
+            this.lb_nome_prod.AutoSize = true;
+            this.lb_nome_prod.Location = new System.Drawing.Point(32, 43);
+            this.lb_nome_prod.Name = "lb_nome_prod";
+            this.lb_nome_prod.Size = new System.Drawing.Size(35, 13);
+            this.lb_nome_prod.TabIndex = 23;
+            this.lb_nome_prod.Text = "Nome";
             // 
             // dtgProdutos
             // 
+            this.dtgProdutos.AutoGenerateColumns = false;
             this.dtgProdutos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_produto,
             this.nome,
-            this.desc_produto,
             this.valor,
+            this.tb_categoria,
             this.id_categoria,
-            this.quantidade});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle17;
+            this.idprodutoDataGridViewTextBoxColumn,
+            this.valorDataGridViewTextBoxColumn,
+            this.idcategoriaDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.tbcategoriaDataGridViewTextBoxColumn});
+            this.dtgProdutos.DataSource = this.tbprodutoBindingSource2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgProdutos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgProdutos.Location = new System.Drawing.Point(499, 147);
+            this.dtgProdutos.Location = new System.Drawing.Point(8, 146);
             this.dtgProdutos.Name = "dtgProdutos";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdutos.RowHeadersWidth = 51;
-            this.dtgProdutos.Size = new System.Drawing.Size(655, 336);
+            this.dtgProdutos.Size = new System.Drawing.Size(1144, 336);
             this.dtgProdutos.TabIndex = 22;
             this.dtgProdutos.TabStop = false;
             // 
@@ -569,43 +406,129 @@ namespace SistemaEletrico
             // 
             this.id_produto.DataPropertyName = "id_produto";
             this.id_produto.HeaderText = "id_produto";
+            this.id_produto.MinimumWidth = 6;
             this.id_produto.Name = "id_produto";
             this.id_produto.ReadOnly = true;
+            this.id_produto.Width = 125;
             // 
             // nome
             // 
             this.nome.DataPropertyName = "nome";
             this.nome.HeaderText = "nome";
+            this.nome.MinimumWidth = 6;
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
-            // 
-            // desc_produto
-            // 
-            this.desc_produto.DataPropertyName = "desc_produto";
-            this.desc_produto.HeaderText = "desc_produto";
-            this.desc_produto.Name = "desc_produto";
-            this.desc_produto.ReadOnly = true;
+            this.nome.Width = 125;
             // 
             // valor
             // 
             this.valor.DataPropertyName = "valor";
             this.valor.HeaderText = "valor";
+            this.valor.MinimumWidth = 6;
             this.valor.Name = "valor";
             this.valor.ReadOnly = true;
+            this.valor.Width = 125;
+            // 
+            // tb_categoria
+            // 
+            this.tb_categoria.DataPropertyName = "tb_categoria";
+            this.tb_categoria.HeaderText = "tb_categoria";
+            this.tb_categoria.MinimumWidth = 6;
+            this.tb_categoria.Name = "tb_categoria";
+            this.tb_categoria.ReadOnly = true;
+            this.tb_categoria.Width = 125;
             // 
             // id_categoria
             // 
             this.id_categoria.DataPropertyName = "id_categoria";
             this.id_categoria.HeaderText = "id_categoria";
+            this.id_categoria.MinimumWidth = 6;
             this.id_categoria.Name = "id_categoria";
             this.id_categoria.ReadOnly = true;
+            this.id_categoria.Width = 125;
             // 
-            // quantidade
+            // idprodutoDataGridViewTextBoxColumn
             // 
-            this.quantidade.DataPropertyName = "quantidade";
-            this.quantidade.HeaderText = "quantidade";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
+            this.idprodutoDataGridViewTextBoxColumn.DataPropertyName = "id_produto";
+            this.idprodutoDataGridViewTextBoxColumn.HeaderText = "id_produto";
+            this.idprodutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idprodutoDataGridViewTextBoxColumn.Name = "idprodutoDataGridViewTextBoxColumn";
+            this.idprodutoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "valor";
+            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idcategoriaDataGridViewTextBoxColumn
+            // 
+            this.idcategoriaDataGridViewTextBoxColumn.DataPropertyName = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idcategoriaDataGridViewTextBoxColumn.Name = "idcategoriaDataGridViewTextBoxColumn";
+            this.idcategoriaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tbcategoriaDataGridViewTextBoxColumn
+            // 
+            this.tbcategoriaDataGridViewTextBoxColumn.DataPropertyName = "tb_categoria";
+            this.tbcategoriaDataGridViewTextBoxColumn.HeaderText = "tb_categoria";
+            this.tbcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tbcategoriaDataGridViewTextBoxColumn.Name = "tbcategoriaDataGridViewTextBoxColumn";
+            this.tbcategoriaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tbprodutoBindingSource2
+            // 
+            this.tbprodutoBindingSource2.DataMember = "tb_produto";
+            this.tbprodutoBindingSource2.DataSource = this.tbcategoriaBindingSource;
+            // 
+            // tbcategoriaBindingSource
+            // 
+            this.tbcategoriaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
+            // 
+            // btn_alterar
+            // 
+            this.btn_alterar.Location = new System.Drawing.Point(999, 95);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(138, 28);
+            this.btn_alterar.TabIndex = 21;
+            this.btn_alterar.Text = "Alterar";
+            this.btn_alterar.UseVisualStyleBackColor = true;
+            // 
+            // btn_excluir_produtos_1
+            // 
+            this.btn_excluir_produtos_1.Location = new System.Drawing.Point(721, 95);
+            this.btn_excluir_produtos_1.Name = "btn_excluir_produtos_1";
+            this.btn_excluir_produtos_1.Size = new System.Drawing.Size(143, 28);
+            this.btn_excluir_produtos_1.TabIndex = 20;
+            this.btn_excluir_produtos_1.Text = "Excluir";
+            this.btn_excluir_produtos_1.UseVisualStyleBackColor = true;
+            // 
+            // btn_cadastrar_produto_1
+            // 
+            this.btn_cadastrar_produto_1.Location = new System.Drawing.Point(401, 91);
+            this.btn_cadastrar_produto_1.Name = "btn_cadastrar_produto_1";
+            this.btn_cadastrar_produto_1.Size = new System.Drawing.Size(152, 28);
+            this.btn_cadastrar_produto_1.TabIndex = 18;
+            this.btn_cadastrar_produto_1.Text = "Cadastrar";
+            this.btn_cadastrar_produto_1.UseVisualStyleBackColor = true;
+            // 
+            // txt_valor_produto
+            // 
+            this.txt_valor_produto.Location = new System.Drawing.Point(568, 40);
+            this.txt_valor_produto.Name = "txt_valor_produto";
+            this.txt_valor_produto.Size = new System.Drawing.Size(201, 20);
+            this.txt_valor_produto.TabIndex = 16;
             // 
             // lb_cat_prod
             // 
@@ -616,23 +539,48 @@ namespace SistemaEletrico
             this.lb_cat_prod.TabIndex = 15;
             this.lb_cat_prod.Text = "Categoria";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(522, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Valor";
+            // 
+            // Txt_descricao_produto
+            // 
+            this.Txt_descricao_produto.Location = new System.Drawing.Point(291, 40);
+            this.Txt_descricao_produto.Name = "Txt_descricao_produto";
+            this.Txt_descricao_produto.Size = new System.Drawing.Size(192, 20);
+            this.Txt_descricao_produto.TabIndex = 13;
+            // 
+            // lb_desc_prod
+            // 
+            this.lb_desc_prod.AutoSize = true;
+            this.lb_desc_prod.Location = new System.Drawing.Point(208, 43);
+            this.lb_desc_prod.Name = "lb_desc_prod";
+            this.lb_desc_prod.Size = new System.Drawing.Size(55, 13);
+            this.lb_desc_prod.TabIndex = 12;
+            this.lb_desc_prod.Text = "Descrição";
+            // 
             // Categoria
             // 
             this.Categoria.BackColor = System.Drawing.Color.White;
-            this.Categoria.Controls.Add(this.txt_desc_categoria);
-            this.Categoria.Controls.Add(this.Txt_nome_categoria);
-            this.Categoria.Controls.Add(this.txt_cod_categoria);
             this.Categoria.Controls.Add(this.btn_alterar_categoria);
             this.Categoria.Controls.Add(this.btn_excluir_Categoria);
             this.Categoria.Controls.Add(this.btn_buscar_categoria);
             this.Categoria.Controls.Add(this.btn_cadastrar_Categoria);
+            this.Categoria.Controls.Add(this.txt_cod_categoria);
             this.Categoria.Controls.Add(this.label1);
+            this.Categoria.Controls.Add(this.txt_desc_categoria);
             this.Categoria.Controls.Add(this.lb_desc_categoria);
             this.Categoria.Controls.Add(this.dtgCategorias);
             this.Categoria.Controls.Add(this.btn_alterar_categoria_1);
             this.Categoria.Controls.Add(this.btn_excluir_Categoria_1);
             this.Categoria.Controls.Add(this.btn_buscar_categoria_1);
             this.Categoria.Controls.Add(this.btn_cadastrar_Categoria_1);
+            this.Categoria.Controls.Add(this.Txt_nome_categoria);
             this.Categoria.Controls.Add(this.lb_nome_categoria);
             this.Categoria.ForeColor = System.Drawing.Color.Black;
             this.Categoria.ImageKey = "icons8-categorize-32.png";
@@ -642,102 +590,6 @@ namespace SistemaEletrico
             this.Categoria.Size = new System.Drawing.Size(1160, 499);
             this.Categoria.TabIndex = 1;
             this.Categoria.Text = "CATEGORIA";
-            // 
-            // txt_desc_categoria
-            // 
-            // 
-            // 
-            // 
-            this.txt_desc_categoria.CustomButton.Image = null;
-            this.txt_desc_categoria.CustomButton.Location = new System.Drawing.Point(170, 1);
-            this.txt_desc_categoria.CustomButton.Name = "";
-            this.txt_desc_categoria.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_desc_categoria.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_desc_categoria.CustomButton.TabIndex = 1;
-            this.txt_desc_categoria.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_desc_categoria.CustomButton.UseSelectable = true;
-            this.txt_desc_categoria.CustomButton.Visible = false;
-            this.txt_desc_categoria.Lines = new string[0];
-            this.txt_desc_categoria.Location = new System.Drawing.Point(815, 42);
-            this.txt_desc_categoria.MaxLength = 32767;
-            this.txt_desc_categoria.Name = "txt_desc_categoria";
-            this.txt_desc_categoria.PasswordChar = '\0';
-            this.txt_desc_categoria.PromptText = "Descrição Categoria";
-            this.txt_desc_categoria.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_desc_categoria.SelectedText = "";
-            this.txt_desc_categoria.SelectionLength = 0;
-            this.txt_desc_categoria.SelectionStart = 0;
-            this.txt_desc_categoria.ShortcutsEnabled = true;
-            this.txt_desc_categoria.Size = new System.Drawing.Size(192, 23);
-            this.txt_desc_categoria.TabIndex = 50;
-            this.txt_desc_categoria.UseSelectable = true;
-            this.txt_desc_categoria.WaterMark = "Descrição Categoria";
-            this.txt_desc_categoria.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_desc_categoria.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Txt_nome_categoria
-            // 
-            // 
-            // 
-            // 
-            this.Txt_nome_categoria.CustomButton.Image = null;
-            this.Txt_nome_categoria.CustomButton.Location = new System.Drawing.Point(159, 1);
-            this.Txt_nome_categoria.CustomButton.Name = "";
-            this.Txt_nome_categoria.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.Txt_nome_categoria.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_nome_categoria.CustomButton.TabIndex = 1;
-            this.Txt_nome_categoria.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_nome_categoria.CustomButton.UseSelectable = true;
-            this.Txt_nome_categoria.CustomButton.Visible = false;
-            this.Txt_nome_categoria.Lines = new string[0];
-            this.Txt_nome_categoria.Location = new System.Drawing.Point(458, 42);
-            this.Txt_nome_categoria.MaxLength = 32767;
-            this.Txt_nome_categoria.Name = "Txt_nome_categoria";
-            this.Txt_nome_categoria.PasswordChar = '\0';
-            this.Txt_nome_categoria.PromptText = "Nome Categoria";
-            this.Txt_nome_categoria.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_nome_categoria.SelectedText = "";
-            this.Txt_nome_categoria.SelectionLength = 0;
-            this.Txt_nome_categoria.SelectionStart = 0;
-            this.Txt_nome_categoria.ShortcutsEnabled = true;
-            this.Txt_nome_categoria.Size = new System.Drawing.Size(181, 23);
-            this.Txt_nome_categoria.TabIndex = 49;
-            this.Txt_nome_categoria.UseSelectable = true;
-            this.Txt_nome_categoria.WaterMark = "Nome Categoria";
-            this.Txt_nome_categoria.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_nome_categoria.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_cod_categoria
-            // 
-            // 
-            // 
-            // 
-            this.txt_cod_categoria.CustomButton.Image = null;
-            this.txt_cod_categoria.CustomButton.Location = new System.Drawing.Point(159, 1);
-            this.txt_cod_categoria.CustomButton.Name = "";
-            this.txt_cod_categoria.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_cod_categoria.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_cod_categoria.CustomButton.TabIndex = 1;
-            this.txt_cod_categoria.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_cod_categoria.CustomButton.UseSelectable = true;
-            this.txt_cod_categoria.CustomButton.Visible = false;
-            this.txt_cod_categoria.Lines = new string[0];
-            this.txt_cod_categoria.Location = new System.Drawing.Point(192, 42);
-            this.txt_cod_categoria.MaxLength = 32767;
-            this.txt_cod_categoria.Name = "txt_cod_categoria";
-            this.txt_cod_categoria.PasswordChar = '\0';
-            this.txt_cod_categoria.PromptText = "Codigo Categoria";
-            this.txt_cod_categoria.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_cod_categoria.SelectedText = "";
-            this.txt_cod_categoria.SelectionLength = 0;
-            this.txt_cod_categoria.SelectionStart = 0;
-            this.txt_cod_categoria.ShortcutsEnabled = true;
-            this.txt_cod_categoria.Size = new System.Drawing.Size(181, 23);
-            this.txt_cod_categoria.TabIndex = 48;
-            this.txt_cod_categoria.UseSelectable = true;
-            this.txt_cod_categoria.WaterMark = "Codigo Categoria";
-            this.txt_cod_categoria.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_cod_categoria.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btn_alterar_categoria
             // 
@@ -809,6 +661,13 @@ namespace SistemaEletrico
             this.btn_cadastrar_Categoria.UseVisualStyleBackColor = true;
             this.btn_cadastrar_Categoria.Click += new System.EventHandler(this.btn_cadastrar_Categoria_Click);
             // 
+            // txt_cod_categoria
+            // 
+            this.txt_cod_categoria.Location = new System.Drawing.Point(204, 49);
+            this.txt_cod_categoria.Name = "txt_cod_categoria";
+            this.txt_cod_categoria.Size = new System.Drawing.Size(181, 20);
+            this.txt_cod_categoria.TabIndex = 34;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -817,6 +676,13 @@ namespace SistemaEletrico
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 33;
             this.label1.Text = "Codigo Categoria";
+            // 
+            // txt_desc_categoria
+            // 
+            this.txt_desc_categoria.Location = new System.Drawing.Point(806, 45);
+            this.txt_desc_categoria.Name = "txt_desc_categoria";
+            this.txt_desc_categoria.Size = new System.Drawing.Size(192, 20);
+            this.txt_desc_categoria.TabIndex = 31;
             // 
             // lb_desc_categoria
             // 
@@ -830,36 +696,48 @@ namespace SistemaEletrico
             // dtgCategorias
             // 
             this.dtgCategorias.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dtgCategorias.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCategorias.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dtgCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idcategoriaDataGridViewTextBoxColumn1});
+            this.dtgCategorias.DataSource = this.tbcategoriaBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCategorias.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgCategorias.Location = new System.Drawing.Point(385, 150);
             this.dtgCategorias.Name = "dtgCategorias";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgCategorias.RowHeadersWidth = 51;
             this.dtgCategorias.Size = new System.Drawing.Size(354, 331);
             this.dtgCategorias.TabIndex = 29;
+            // 
+            // idcategoriaDataGridViewTextBoxColumn1
+            // 
+            this.idcategoriaDataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn1.HeaderText = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idcategoriaDataGridViewTextBoxColumn1.Name = "idcategoriaDataGridViewTextBoxColumn1";
+            this.idcategoriaDataGridViewTextBoxColumn1.Width = 125;
             // 
             // btn_alterar_categoria_1
             // 
@@ -899,6 +777,13 @@ namespace SistemaEletrico
             this.btn_cadastrar_Categoria_1.Text = "Cadastrar";
             this.btn_cadastrar_Categoria_1.UseVisualStyleBackColor = true;
             this.btn_cadastrar_Categoria_1.Click += new System.EventHandler(this.btn_cadastrar_Categoria_Click);
+            // 
+            // Txt_nome_categoria
+            // 
+            this.Txt_nome_categoria.Location = new System.Drawing.Point(480, 49);
+            this.Txt_nome_categoria.Name = "Txt_nome_categoria";
+            this.Txt_nome_categoria.Size = new System.Drawing.Size(181, 20);
+            this.Txt_nome_categoria.TabIndex = 24;
             // 
             // lb_nome_categoria
             // 
@@ -1163,38 +1048,38 @@ namespace SistemaEletrico
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(38, 70);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(771, 306);
             this.dataGridView1.TabIndex = 10;
@@ -1379,10 +1264,10 @@ namespace SistemaEletrico
             // mcb_prod_orca
             // 
             this.mcb_prod_orca.FormattingEnabled = true;
-            this.mcb_prod_orca.ItemHeight = 23;
+            this.mcb_prod_orca.ItemHeight = 24;
             this.mcb_prod_orca.Location = new System.Drawing.Point(344, 19);
             this.mcb_prod_orca.Name = "mcb_prod_orca";
-            this.mcb_prod_orca.Size = new System.Drawing.Size(239, 29);
+            this.mcb_prod_orca.Size = new System.Drawing.Size(239, 30);
             this.mcb_prod_orca.TabIndex = 27;
             this.mcb_prod_orca.UseSelectable = true;
             // 
@@ -1421,38 +1306,38 @@ namespace SistemaEletrico
             // 
             // dataGridView2
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.Location = new System.Drawing.Point(38, 70);
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(771, 325);
             this.dataGridView2.TabIndex = 10;
@@ -1507,16 +1392,6 @@ namespace SistemaEletrico
             this.Rela.TabIndex = 3;
             this.Rela.Text = "RELATÓRIOS / DASHBOARD";
             this.Rela.UseVisualStyleBackColor = true;
-            // 
-            // Financeiro
-            // 
-            this.Financeiro.Location = new System.Drawing.Point(4, 23);
-            this.Financeiro.Name = "Financeiro";
-            this.Financeiro.Padding = new System.Windows.Forms.Padding(3);
-            this.Financeiro.Size = new System.Drawing.Size(1160, 499);
-            this.Financeiro.TabIndex = 4;
-            this.Financeiro.Text = "FINANCEIRO";
-            this.Financeiro.UseVisualStyleBackColor = true;
             // 
             // Cadastrar
             // 
@@ -1601,7 +1476,7 @@ namespace SistemaEletrico
             // metroDateTime2
             // 
             this.metroDateTime2.Location = new System.Drawing.Point(871, 30);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(4, 30);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime2.Name = "metroDateTime2";
             this.metroDateTime2.Size = new System.Drawing.Size(206, 30);
             this.metroDateTime2.TabIndex = 57;
@@ -1616,10 +1491,10 @@ namespace SistemaEletrico
             // cb_setor
             // 
             this.cb_setor.FormattingEnabled = true;
-            this.cb_setor.ItemHeight = 24;
+            this.cb_setor.ItemHeight = 23;
             this.cb_setor.Location = new System.Drawing.Point(92, 28);
             this.cb_setor.Name = "cb_setor";
-            this.cb_setor.Size = new System.Drawing.Size(196, 30);
+            this.cb_setor.Size = new System.Drawing.Size(196, 29);
             this.cb_setor.TabIndex = 53;
             this.cb_setor.UseSelectable = true;
             // 
@@ -1890,12 +1765,13 @@ namespace SistemaEletrico
             // cb_tp_cadastro
             // 
             this.cb_tp_cadastro.FormattingEnabled = true;
-            this.cb_tp_cadastro.ItemHeight = 24;
+            this.cb_tp_cadastro.ItemHeight = 23;
             this.cb_tp_cadastro.Location = new System.Drawing.Point(871, 102);
             this.cb_tp_cadastro.Name = "cb_tp_cadastro";
-            this.cb_tp_cadastro.Size = new System.Drawing.Size(196, 30);
+            this.cb_tp_cadastro.Size = new System.Drawing.Size(196, 29);
             this.cb_tp_cadastro.TabIndex = 56;
             this.cb_tp_cadastro.UseSelectable = true;
+            this.cb_tp_cadastro.SelectedIndexChanged += new System.EventHandler(this.cb_tp_cadastro_SelectedIndexChanged);
             // 
             // metroToggle1
             // 
@@ -1910,17 +1786,17 @@ namespace SistemaEletrico
             // cb_Sexo
             // 
             this.cb_Sexo.FormattingEnabled = true;
-            this.cb_Sexo.ItemHeight = 24;
+            this.cb_Sexo.ItemHeight = 23;
             this.cb_Sexo.Location = new System.Drawing.Point(566, 29);
             this.cb_Sexo.Name = "cb_Sexo";
-            this.cb_Sexo.Size = new System.Drawing.Size(121, 30);
+            this.cb_Sexo.Size = new System.Drawing.Size(121, 29);
             this.cb_Sexo.TabIndex = 40;
             this.cb_Sexo.UseSelectable = true;
             // 
             // dt_dt_nasc
             // 
             this.dt_dt_nasc.Location = new System.Drawing.Point(871, 28);
-            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 29);
             this.dt_dt_nasc.Name = "dt_dt_nasc";
             this.dt_dt_nasc.Size = new System.Drawing.Size(206, 30);
             this.dt_dt_nasc.TabIndex = 39;
@@ -1929,7 +1805,7 @@ namespace SistemaEletrico
             // 
             this.metroDateTime1.Enabled = false;
             this.metroDateTime1.Location = new System.Drawing.Point(501, 102);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 30);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(206, 30);
             this.metroDateTime1.TabIndex = 44;
@@ -2004,38 +1880,38 @@ namespace SistemaEletrico
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_produtos,
             this.desc_prod,
             this.vl});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView4.Location = new System.Drawing.Point(91, 73);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.Size = new System.Drawing.Size(845, 382);
             this.dataGridView4.TabIndex = 19;
@@ -2109,17 +1985,31 @@ namespace SistemaEletrico
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // Menu
+            // tbprodutoBindingSource1
+            // 
+            this.tbprodutoBindingSource1.DataMember = "tb_produto";
+            this.tbprodutoBindingSource1.DataSource = this.tbcategoriaBindingSource1;
+            // 
+            // tbcategoriaBindingSource1
+            // 
+            this.tbcategoriaBindingSource1.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
+            this.tbcategoriaBindingSource1.CurrentChanged += new System.EventHandler(this.tbcategoriaBindingSource1_CurrentChanged);
+            // 
+            // tbprodutoBindingSource
+            // 
+            this.tbprodutoBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_produto);
+            // 
+            // MenuFun_one
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 630);
+            this.ClientSize = new System.Drawing.Size(1175, 629);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.HelpButton = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Menu";
+            this.Name = "MenuFun_one";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
@@ -2127,8 +2017,9 @@ namespace SistemaEletrico
             this.materialTabControl1.ResumeLayout(false);
             this.Produto.ResumeLayout(false);
             this.Produto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).EndInit();
             this.Categoria.ResumeLayout(false);
             this.Categoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategorias)).EndInit();
@@ -2154,6 +2045,9 @@ namespace SistemaEletrico
             this.Consultar.ResumeLayout(false);
             this.Consultar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2164,10 +2058,24 @@ namespace SistemaEletrico
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
         private System.Windows.Forms.TabPage Produto;
         private System.Windows.Forms.DataGridView dtgProdutos;
+        private System.Windows.Forms.Button btn_alterar;
+        private System.Windows.Forms.Button btn_excluir_produtos_1;
+        private System.Windows.Forms.Button btn_cadastrar_produto_1;
+        private System.Windows.Forms.TextBox txt_valor_produto;
         private System.Windows.Forms.Label lb_cat_prod;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Txt_descricao_produto;
+        private System.Windows.Forms.Label lb_desc_prod;
+        private System.Windows.Forms.TabPage Categoria;
+        private System.Windows.Forms.DataGridView dtgCategorias;
+        private System.Windows.Forms.Button btn_alterar_categoria_1;
+        private System.Windows.Forms.Button btn_excluir_Categoria_1;
+        private System.Windows.Forms.Button btn_buscar_categoria_1;
+        private System.Windows.Forms.Button btn_cadastrar_Categoria_1;
+        private System.Windows.Forms.TextBox Txt_nome_categoria;
+        private System.Windows.Forms.Label lb_nome_categoria;
         private System.Windows.Forms.TabPage Vendas;
         private System.Windows.Forms.TabPage Rela;
-        private System.Windows.Forms.TabPage Financeiro;
         private System.Windows.Forms.TabPage Cadastrar;
         private System.Windows.Forms.TabPage Consultar;
         private System.Windows.Forms.DataGridView dataGridView4;
@@ -2178,7 +2086,14 @@ namespace SistemaEletrico
         private System.Windows.Forms.Button btn_pesquisar_produto;
         private System.Windows.Forms.ComboBox combo_produto_por_categoria;
         private System.Windows.Forms.TabPage Conf;
-        private System.Windows.Forms.TextBox txtCategoria_Prod5;
+        private System.Windows.Forms.TextBox txtNome_Produto;
+        private System.Windows.Forms.Label lb_nome_prod;
+        private System.Windows.Forms.TextBox txtCategoria_Prod;
+        private System.Windows.Forms.BindingSource tbcategoriaBindingSource;
+        private System.Windows.Forms.TextBox txt_desc_categoria;
+        private System.Windows.Forms.Label lb_desc_categoria;
+        private System.Windows.Forms.BindingSource tbcategoriaBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroDateTime dt_dt_nasc;
         private MetroFramework.Controls.MetroComboBox cb_Sexo;
@@ -2250,41 +2165,30 @@ namespace SistemaEletrico
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.TextBox txt_cod_orca;
         private MaterialSkin.Controls.MaterialFlatButton mf_btn_buscar;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private MaterialSkin.Controls.MaterialFlatButton btn_cadastrar_produto;
-        private MaterialSkin.Controls.MaterialFlatButton btn_alterar_prod;
-        private System.Windows.Forms.ImageList imageList1;
-        private MetroFramework.Controls.MetroTextBox txt_valor_produto;
-        private MetroFramework.Controls.MetroTextBox Txt_descricao_produto;
-        private MetroFramework.Controls.MetroTextBox txtNome_Produto;
-        private MetroFramework.Controls.MetroTextBox txt_cod_prod;
-        private MaterialSkin.Controls.MaterialFlatButton btn_excluir_produtos;
+        private System.Windows.Forms.BindingSource tbprodutoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn desc_produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tb_categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private MetroFramework.Controls.MetroTextBox mtxt_qt_prod;
-        private MetroFramework.Controls.MetroComboBox txtCategoria_Prod;
-        private System.Windows.Forms.BindingSource tbcategoriaBindingSource;
-        private System.Windows.Forms.TabPage Categoria;
-        private MetroFramework.Controls.MetroTextBox txt_desc_categoria;
-        private MetroFramework.Controls.MetroTextBox Txt_nome_categoria;
-        private MetroFramework.Controls.MetroTextBox txt_cod_categoria;
-        private MaterialSkin.Controls.MaterialFlatButton btn_alterar_categoria;
-        private MaterialSkin.Controls.MaterialFlatButton btn_excluir_Categoria;
-        private MaterialSkin.Controls.MaterialFlatButton btn_buscar_categoria;
-        private MaterialSkin.Controls.MaterialFlatButton btn_cadastrar_Categoria;
+        private System.Windows.Forms.BindingSource tbprodutoBindingSource2;
+        private System.Windows.Forms.BindingSource tbprodutoBindingSource1;
+        private System.Windows.Forms.TextBox txt_cod_categoria;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb_desc_categoria;
-        private System.Windows.Forms.DataGridView dtgCategorias;
-        private System.Windows.Forms.Button btn_alterar_categoria_1;
-        private System.Windows.Forms.Button btn_excluir_Categoria_1;
-        private System.Windows.Forms.Button btn_buscar_categoria_1;
-        private System.Windows.Forms.Button btn_cadastrar_Categoria_1;
-        private System.Windows.Forms.Label lb_nome_categoria;
-        private MaterialSkin.Controls.MaterialRaisedButton mtb_Limpar_Prod;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idprodutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcategoriaDataGridViewTextBoxColumn;
+        private MaterialSkin.Controls.MaterialFlatButton btn_cadastrar_Categoria;
+        private MaterialSkin.Controls.MaterialFlatButton btn_buscar_categoria;
+        private MaterialSkin.Controls.MaterialFlatButton btn_excluir_Categoria;
+        private MaterialSkin.Controls.MaterialFlatButton btn_alterar_categoria;
+        private MaterialSkin.Controls.MaterialFlatButton btn_cadastrar_produto;
+        private MaterialSkin.Controls.MaterialFlatButton btn_alterar_prod;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_excluir_produtos;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

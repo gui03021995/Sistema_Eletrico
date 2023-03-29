@@ -63,6 +63,16 @@ namespace SistemaEletrico
             this.mbt_alterar_cad = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbt_salvar = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.mlb_end1 = new MaterialSkin.Controls.MaterialLabel();
+            this.mtbox_endereco1 = new MetroFramework.Controls.MetroTextBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.mlb_endereco1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.lb_tp_Documento = new MaterialSkin.Controls.MaterialLabel();
+            this.mlb_endereco2 = new MetroFramework.Controls.MetroComboBox();
+            this.mtbox_endereco2 = new MetroFramework.Controls.MetroTextBox();
+            this.mlb_end2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.Cadastrar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,7 +87,7 @@ namespace SistemaEletrico
             this.Cadastrar.ImageKey = "icons8-add-user-male-32.png";
             this.Cadastrar.Location = new System.Drawing.Point(4, 22);
             this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Cadastrar.Padding = new System.Windows.Forms.Padding(3);
             this.Cadastrar.Size = new System.Drawing.Size(1172, 531);
             this.Cadastrar.TabIndex = 5;
             this.Cadastrar.Text = "CADASTRAR";
@@ -114,7 +124,7 @@ namespace SistemaEletrico
             this.ms_Senha.Depth = 0;
             this.ms_Senha.Hint = "SENHA";
             this.ms_Senha.Location = new System.Drawing.Point(323, 37);
-            this.ms_Senha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ms_Senha.Margin = new System.Windows.Forms.Padding(2);
             this.ms_Senha.MaxLength = 32767;
             this.ms_Senha.MouseState = MaterialSkin.MouseState.HOVER;
             this.ms_Senha.Name = "ms_Senha";
@@ -132,7 +142,7 @@ namespace SistemaEletrico
             this.SLT_User.Depth = 0;
             this.SLT_User.Hint = "USUÁRIO";
             this.SLT_User.Location = new System.Drawing.Point(26, 37);
-            this.SLT_User.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SLT_User.Margin = new System.Windows.Forms.Padding(2);
             this.SLT_User.MaxLength = 32767;
             this.SLT_User.MouseState = MaterialSkin.MouseState.HOVER;
             this.SLT_User.Name = "SLT_User";
@@ -205,7 +215,7 @@ namespace SistemaEletrico
             this.mt_dt_admissao.Location = new System.Drawing.Point(871, 30);
             this.mt_dt_admissao.MinimumSize = new System.Drawing.Size(0, 29);
             this.mt_dt_admissao.Name = "mt_dt_admissao";
-            this.mt_dt_admissao.Size = new System.Drawing.Size(206, 30);
+            this.mt_dt_admissao.Size = new System.Drawing.Size(206, 29);
             this.mt_dt_admissao.TabIndex = 11;
             this.mt_dt_admissao.Value = new System.DateTime(2023, 3, 18, 0, 0, 0, 0);
             // 
@@ -233,6 +243,16 @@ namespace SistemaEletrico
             // gb_Pessoal
             // 
             this.gb_Pessoal.BackColor = System.Drawing.Color.White;
+            this.gb_Pessoal.Controls.Add(this.mlb_endereco2);
+            this.gb_Pessoal.Controls.Add(this.mtbox_endereco2);
+            this.gb_Pessoal.Controls.Add(this.lb_tp_Documento);
+            this.gb_Pessoal.Controls.Add(this.mlb_end2);
+            this.gb_Pessoal.Controls.Add(this.metroComboBox2);
+            this.gb_Pessoal.Controls.Add(this.mlb_endereco1);
+            this.gb_Pessoal.Controls.Add(this.mtbox_endereco1);
+            this.gb_Pessoal.Controls.Add(this.materialLabel3);
+            this.gb_Pessoal.Controls.Add(this.materialLabel5);
+            this.gb_Pessoal.Controls.Add(this.mlb_end1);
             this.gb_Pessoal.Controls.Add(this.mlb_situacao_cadastro);
             this.gb_Pessoal.Controls.Add(this.mtxt_Email);
             this.gb_Pessoal.Controls.Add(this.mlb_Email);
@@ -264,7 +284,7 @@ namespace SistemaEletrico
             this.mlb_situacao_cadastro.Depth = 0;
             this.mlb_situacao_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_situacao_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(898, 155);
+            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(955, 84);
             this.mlb_situacao_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_situacao_cadastro.Name = "mlb_situacao_cadastro";
             this.mlb_situacao_cadastro.Size = new System.Drawing.Size(133, 19);
@@ -277,16 +297,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Email.CustomButton.Image = null;
-            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(228, 1);
+            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(258, 1);
             this.mtxt_Email.CustomButton.Name = "";
-            this.mtxt_Email.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxt_Email.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxt_Email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Email.CustomButton.TabIndex = 1;
             this.mtxt_Email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Email.CustomButton.UseSelectable = true;
             this.mtxt_Email.CustomButton.Visible = false;
             this.mtxt_Email.Lines = new string[0];
-            this.mtxt_Email.Location = new System.Drawing.Point(466, 172);
+            this.mtxt_Email.Location = new System.Drawing.Point(693, 136);
             this.mtxt_Email.MaxLength = 32767;
             this.mtxt_Email.Name = "mtxt_Email";
             this.mtxt_Email.PasswordChar = '\0';
@@ -295,7 +315,7 @@ namespace SistemaEletrico
             this.mtxt_Email.SelectionLength = 0;
             this.mtxt_Email.SelectionStart = 0;
             this.mtxt_Email.ShortcutsEnabled = true;
-            this.mtxt_Email.Size = new System.Drawing.Size(326, 23);
+            this.mtxt_Email.Size = new System.Drawing.Size(280, 23);
             this.mtxt_Email.TabIndex = 7;
             this.mtxt_Email.UseSelectable = true;
             this.mtxt_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -307,7 +327,7 @@ namespace SistemaEletrico
             this.mlb_Email.Depth = 0;
             this.mlb_Email.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Email.Location = new System.Drawing.Point(398, 176);
+            this.mlb_Email.Location = new System.Drawing.Point(629, 140);
             this.mlb_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Email.Name = "mlb_Email";
             this.mlb_Email.Size = new System.Drawing.Size(47, 19);
@@ -320,16 +340,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Contato.CustomButton.Image = null;
-            this.mtxt_Contato.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.mtxt_Contato.CustomButton.Location = new System.Drawing.Point(203, 1);
             this.mtxt_Contato.CustomButton.Name = "";
-            this.mtxt_Contato.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxt_Contato.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxt_Contato.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Contato.CustomButton.TabIndex = 1;
             this.mtxt_Contato.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Contato.CustomButton.UseSelectable = true;
             this.mtxt_Contato.CustomButton.Visible = false;
             this.mtxt_Contato.Lines = new string[0];
-            this.mtxt_Contato.Location = new System.Drawing.Point(118, 172);
+            this.mtxt_Contato.Location = new System.Drawing.Point(82, 136);
             this.mtxt_Contato.MaxLength = 32767;
             this.mtxt_Contato.Name = "mtxt_Contato";
             this.mtxt_Contato.PasswordChar = '\0';
@@ -350,7 +370,7 @@ namespace SistemaEletrico
             this.mlb_Contato.Depth = 0;
             this.mlb_Contato.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Contato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Contato.Location = new System.Drawing.Point(36, 176);
+            this.mlb_Contato.Location = new System.Drawing.Point(13, 140);
             this.mlb_Contato.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Contato.Name = "mlb_Contato";
             this.mlb_Contato.Size = new System.Drawing.Size(63, 19);
@@ -363,7 +383,7 @@ namespace SistemaEletrico
             this.mlb_tp_cadastro.Depth = 0;
             this.mlb_tp_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_tp_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_tp_cadastro.Location = new System.Drawing.Point(750, 112);
+            this.mlb_tp_cadastro.Location = new System.Drawing.Point(348, 140);
             this.mlb_tp_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_tp_cadastro.Name = "mlb_tp_cadastro";
             this.mlb_tp_cadastro.Size = new System.Drawing.Size(104, 19);
@@ -376,7 +396,7 @@ namespace SistemaEletrico
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(719, 38);
+            this.materialLabel1.Location = new System.Drawing.Point(642, 39);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(146, 19);
@@ -389,7 +409,7 @@ namespace SistemaEletrico
             this.mlb_Sexo.Depth = 0;
             this.mlb_Sexo.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Sexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Sexo.Location = new System.Drawing.Point(462, 38);
+            this.mlb_Sexo.Location = new System.Drawing.Point(440, 45);
             this.mlb_Sexo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Sexo.Name = "mlb_Sexo";
             this.mlb_Sexo.Size = new System.Drawing.Size(42, 19);
@@ -402,7 +422,7 @@ namespace SistemaEletrico
             this.mlb_Dt_Cadastro.Depth = 0;
             this.mlb_Dt_Cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Dt_Cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(369, 112);
+            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(625, 90);
             this.mlb_Dt_Cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Dt_Cadastro.Name = "mlb_Dt_Cadastro";
             this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(126, 19);
@@ -415,16 +435,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Cpf_Cnpj.CustomButton.Image = null;
-            this.mtxt_Cpf_Cnpj.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.mtxt_Cpf_Cnpj.CustomButton.Location = new System.Drawing.Point(156, 1);
             this.mtxt_Cpf_Cnpj.CustomButton.Name = "";
-            this.mtxt_Cpf_Cnpj.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxt_Cpf_Cnpj.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxt_Cpf_Cnpj.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxt_Cpf_Cnpj.CustomButton.TabIndex = 1;
             this.mtxt_Cpf_Cnpj.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxt_Cpf_Cnpj.CustomButton.UseSelectable = true;
             this.mtxt_Cpf_Cnpj.CustomButton.Visible = false;
             this.mtxt_Cpf_Cnpj.Lines = new string[0];
-            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(92, 112);
+            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(411, 86);
             this.mtxt_Cpf_Cnpj.MaxLength = 32767;
             this.mtxt_Cpf_Cnpj.Name = "mtxt_Cpf_Cnpj";
             this.mtxt_Cpf_Cnpj.PasswordChar = '\0';
@@ -433,11 +453,12 @@ namespace SistemaEletrico
             this.mtxt_Cpf_Cnpj.SelectionLength = 0;
             this.mtxt_Cpf_Cnpj.SelectionStart = 0;
             this.mtxt_Cpf_Cnpj.ShortcutsEnabled = true;
-            this.mtxt_Cpf_Cnpj.Size = new System.Drawing.Size(225, 23);
+            this.mtxt_Cpf_Cnpj.Size = new System.Drawing.Size(178, 23);
             this.mtxt_Cpf_Cnpj.TabIndex = 3;
             this.mtxt_Cpf_Cnpj.UseSelectable = true;
             this.mtxt_Cpf_Cnpj.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxt_Cpf_Cnpj.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtxt_Cpf_Cnpj.Click += new System.EventHandler(this.mtxt_Cpf_Cnpj_Click);
             // 
             // mlb_Cpf_Cnpj
             // 
@@ -445,12 +466,13 @@ namespace SistemaEletrico
             this.mlb_Cpf_Cnpj.Depth = 0;
             this.mlb_Cpf_Cnpj.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Cpf_Cnpj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(36, 112);
+            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(309, 86);
             this.mlb_Cpf_Cnpj.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cpf_Cnpj.Name = "mlb_Cpf_Cnpj";
-            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(36, 19);
+            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(88, 19);
             this.mlb_Cpf_Cnpj.TabIndex = 59;
-            this.mlb_Cpf_Cnpj.Text = "CPF";
+            this.mlb_Cpf_Cnpj.Text = "CPF / CNPJ";
+            this.mlb_Cpf_Cnpj.Click += new System.EventHandler(this.mlb_Cpf_Cnpj_Click);
             // 
             // mtxtb_Nome
             // 
@@ -458,16 +480,16 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxtb_Nome.CustomButton.Image = null;
-            this.mtxtb_Nome.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.mtxtb_Nome.CustomButton.Location = new System.Drawing.Point(299, 1);
             this.mtxtb_Nome.CustomButton.Name = "";
-            this.mtxtb_Nome.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxtb_Nome.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxtb_Nome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxtb_Nome.CustomButton.TabIndex = 1;
             this.mtxtb_Nome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxtb_Nome.CustomButton.UseSelectable = true;
             this.mtxtb_Nome.CustomButton.Visible = false;
             this.mtxtb_Nome.Lines = new string[0];
-            this.mtxtb_Nome.Location = new System.Drawing.Point(92, 38);
+            this.mtxtb_Nome.Location = new System.Drawing.Point(78, 35);
             this.mtxtb_Nome.MaxLength = 32767;
             this.mtxtb_Nome.Name = "mtxtb_Nome";
             this.mtxtb_Nome.PasswordChar = '\0';
@@ -476,7 +498,7 @@ namespace SistemaEletrico
             this.mtxtb_Nome.SelectionLength = 0;
             this.mtxtb_Nome.SelectionStart = 0;
             this.mtxtb_Nome.ShortcutsEnabled = true;
-            this.mtxtb_Nome.Size = new System.Drawing.Size(353, 23);
+            this.mtxtb_Nome.Size = new System.Drawing.Size(321, 23);
             this.mtxtb_Nome.TabIndex = 0;
             this.mtxtb_Nome.UseSelectable = true;
             this.mtxtb_Nome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -488,7 +510,7 @@ namespace SistemaEletrico
             this.mlb_Nome.Depth = 0;
             this.mlb_Nome.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Nome.Location = new System.Drawing.Point(36, 38);
+            this.mlb_Nome.Location = new System.Drawing.Point(11, 39);
             this.mlb_Nome.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Nome.Name = "mlb_Nome";
             this.mlb_Nome.Size = new System.Drawing.Size(50, 19);
@@ -503,11 +525,12 @@ namespace SistemaEletrico
             "Administrador",
             "Funcionário I",
             "Funcionário II"});
-            this.cb_tp_cadastro.Location = new System.Drawing.Point(871, 102);
+            this.cb_tp_cadastro.Location = new System.Drawing.Point(460, 130);
             this.cb_tp_cadastro.Name = "cb_tp_cadastro";
-            this.cb_tp_cadastro.Size = new System.Drawing.Size(196, 29);
+            this.cb_tp_cadastro.Size = new System.Drawing.Size(128, 29);
             this.cb_tp_cadastro.TabIndex = 5;
             this.cb_tp_cadastro.UseSelectable = true;
+            this.cb_tp_cadastro.SelectedIndexChanged += new System.EventHandler(this.cb_tp_cadastro_SelectedIndexChanged);
             // 
             // metroToggle1
             // 
@@ -515,7 +538,7 @@ namespace SistemaEletrico
             this.metroToggle1.AutoSize = true;
             this.metroToggle1.Checked = true;
             this.metroToggle1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.metroToggle1.Location = new System.Drawing.Point(920, 184);
+            this.metroToggle1.Location = new System.Drawing.Point(977, 113);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 17);
             this.metroToggle1.TabIndex = 53;
@@ -534,7 +557,7 @@ namespace SistemaEletrico
             "Analberto",
             "Feminino",
             "Masculino"});
-            this.cb_Sexo.Location = new System.Drawing.Point(566, 29);
+            this.cb_Sexo.Location = new System.Drawing.Point(488, 35);
             this.cb_Sexo.Name = "cb_Sexo";
             this.cb_Sexo.Size = new System.Drawing.Size(121, 29);
             this.cb_Sexo.Sorted = true;
@@ -544,10 +567,10 @@ namespace SistemaEletrico
             // dt_dt_nasc
             // 
             this.dt_dt_nasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_dt_nasc.Location = new System.Drawing.Point(871, 28);
+            this.dt_dt_nasc.Location = new System.Drawing.Point(794, 33);
             this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 29);
             this.dt_dt_nasc.Name = "dt_dt_nasc";
-            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 30);
+            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 29);
             this.dt_dt_nasc.TabIndex = 2;
             this.dt_dt_nasc.Value = new System.DateTime(2023, 3, 18, 0, 0, 0, 0);
             // 
@@ -556,10 +579,10 @@ namespace SistemaEletrico
             this.mt_dt_cadastro.CustomFormat = "  /  /    ";
             this.mt_dt_cadastro.Enabled = false;
             this.mt_dt_cadastro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.mt_dt_cadastro.Location = new System.Drawing.Point(501, 102);
+            this.mt_dt_cadastro.Location = new System.Drawing.Point(763, 84);
             this.mt_dt_cadastro.MinimumSize = new System.Drawing.Size(0, 29);
             this.mt_dt_cadastro.Name = "mt_dt_cadastro";
-            this.mt_dt_cadastro.Size = new System.Drawing.Size(206, 30);
+            this.mt_dt_cadastro.Size = new System.Drawing.Size(147, 29);
             this.mt_dt_cadastro.TabIndex = 4;
             this.mt_dt_cadastro.Value = new System.DateTime(2023, 3, 9, 0, 0, 0, 0);
             // 
@@ -609,13 +632,184 @@ namespace SistemaEletrico
             this.materialTabControl1.Size = new System.Drawing.Size(1180, 557);
             this.materialTabControl1.TabIndex = 11;
             // 
+            // mlb_end1
+            // 
+            this.mlb_end1.AutoSize = true;
+            this.mlb_end1.Depth = 0;
+            this.mlb_end1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_end1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mlb_end1.Location = new System.Drawing.Point(7, 184);
+            this.mlb_end1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlb_end1.Name = "mlb_end1";
+            this.mlb_end1.Size = new System.Drawing.Size(118, 19);
+            this.mlb_end1.TabIndex = 72;
+            this.mlb_end1.Text = "Tipo Endereco 1";
+            // 
+            // mtbox_endereco1
+            // 
+            // 
+            // 
+            // 
+            this.mtbox_endereco1.CustomButton.Image = null;
+            this.mtbox_endereco1.CustomButton.Location = new System.Drawing.Point(202, 1);
+            this.mtbox_endereco1.CustomButton.Name = "";
+            this.mtbox_endereco1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtbox_endereco1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtbox_endereco1.CustomButton.TabIndex = 1;
+            this.mtbox_endereco1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtbox_endereco1.CustomButton.UseSelectable = true;
+            this.mtbox_endereco1.CustomButton.Visible = false;
+            this.mtbox_endereco1.Lines = new string[0];
+            this.mtbox_endereco1.Location = new System.Drawing.Point(335, 180);
+            this.mtbox_endereco1.MaxLength = 32767;
+            this.mtbox_endereco1.Name = "mtbox_endereco1";
+            this.mtbox_endereco1.PasswordChar = '\0';
+            this.mtbox_endereco1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtbox_endereco1.SelectedText = "";
+            this.mtbox_endereco1.SelectionLength = 0;
+            this.mtbox_endereco1.SelectionStart = 0;
+            this.mtbox_endereco1.ShortcutsEnabled = true;
+            this.mtbox_endereco1.Size = new System.Drawing.Size(224, 23);
+            this.mtbox_endereco1.TabIndex = 73;
+            this.mtbox_endereco1.UseSelectable = true;
+            this.mtbox_endereco1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtbox_endereco1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(245, 184);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(84, 19);
+            this.materialLabel3.TabIndex = 74;
+            this.materialLabel3.Text = "Endereco 1";
+            // 
+            // mlb_endereco1
+            // 
+            this.mlb_endereco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mlb_endereco1.FormattingEnabled = true;
+            this.mlb_endereco1.ItemHeight = 23;
+            this.mlb_endereco1.Items.AddRange(new object[] {
+            "Comercial",
+            "Residencial"});
+            this.mlb_endereco1.Location = new System.Drawing.Point(131, 175);
+            this.mlb_endereco1.Name = "mlb_endereco1";
+            this.mlb_endereco1.Size = new System.Drawing.Size(95, 29);
+            this.mlb_endereco1.Sorted = true;
+            this.mlb_endereco1.TabIndex = 75;
+            this.mlb_endereco1.UseSelectable = true;
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Analberto",
+            "Feminino",
+            "Masculino"});
+            this.metroComboBox2.Location = new System.Drawing.Point(153, 84);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox2.Sorted = true;
+            this.metroComboBox2.TabIndex = 76;
+            this.metroComboBox2.UseSelectable = true;
+            // 
+            // lb_tp_Documento
+            // 
+            this.lb_tp_Documento.AutoSize = true;
+            this.lb_tp_Documento.Depth = 0;
+            this.lb_tp_Documento.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lb_tp_Documento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_tp_Documento.Location = new System.Drawing.Point(11, 90);
+            this.lb_tp_Documento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lb_tp_Documento.Name = "lb_tp_Documento";
+            this.lb_tp_Documento.Size = new System.Drawing.Size(121, 19);
+            this.lb_tp_Documento.TabIndex = 77;
+            this.lb_tp_Documento.Text = "Tipo Documento";
+            // 
+            // mlb_endereco2
+            // 
+            this.mlb_endereco2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mlb_endereco2.FormattingEnabled = true;
+            this.mlb_endereco2.ItemHeight = 23;
+            this.mlb_endereco2.Items.AddRange(new object[] {
+            "Comercial",
+            "Residencial"});
+            this.mlb_endereco2.Location = new System.Drawing.Point(703, 174);
+            this.mlb_endereco2.Name = "mlb_endereco2";
+            this.mlb_endereco2.Size = new System.Drawing.Size(106, 29);
+            this.mlb_endereco2.Sorted = true;
+            this.mlb_endereco2.TabIndex = 81;
+            this.mlb_endereco2.UseSelectable = true;
+            // 
+            // mtbox_endereco2
+            // 
+            // 
+            // 
+            // 
+            this.mtbox_endereco2.CustomButton.Image = null;
+            this.mtbox_endereco2.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.mtbox_endereco2.CustomButton.Name = "";
+            this.mtbox_endereco2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtbox_endereco2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtbox_endereco2.CustomButton.TabIndex = 1;
+            this.mtbox_endereco2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtbox_endereco2.CustomButton.UseSelectable = true;
+            this.mtbox_endereco2.CustomButton.Visible = false;
+            this.mtbox_endereco2.Lines = new string[0];
+            this.mtbox_endereco2.Location = new System.Drawing.Point(914, 180);
+            this.mtbox_endereco2.MaxLength = 32767;
+            this.mtbox_endereco2.Name = "mtbox_endereco2";
+            this.mtbox_endereco2.PasswordChar = '\0';
+            this.mtbox_endereco2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtbox_endereco2.SelectedText = "";
+            this.mtbox_endereco2.SelectionLength = 0;
+            this.mtbox_endereco2.SelectionStart = 0;
+            this.mtbox_endereco2.ShortcutsEnabled = true;
+            this.mtbox_endereco2.Size = new System.Drawing.Size(174, 23);
+            this.mtbox_endereco2.TabIndex = 79;
+            this.mtbox_endereco2.UseSelectable = true;
+            this.mtbox_endereco2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtbox_endereco2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mlb_end2
+            // 
+            this.mlb_end2.AutoSize = true;
+            this.mlb_end2.Depth = 0;
+            this.mlb_end2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_end2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mlb_end2.Location = new System.Drawing.Point(824, 185);
+            this.mlb_end2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlb_end2.Name = "mlb_end2";
+            this.mlb_end2.Size = new System.Drawing.Size(84, 19);
+            this.mlb_end2.TabIndex = 80;
+            this.mlb_end2.Text = "Endereco 2";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(579, 184);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(118, 19);
+            this.materialLabel5.TabIndex = 78;
+            this.materialLabel5.Text = "Tipo Endereco 2";
+            // 
             // CadastroLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 610);
             this.Controls.Add(this.materialTabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "CadastroLogin";
             this.Sizable = false;
@@ -672,5 +866,15 @@ namespace SistemaEletrico
         private MaterialSkin.Controls.MaterialSingleLineTextField SLT_User;
         protected MetroFramework.Controls.MetroDateTime mt_dt_cadastro;
         public MetroFramework.Controls.MetroComboBox cb_Sexo;
+        private MaterialSkin.Controls.MaterialLabel lb_tp_Documento;
+        public MetroFramework.Controls.MetroComboBox metroComboBox2;
+        public MetroFramework.Controls.MetroComboBox mlb_endereco1;
+        private MetroFramework.Controls.MetroTextBox mtbox_endereco1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel mlb_end1;
+        public MetroFramework.Controls.MetroComboBox mlb_endereco2;
+        private MetroFramework.Controls.MetroTextBox mtbox_endereco2;
+        private MaterialSkin.Controls.MaterialLabel mlb_end2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
     }
 }

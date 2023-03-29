@@ -136,7 +136,7 @@ namespace SistemaEletrico
             this.mtlb_esqueceu_senha.Size = new System.Drawing.Size(142, 19);
             this.mtlb_esqueceu_senha.TabIndex = 4;
             this.mtlb_esqueceu_senha.Text = "Esqueceu a senha ?";
-            this.mtlb_esqueceu_senha.Click += new System.EventHandler(this.RBtn_Login_Click);
+            this.mtlb_esqueceu_senha.Click += new System.EventHandler(this.mtlb_esqueceu_senha_Click);
             // 
             // materialLabel2
             // 
@@ -152,7 +152,6 @@ namespace SistemaEletrico
             this.materialLabel2.Size = new System.Drawing.Size(69, 19);
             this.materialLabel2.TabIndex = 5;
             this.materialLabel2.Text = "Registrar";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialLabel1
             // 
@@ -198,7 +197,7 @@ namespace SistemaEletrico
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load_1);
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

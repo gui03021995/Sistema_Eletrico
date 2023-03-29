@@ -20,7 +20,6 @@ namespace SistemaEletrico
 
         public CadastroLogin()
         {
-
             InitializeComponent();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -31,8 +30,7 @@ namespace SistemaEletrico
             // Definindo um esquema de Cor para formulário com tom Azul
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
             // Definindo um esquema de Cor para formulário com tom Azul agua
-            //materialSkinManager.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Cyan200, TextShade.WHITE);
-           
+            //materialSkinManager.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Cyan200, TextShade.WHITE);           
         }
         private void Login_Load_1(object sender, EventArgs e)
         {
@@ -42,8 +40,7 @@ namespace SistemaEletrico
         private void mbt_salvar_Click(object sender, EventArgs e)
         {
             if (ValidarForms())
-            {
-                
+            {                
                 Salvar();
             }
             else
@@ -57,6 +54,9 @@ namespace SistemaEletrico
             {
                 tb_pessoas NovaPessoa = new tb_pessoas();
                 tb_usuario NovoUser = new tb_usuario();
+
+                tb_pessoas_endereco NovoEndereco = new tb_pessoas_endereco();
+
 
                 NovaPessoa.nome_pessoa = mtxtb_Nome.Text;
                 NovaPessoa.sexo = cb_Sexo.Text;
@@ -73,6 +73,12 @@ namespace SistemaEletrico
                 NovaPessoa.data_nascimento = Convert.ToDateTime(dt_dt_nasc.Text);
                 NovaPessoa.data_admissao = Convert.ToDateTime(mt_dt_admissao.Text);
 
+                //Informações Endereco
+                NovoEndereco.endereco1 = mtbox_endereco1.Text;
+                NovoEndereco.tp_endereco1 = mlb_endereco1.Text;
+
+                NovoEndereco.endereco2 = mtbox_endereco2.Text;
+                NovoEndereco.tp_endereco2 = mlb_endereco2.Text;
 
                 //NovaPessoa.situacao_cadastro = mlb_situacao_cadastro.Text;
                 NovoUser.usuario = SLT_User.Text;
@@ -80,12 +86,14 @@ namespace SistemaEletrico
 
                 if (!PessoaDataAccess.InserePessoa(NovaPessoa))                    
                     MessageBox.Show("Falha ao tentar inserir a nova Pessoa no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                NovoEndereco.id_pessoas = NovaPessoa.id_pessoas;
+                if (!EnderecoDataAccess.Insere(NovoEndereco))
+                    MessageBox.Show("Falha ao tentar inserir o novo Endereco a nova Pessoa no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 NovoUser.id_pessoas = NovaPessoa.id_pessoas;
                 if (!UsuarioDataAccess.InsereUser(NovoUser))
                     MessageBox.Show("Falha ao tentar inserir o novo Usuário no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                     MessageBox.Show("Usuario inserido com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 //loadData();               
             }
             else
@@ -180,16 +188,24 @@ namespace SistemaEletrico
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
+            //var valorComboBox = comboBox.SelectedValue;
             // Definir o valor fixo para "ON = 1" e "OFF = 0"
-            //if (metroToggle1.Checked)
-            //{
-            //    metroToggle1 = '1';
-            //}
-            //else
-            //{
-            //    metroToggle1 = 0;
-            //}
             int valorFixo = metroToggle1.Checked ? 1 : 0;
+        }
+
+        private void mtxt_Cpf_Cnpj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mlb_Cpf_Cnpj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_tp_cadastro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

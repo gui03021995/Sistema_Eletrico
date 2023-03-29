@@ -81,6 +81,14 @@ namespace EletricoSistema.DataAccess
             return oPessoa;
         }
 
+        public static string  Pessoa_Tp(int id_pessoas)
+        {
+            EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
+            tb_pessoas oPessoa = (from Selecao in oDB.tb_pessoas where Selecao.id_pessoas == id_pessoas select Selecao).SingleOrDefault();
+            return oPessoa.tipo_cadastro;
+        }
+
+
         public static bool Atualiza(tb_pessoas pPessoa)
         {
             try
