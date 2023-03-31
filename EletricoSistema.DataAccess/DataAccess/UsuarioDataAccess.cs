@@ -54,17 +54,18 @@ namespace EletricoSistema.DataAccess
             return oUser;
         }
 
-        public static int Verificar_Login(string senha, string usuario)
+        public static int Verificar_Login(string usuario)
         {
             try
             {
                 EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
-                tb_usuario oUser = (from Selecao in oDB.tb_usuario where Selecao.senha == senha && Selecao.usuario == usuario select Selecao).SingleOrDefault();
+                tb_usuario oUser = (from Selecao in oDB.tb_usuario where Selecao.usuario == usuario select Selecao).SingleOrDefault();
                 return oUser.id_pessoas;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return 0;
+                //return ex;
+                throw new ApplicationException(ex.Message);
             }
         }
 

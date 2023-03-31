@@ -10,7 +10,6 @@ using System.Windows.Forms;
 //Utilizado para encerrar forms atual quando abrir outro forms
 using System.Threading;
 
-
 using EletricoSistema.DataAccess;
 
 using MaterialSkin;
@@ -82,10 +81,12 @@ namespace SistemaEletrico
         {
             if (ValidarForms())
             {
-                if ( UsuarioDataAccess.Verificar_Login(SLT_User.Text, SLT_passord.Text) != 0 )
+                if ( UsuarioDataAccess.Verificar_Login(SLT_User.Text) != 0 )
                 {
-                    var Pes_Tp = UsuarioDataAccess.Verificar_Login(SLT_User.Text, SLT_passord.Text);
-                    if ( PessoaDataAccess.Pessoa_Tp(Pes_Tp)  == "Administrador")
+                    var Id_pessoa = UsuarioDataAccess.Verificar_Login(SLT_User.Text);
+                    var Pes_Tp = PessoaDataAccess.ObterPessoa_unique(Id_pessoa);
+
+                    if ( Pes_Tp.tipo_cadastro  == "Administrador")
                     {
                         this.Close();
                         t1 = new Thread(logar_adm);
@@ -93,16 +94,18 @@ namespace SistemaEletrico
                         t1.Start();                                 
 
                     }
-                    if (PessoaDataAccess.Pessoa_Tp(Pes_Tp) == "Funcionário I")
+                    if (Pes_Tp.tipo_cadastro == "Funcionário I")
                     {
                         this.Close();
+                        //ADICIONAR O MENUfUN_ONE
                         //t1 = new Thread();
                         //t1.SetApartmentState(ApartmentState.STA);
                         //t1.Start();
                     }
-                    if (PessoaDataAccess.Pessoa_Tp(Pes_Tp) == "Funcionário II")
+                    if (Pes_Tp.tipo_cadastro == "Funcionário II")
                     {
                         this.Close();
+                        //ADICIONAR O MENUfUN_two
                         //t1 = new Thread();
                         //t1.SetApartmentState(ApartmentState.STA);
                         //t1.Start();

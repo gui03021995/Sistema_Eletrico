@@ -40,10 +40,7 @@ namespace SistemaEletrico
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbprodutoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tbcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tbprodutoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tbcategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Conf = new System.Windows.Forms.TabPage();
@@ -153,6 +150,8 @@ namespace SistemaEletrico
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtb_cod_venda = new System.Windows.Forms.TextBox();
             this.cb_client_venda = new System.Windows.Forms.ComboBox();
+            this.tbpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbEletricDataSet = new SistemaEletrico.dbEletricDataSet();
             this.tp_orcamento = new System.Windows.Forms.TabPage();
             this.mfbt_excluir_orcamento = new MaterialSkin.Controls.MaterialFlatButton();
             this.mfbt_Cadastrar_orcamento = new MaterialSkin.Controls.MaterialFlatButton();
@@ -173,10 +172,9 @@ namespace SistemaEletrico
             this.mt_s_orcamento_venda = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.tbvendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_pessoasTableAdapter = new SistemaEletrico.dbEletricDataSetTableAdapters.tb_pessoasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).BeginInit();
             this.Consultar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -195,35 +193,20 @@ namespace SistemaEletrico
             this.tp_venda.SuspendLayout();
             this.gb_venda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbpessoasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbEletricDataSet)).BeginInit();
             this.tp_orcamento.SuspendLayout();
             this.gbox_Orcamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.materialTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbvendaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbprodutoBindingSource2
-            // 
-            this.tbprodutoBindingSource2.DataMember = "tb_produto";
-            this.tbprodutoBindingSource2.DataSource = this.tbcategoriaBindingSource;
-            // 
-            // tbcategoriaBindingSource
-            // 
-            this.tbcategoriaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
             // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // tbprodutoBindingSource1
-            // 
-            this.tbprodutoBindingSource1.DataMember = "tb_produto";
-            this.tbprodutoBindingSource1.DataSource = this.tbcategoriaBindingSource1;
-            // 
-            // tbcategoriaBindingSource1
-            // 
-            this.tbcategoriaBindingSource1.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
             // 
             // tbprodutoBindingSource
             // 
@@ -1534,6 +1517,7 @@ namespace SistemaEletrico
             // 
             // Vendas
             // 
+            this.Vendas.AutoScroll = true;
             this.Vendas.Controls.Add(this.mtb_venda_orcamento);
             this.Vendas.Controls.Add(this.mt_s_orcamento_venda);
             this.Vendas.ImageKey = "icons8-us-dollar-26.png";
@@ -1559,6 +1543,7 @@ namespace SistemaEletrico
             // 
             // tp_venda
             // 
+            this.tp_venda.AutoScroll = true;
             this.tp_venda.Controls.Add(this.materialLabel2);
             this.tp_venda.Controls.Add(this.mfbt_alterar_venda);
             this.tp_venda.Controls.Add(this.mfbt_cadastrar_venda);
@@ -1859,7 +1844,9 @@ namespace SistemaEletrico
             // 
             // cb_client_venda
             // 
-            this.cb_client_venda.DisplayMember = "desc_pessoa";
+            this.cb_client_venda.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbpessoasBindingSource, "nome_pessoa", true));
+            this.cb_client_venda.DataSource = this.tbpessoasBindingSource;
+            this.cb_client_venda.DisplayMember = "id_pessoa";
             this.cb_client_venda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_client_venda.FormattingEnabled = true;
             this.cb_client_venda.Location = new System.Drawing.Point(108, 15);
@@ -1867,6 +1854,16 @@ namespace SistemaEletrico
             this.cb_client_venda.Size = new System.Drawing.Size(413, 21);
             this.cb_client_venda.TabIndex = 10;
             this.cb_client_venda.ValueMember = "id_pessoa";
+            // 
+            // tbpessoasBindingSource
+            // 
+            this.tbpessoasBindingSource.DataMember = "tb_pessoas";
+            this.tbpessoasBindingSource.DataSource = this.dbEletricDataSet;
+            // 
+            // dbEletricDataSet
+            // 
+            this.dbEletricDataSet.DataSetName = "dbEletricDataSet";
+            this.dbEletricDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tp_orcamento
             // 
@@ -2147,11 +2144,19 @@ namespace SistemaEletrico
             this.materialTabSelector1.TabIndex = 11;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // tbvendaBindingSource
+            // 
+            this.tbvendaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_venda);
+            // 
+            // tb_pessoasTableAdapter
+            // 
+            this.tb_pessoasTableAdapter.ClearBeforeFill = true;
+            // 
             // MenuFun_two
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 626);
+            this.ClientSize = new System.Drawing.Size(1177, 626);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.HelpButton = true;
@@ -2163,9 +2168,6 @@ namespace SistemaEletrico
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.MenuFun_two_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).EndInit();
             this.Consultar.ResumeLayout(false);
             this.Consultar.PerformLayout();
@@ -2193,22 +2195,22 @@ namespace SistemaEletrico
             this.gb_venda.ResumeLayout(false);
             this.gb_venda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbpessoasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbEletricDataSet)).EndInit();
             this.tp_orcamento.ResumeLayout(false);
             this.tp_orcamento.PerformLayout();
             this.gbox_Orcamento.ResumeLayout(false);
             this.gbox_Orcamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.materialTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbvendaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource tbcategoriaBindingSource;
-        private System.Windows.Forms.BindingSource tbcategoriaBindingSource1;
         private System.Windows.Forms.BindingSource tbprodutoBindingSource;
         private System.Windows.Forms.BindingSource tbprodutoBindingSource2;
-        private System.Windows.Forms.BindingSource tbprodutoBindingSource1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TabPage Conf;
@@ -2338,6 +2340,10 @@ namespace SistemaEletrico
         protected MetroFramework.Controls.MetroDateTime mt_dt_cadastro;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+        private System.Windows.Forms.BindingSource tbvendaBindingSource;
+        private dbEletricDataSet dbEletricDataSet;
+        private System.Windows.Forms.BindingSource tbpessoasBindingSource;
+        private dbEletricDataSetTableAdapters.tb_pessoasTableAdapter tb_pessoasTableAdapter;
     }
 }
 

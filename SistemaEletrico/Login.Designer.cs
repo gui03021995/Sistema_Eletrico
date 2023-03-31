@@ -99,7 +99,7 @@ namespace SistemaEletrico
             this.RBtn_Login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.RBtn_Login.Depth = 0;
             this.RBtn_Login.Icon = null;
-            this.RBtn_Login.Location = new System.Drawing.Point(248, 379);
+            this.RBtn_Login.Location = new System.Drawing.Point(257, 378);
             this.RBtn_Login.Margin = new System.Windows.Forms.Padding(2);
             this.RBtn_Login.MouseState = MaterialSkin.MouseState.HOVER;
             this.RBtn_Login.Name = "RBtn_Login";
@@ -114,7 +114,7 @@ namespace SistemaEletrico
             // 
             this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(70, 425);
+            this.materialDivider1.Location = new System.Drawing.Point(68, 435);
             this.materialDivider1.Margin = new System.Windows.Forms.Padding(2);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
@@ -129,7 +129,7 @@ namespace SistemaEletrico
             this.mtlb_esqueceu_senha.Depth = 0;
             this.mtlb_esqueceu_senha.Font = new System.Drawing.Font("Roboto", 11F);
             this.mtlb_esqueceu_senha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mtlb_esqueceu_senha.Location = new System.Drawing.Point(68, 448);
+            this.mtlb_esqueceu_senha.Location = new System.Drawing.Point(63, 465);
             this.mtlb_esqueceu_senha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mtlb_esqueceu_senha.MouseState = MaterialSkin.MouseState.HOVER;
             this.mtlb_esqueceu_senha.Name = "mtlb_esqueceu_senha";
@@ -145,7 +145,7 @@ namespace SistemaEletrico
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(268, 448);
+            this.materialLabel2.Location = new System.Drawing.Point(263, 465);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";

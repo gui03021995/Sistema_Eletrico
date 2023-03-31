@@ -1,101 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11" name="EletricoSistemaDataClasses">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.25" name="EletricoSistemaDataClasses">
   <DataContextMoniker Name="/EletricoSistemaDataClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="c2ba11a0-da71-4aa6-aeda-8c8dec0bdfdc" absoluteBounds="0.75, 9, 2, 1.3862939453124987">
+    <classShape Id="82141080-0e26-4997-a897-f34ee49cf948" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
       <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_categoria" />
       <nestedChildShapes>
-        <elementListCompartment Id="3175a19d-6242-40ef-a32c-67123a871609" absoluteBounds="0.765, 9.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="dbb588c3-49cd-4cde-8e31-e71a4ae27bfc" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="98c5271f-38ff-4e56-9e8e-e3f39cc6af14" absoluteBounds="6.75, 7.25, 2, 1.5785953776041657">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_usuario" />
-      <nestedChildShapes>
-        <elementListCompartment Id="cf778173-4165-4dba-b180-7d1e0986188a" absoluteBounds="6.765, 7.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="d9626637-eeb7-4172-8e4d-a9f447fe2f94" absoluteBounds="6.25, 0.75, 2, 1.9631982421875">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_contas_receber" />
-      <nestedChildShapes>
-        <elementListCompartment Id="c0177d42-5a9d-46f2-a092-0f31503cf4e5" absoluteBounds="6.265, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="4eaa6e06-5572-42ae-996e-29c0413c69a4" absoluteBounds="6.25, 3.875, 2, 1.7708968098958327">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_itens_venda" />
-      <nestedChildShapes>
-        <elementListCompartment Id="70c3e030-8bcb-4a42-9702-56bb8ebf631c" absoluteBounds="6.265, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="9a065d05-0882-4167-8a6e-6222d263cb3b" absoluteBounds="0.75, 3, 2, 3.5016097005208326">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_pessoas" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b3b14886-246e-4865-bfcd-c201b31821df" absoluteBounds="0.765, 3.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="d3663782-c3b2-4595-9711-4975d0aa8cf8" absoluteBounds="8.75, 2.25, 2, 1.9631982421875005">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_pessoas_endereco" />
-      <nestedChildShapes>
-        <elementListCompartment Id="147b9a77-00e0-4e6e-83ea-8fe6dd937631" absoluteBounds="8.765, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="8427c7ff-985d-45f2-b44c-096ca645c644" absoluteBounds="3.5, 8.75, 2, 1.9631982421874987">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_produto" />
-      <nestedChildShapes>
-        <elementListCompartment Id="63c8532e-593d-4042-9fdd-13a5f5f0fba6" absoluteBounds="3.515, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="28d02686-6baa-4365-a435-51f6e274e4fb" absoluteBounds="3.5, 1.625, 2, 1.1939925130208338">
-      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_status" />
-      <nestedChildShapes>
-        <elementListCompartment Id="3c96a590-fcd6-4db9-b7db-511909744035" absoluteBounds="3.515, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="e3b80e53-01b2-410f-b6be-b78f77345c07" absoluteBounds="3.5, 3.875, 2, 1.7708968098958327">
+    <classShape Id="4bdb78c3-815e-4575-ac4e-9f8f605f2588" absoluteBounds="3.5, 3.875, 2, 2.1554996744791666">
       <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_venda" />
       <nestedChildShapes>
-        <elementListCompartment Id="52efbbda-cf5c-4967-ad11-5bfbfb8ddc36" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0bc24aa6-dc2a-48ed-88a3-e5ed9da1d0a9" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5 : 9.80214680989583); (6.46875 : 9.80214680989583); (6.46875 : 5.64589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_produto/tb_produto_tb_itens_venda" />
-      <nodes>
-        <classShapeMoniker Id="8427c7ff-985d-45f2-b44c-096ca645c644" />
-        <classShapeMoniker Id="4eaa6e06-5572-42ae-996e-29c0413c69a4" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 9.69314697265625); (3.5 : 9.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_categoria/tb_categoria_tb_produto" />
-      <nodes>
-        <classShapeMoniker Id="c2ba11a0-da71-4aa6-aeda-8c8dec0bdfdc" />
-        <classShapeMoniker Id="8427c7ff-985d-45f2-b44c-096ca645c644" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 2.16909912109375); (5.79166666666667 : 2.16909912109375 : JumpStart); (5.95833333333333 : 2.16909912109375 : JumpEnd); (6.25 : 2.16909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_status/tb_status_tb_contas_receber" />
-      <nodes>
-        <classShapeMoniker Id="28d02686-6baa-4365-a435-51f6e274e4fb" />
-        <classShapeMoniker Id="d9626637-eeb7-4172-8e4d-a9f447fe2f94" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 3.875); (5.875 : 3.5); (5.875 : 1.42829756054688); (6.25 : 1.42829756054688)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <classShape Id="61f9be55-c03d-4cd7-a1f6-dc7e75658661" absoluteBounds="6.25, 3.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_contas_receber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87917105-16ce-4e92-b9d9-1da21abaaa05" absoluteBounds="6.265, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d183e73f-3154-4d10-8876-b37af30b74df" absoluteBounds="6.25, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_itens_venda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80eb3aad-c3cc-4d6e-b16e-6d571e0b34be" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e49643a2-e437-4b9e-8544-53454543a48a" absoluteBounds="6.75, 6.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_pessoas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6565b8a6-b076-4cea-b06b-d6afc40ed265" absoluteBounds="6.765, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fa9eb54-c9d0-44bd-a323-1ffdcc09ae54" absoluteBounds="8.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_pessoas_endereco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9359033b-5fb3-4cb8-b73f-e524d096a7dd" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc46c8ce-887d-4433-b760-4e47b58e3cb6" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_produto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b46f743a-abef-41b5-a79d-02f2fdadc7ad" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3398eb3f-c647-49cc-84bd-f6dedd1a6e0b" absoluteBounds="3.5, 7.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd5cba7a-3d3c-4c46-9554-1610ba340434" absoluteBounds="3.515, 7.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c9c8de1-cd00-4e7b-9079-2c06d97550b2" absoluteBounds="8.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EletricoSistemaDataClassesDataContext/tb_usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72b9978c-c3a3-4c2e-9830-697b3f0aa87d" absoluteBounds="8.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.85659912109375); (6.25 : 4.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_venda/tb_venda_tb_contas_receber" />
       <nodes>
-        <classShapeMoniker Id="e3b80e53-01b2-410f-b6be-b78f77345c07" />
-        <classShapeMoniker Id="d9626637-eeb7-4172-8e4d-a9f447fe2f94" />
+        <classShapeMoniker Id="4bdb78c3-815e-4575-ac4e-9f8f605f2588" />
+        <classShapeMoniker Id="61f9be55-c03d-4cd7-a1f6-dc7e75658661" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.79170090494792); (6.25 : 4.79170090494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 3.875); (5.875 : 3.5); (5.875 : 1.88544840494792); (6.25 : 1.88544840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_venda/tb_venda_tb_itens_venda" />
       <nodes>
-        <classShapeMoniker Id="e3b80e53-01b2-410f-b6be-b78f77345c07" />
-        <classShapeMoniker Id="4eaa6e06-5572-42ae-996e-29c0413c69a4" />
+        <classShapeMoniker Id="4bdb78c3-815e-4575-ac4e-9f8f605f2588" />
+        <classShapeMoniker Id="d183e73f-3154-4d10-8876-b37af30b74df" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.76044840494792); (3.5 : 4.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_pessoas/tb_pessoas_tb_venda" />
+    <associationConnector edgePoints="[(5.5 : 1.38022420247396); (6.25 : 1.38022420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_produto/tb_produto_tb_itens_venda" />
       <nodes>
-        <classShapeMoniker Id="9a065d05-0882-4167-8a6e-6222d263cb3b" />
-        <classShapeMoniker Id="e3b80e53-01b2-410f-b6be-b78f77345c07" />
+        <classShapeMoniker Id="dc46c8ce-887d-4433-b760-4e47b58e3cb6" />
+        <classShapeMoniker Id="d183e73f-3154-4d10-8876-b37af30b74df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.94314697265625); (3.5 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_categoria/tb_categoria_tb_produto" />
+      <nodes>
+        <classShapeMoniker Id="82141080-0e26-4997-a897-f34ee49cf948" />
+        <classShapeMoniker Id="dc46c8ce-887d-4433-b760-4e47b58e3cb6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.25); (5.875 : 6.875); (5.875 : 5.37865068164063); (6.25 : 5.37865068164063)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EletricoSistemaDataClassesDataContext/tb_status/tb_status_tb_contas_receber" />
+      <nodes>
+        <classShapeMoniker Id="3398eb3f-c647-49cc-84bd-f6dedd1a6e0b" />
+        <classShapeMoniker Id="61f9be55-c03d-4cd7-a1f6-dc7e75658661" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

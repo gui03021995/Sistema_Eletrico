@@ -8,12 +8,17 @@
       <Association Name="tb_categoria_tb_produto" Member="tb_produto" ThisKey="id_categoria" OtherKey="id_categoria" Type="tb_produto" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_usuario" Member="tb_usuario">
-    <Type Name="tb_usuario">
-      <Column Name="usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="senha" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_pessoas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.tb_venda" Member="tb_venda">
+    <Type Name="tb_venda">
+      <Column Name="id_venda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="desconto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cod_venda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pessoa_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pessoa_funcionario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cod_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_venda_tb_contas_receber" Member="tb_contas_receber" ThisKey="id_venda" OtherKey="id_venda" Type="tb_contas_receber" />
+      <Association Name="tb_venda_tb_itens_venda" Member="tb_itens_venda" ThisKey="id_venda" OtherKey="id_venda" Type="tb_itens_venda" />
     </Type>
   </Table>
   <Table Name="dbo.tb_contas_receber" Member="tb_contas_receber">
@@ -24,8 +29,8 @@
       <Column Name="data_pagamento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="id_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_venda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tb_status_tb_contas_receber" Member="tb_status" ThisKey="id_status" OtherKey="id_status" Type="tb_status" IsForeignKey="true" />
       <Association Name="tb_venda_tb_contas_receber" Member="tb_venda" ThisKey="id_venda" OtherKey="id_venda" Type="tb_venda" IsForeignKey="true" />
+      <Association Name="tb_status_tb_contas_receber" Member="tb_status" ThisKey="id_status" OtherKey="id_status" Type="tb_status" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tb_itens_venda" Member="tb_itens_venda">
@@ -35,8 +40,8 @@
       <Column Name="id_venda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="id_produto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="quantidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tb_produto_tb_itens_venda" Member="tb_produto" ThisKey="id_produto" OtherKey="id_produto" Type="tb_produto" IsForeignKey="true" />
       <Association Name="tb_venda_tb_itens_venda" Member="tb_venda" ThisKey="id_venda" OtherKey="id_venda" Type="tb_venda" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tb_produto_tb_itens_venda" Member="tb_produto" ThisKey="id_produto" OtherKey="id_produto" Type="tb_produto" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tb_pessoas" Member="tb_pessoas">
@@ -54,8 +59,6 @@
       <Column Name="contato" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
       <Column Name="email" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
       <Column Name="data_admissao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="tipo_endereco" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
-      <Association Name="tb_pessoas_tb_venda" Member="tb_venda" ThisKey="id_pessoas" OtherKey="id_pessoa" Type="tb_venda" />
     </Type>
   </Table>
   <Table Name="dbo.tb_pessoas_endereco" Member="tb_pessoas_endereco">
@@ -87,16 +90,12 @@
       <Association Name="tb_status_tb_contas_receber" Member="tb_contas_receber" ThisKey="id_status" OtherKey="id_status" Type="tb_contas_receber" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_venda" Member="tb_venda">
-    <Type Name="tb_venda">
-      <Column Name="id_venda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="valor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="desconto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="valor_pago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="id_pessoa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tb_venda_tb_contas_receber" Member="tb_contas_receber" ThisKey="id_venda" OtherKey="id_venda" Type="tb_contas_receber" />
-      <Association Name="tb_venda_tb_itens_venda" Member="tb_itens_venda" ThisKey="id_venda" OtherKey="id_venda" Type="tb_itens_venda" />
-      <Association Name="tb_pessoas_tb_venda" Member="tb_pessoas" ThisKey="id_pessoa" OtherKey="id_pessoas" Type="tb_pessoas" IsForeignKey="true" />
+  <Table Name="dbo.tb_usuario" Member="tb_usuario">
+    <Type Name="tb_usuario">
+      <Column Name="usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="senha" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_pessoas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

@@ -117,6 +117,21 @@ namespace SistemaEletrico
 
         private void MenuFun_two_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'dbEletricDataSet.tb_pessoas'. Você pode movê-la ou removê-la conforme necessário.
+            this.tb_pessoasTableAdapter.Fill(this.dbEletricDataSet.tb_pessoas);
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tb_pessoasTableAdapter.Fill(this.dbEletricDataSet.tb_pessoas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

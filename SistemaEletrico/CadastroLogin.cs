@@ -180,7 +180,13 @@ namespace SistemaEletrico
                     MessageBox.Show("Email já existente na base de dados", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     mtxt_Email.Focus();
                     return false;
-                }               
+                }
+                if (UsuarioDataAccess.Verificar_Login(SLT_User.Text) != 0)                    
+                {
+                    MessageBox.Show("Usuário já existente na base de dados", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtxt_Email.Focus();
+                    return false;
+                }
                 return true;
             }
             return true;

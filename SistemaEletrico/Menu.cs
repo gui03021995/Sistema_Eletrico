@@ -20,6 +20,7 @@ namespace SistemaEletrico
     {
         List<tb_produto> ListaProdutos = new List<tb_produto>();
         List<tb_categoria> ListaCategorias = new List<tb_categoria>();
+
         //-----------------------------------------------------------------------INICIALIZAÇÃO------------------------------------------------------------------------------------//
         public Menu()
         {
@@ -33,6 +34,8 @@ namespace SistemaEletrico
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             // Definindo um esquema de Cor para formulário com tom Azul
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
+            string user;
+            string senha;
             // Definindo um esquema de Cor para formulário com tom Azul agua
             //materialSkinManager.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Cyan200, TextShade.WHITE);
         }
@@ -134,9 +137,9 @@ namespace SistemaEletrico
                     MessageBox.Show("Falha ao tentar inserir o novo Produto no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                     MessageBox.Show("Cliente inserido com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-                campos_prod();
-                loadData();            
+
+                campos_venda();
+                loadData();
 
             }
             else
@@ -229,15 +232,15 @@ namespace SistemaEletrico
             txt_desc_categoria.Enabled = true;
             Txt_nome_categoria.Enabled = true;
 
-            btn_buscar_categoria.Enabled = true;
-            btn_cadastrar_Categoria.Enabled = true;
-            btn_excluir_Categoria.Enabled = true;
-            btn_alterar_categoria.Enabled = true;
+            //btn_buscar_categoria.Enabled = true;
+            //btn_cadastrar_Categoria.Enabled = true;
+            //btn_excluir_Categoria.Enabled = true;
+            //btn_alterar_categoria.Enabled = true;
         }
-
+       
         //----------------------------------------------------------------------- Cadastrar ---------------------------------------------------------------------------//
         private void btn_cadastrar_Categoria_Click(object sender, EventArgs e)
-        {
+        {            
             if (Txt_nome_categoria.Text != "" && txt_desc_categoria.Text != "")
             {
                 tb_categoria NovaCategoria = new tb_categoria();
@@ -252,8 +255,9 @@ namespace SistemaEletrico
 
                 else
                     MessageBox.Show("Cliente inserido com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                campos_cat();             
-                loadData();            
+                    txt_cod_categoria.Clear();
+                    campos_cat();             
+                    loadData();            
             }
             else
             {
@@ -274,14 +278,11 @@ namespace SistemaEletrico
                 if (!CategoriaDataAccess.Delete(deteleCategoria.id_categoria))
                     MessageBox.Show("Falha ao tentar deletar uma Nova Categoria no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
                 else
                     MessageBox.Show("Categoria deletada com sucesso : " + txt_cod_categoria.Text + " ","Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                ///alterar daq pra baixo
-                //Volta os campos para o estado original
-                loadData();           
-                campos_cat();
+                    txt_cod_categoria.Clear();
+                    loadData();           
+                    campos_cat();
             }
             else
             {
@@ -306,9 +307,9 @@ namespace SistemaEletrico
                 else
                     MessageBox.Show("Categoria encontrada com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                Txt_nome_categoria.Text = tt.nome_categoria;
-                txt_desc_categoria.Text = tt.desc_categoria;
-                txt_cod_categoria.ReadOnly = true;
+                    Txt_nome_categoria.Text = tt.nome_categoria;
+                    txt_desc_categoria.Text = tt.desc_categoria;
+                    txt_cod_categoria.ReadOnly = true;
                 
             }
             else
@@ -316,7 +317,6 @@ namespace SistemaEletrico
                 MessageBox.Show("Por Favor, preencha o campo : Codigo Categoria " , "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         //----------------------------------------------------------------------- Alterar ---------------------------------------------------------------------------//
         private void btn_alterar_categoria_Click(object sender, EventArgs e)
         {
@@ -334,6 +334,13 @@ namespace SistemaEletrico
 
             }
         }
+        //----------------------------------------------------------------------- Limpar Campos ---------------------------------------------------------------------------//
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            txt_cod_categoria.Clear();
+            Txt_nome_categoria.Clear();
+            txt_desc_categoria.Clear();
+        }
 
         //----------------------------------------------------------------------- Carregar Inicialização ---------------------------------------------------------------------------//
         public void Menu_Load(object sender, EventArgs e)
@@ -345,9 +352,11 @@ namespace SistemaEletrico
                 //dtgCategorias.DataSource = scat;
                 //dtgProdutos.DataSource = sprod;
                 //dtgCategorias.Refresh();    
-                using( EletricoSistemaDataClassesDataContext  db = new EletricoSistemaDataClassesDataContext())
+                using (EletricoSistemaDataClassesDataContext db = new EletricoSistemaDataClassesDataContext())
                 {
                     tbcategoriaBindingSource.DataSource = db.tb_categoria.ToList();
+                    tbpessoasBindingSource.DataSource = db.tb_pessoas.Where(x => x.tipo_cadastro == "Cliente");
+                    tbprodutoBindingSource.DataSource = db.tb_produto.ToList();
                 }
                 loadData();
                 //using( Eletrica db = new EletricoSistema())
@@ -368,11 +377,57 @@ namespace SistemaEletrico
         {
             var scat = CategoriaDataAccess.ObterCategoria();
             var sprod = ProdutoDataAccess.ObterProduto();
+            var svenda = VendaDataAccess.ObterVenda();
+            dtgVenda.DataSource = svenda;
             dtgCategorias.DataSource = scat;
             dtgProdutos.DataSource = sprod;
             dtgCategorias.Refresh();
         }
 
+        //----------------------------------------------------------------------- VENDAS ---------------------------------------------------------------------------//
+        //----------------------------------------------------------------------- VENDA ---------------------------------------------------------------------------//
+        public void campos_venda()
+        {
+            cb_client_venda.SelectedItem = 1;
+            txtb_cod_venda.Clear();
+            mcb_prod_venda.SelectedItem = 1;
+            mtxt_qt.Clear();
+            mtxt_deconto.Clear();
+
+            mfbt_alterar_venda.Enabled = true;
+            mfbt_cadastrar_venda.Enabled = true;
+        }
+
+        //----------------------------------------------------------------------- Lançar Venda---------------------------------------------------------------------------//
+        private void mfbt_cadastrar_venda_Click(object sender, EventArgs e)
+        {
+            if(txtb_cod_venda.Text != "" && mcb_prod_venda.Text != "" && mcb_prod_venda.Text != "" && mtxt_qt.Text != "")
+            {
+                tb_venda NovaVenda = new tb_venda();
+
+                NovaVenda.valor = lb_valor_prod.Text;
+                NovaVenda.desconto = mlb_desconto.Text;
+                NovaVenda.cod_venda = Convert.ToInt32(txtb_cod_venda.Text);                
+                NovaVenda.cod_prod = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+                NovaVenda.id_pessoa_cliente = Convert.ToInt32(cb_client_venda.SelectedValue);
+
+                if (!VendaDataAccess.Insere(NovaVenda))
+                    MessageBox.Show("Falha ao tentar realizar lançamento de Venda!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                //---PAREI AQUI-----------
+
+                else
+                    MessageBox.Show("Venda lançada com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txt_cod_categoria.Clear();
+                    campos_cat();
+                    loadData();
+            }
+            else
+            {
+                MessageBox.Show("Por Favor, preencha todos os campos obrigatórios", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
         //private void txtCategoria_Prod_SelectionChangeCommitted(object sender, EventArgs e)
         //{
         //    //tb_categoria obj = txtCategoria_Prod.SelectedItem as tb_categoria;
@@ -387,7 +442,7 @@ namespace SistemaEletrico
 
         //private void txtCategoria_Prod_Click(object sender, EventArgs e)
         //{
-        
+
         //}
 
         //private void txtCategoria_Prod_SelectedIndexChanged(object sender, EventArgs e)

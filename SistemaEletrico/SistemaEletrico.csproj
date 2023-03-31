@@ -80,6 +80,11 @@
     <Compile Include="CadastroLogin.Designer.cs">
       <DependentUpon>CadastroLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbEletricDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbEletricDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginEsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,9 +144,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dbEletricDataSet.xsc">
+      <DependentUpon>dbEletricDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbEletricDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbEletricDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbEletricDataSet.xss">
+      <DependentUpon>dbEletricDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_categoria.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_contas_receber.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_itens_venda.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_pessoas.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_pessoas_endereco.datasource" />
     <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_produto.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_status.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_usuario.datasource" />
+    <None Include="Properties\DataSources\EletricoSistema.DataAccess.tb_venda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +195,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

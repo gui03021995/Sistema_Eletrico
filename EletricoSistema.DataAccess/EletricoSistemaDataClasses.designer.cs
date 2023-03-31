@@ -33,9 +33,9 @@ namespace EletricoSistema.DataAccess
     partial void Inserttb_categoria(tb_categoria instance);
     partial void Updatetb_categoria(tb_categoria instance);
     partial void Deletetb_categoria(tb_categoria instance);
-    partial void Inserttb_usuario(tb_usuario instance);
-    partial void Updatetb_usuario(tb_usuario instance);
-    partial void Deletetb_usuario(tb_usuario instance);
+    partial void Inserttb_venda(tb_venda instance);
+    partial void Updatetb_venda(tb_venda instance);
+    partial void Deletetb_venda(tb_venda instance);
     partial void Inserttb_contas_receber(tb_contas_receber instance);
     partial void Updatetb_contas_receber(tb_contas_receber instance);
     partial void Deletetb_contas_receber(tb_contas_receber instance);
@@ -54,9 +54,9 @@ namespace EletricoSistema.DataAccess
     partial void Inserttb_status(tb_status instance);
     partial void Updatetb_status(tb_status instance);
     partial void Deletetb_status(tb_status instance);
-    partial void Inserttb_venda(tb_venda instance);
-    partial void Updatetb_venda(tb_venda instance);
-    partial void Deletetb_venda(tb_venda instance);
+    partial void Inserttb_usuario(tb_usuario instance);
+    partial void Updatetb_usuario(tb_usuario instance);
+    partial void Deletetb_usuario(tb_usuario instance);
     #endregion
 		
 		public EletricoSistemaDataClassesDataContext() : 
@@ -97,11 +97,11 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		public System.Data.Linq.Table<tb_usuario> tb_usuario
+		public System.Data.Linq.Table<tb_venda> tb_venda
 		{
 			get
 			{
-				return this.GetTable<tb_usuario>();
+				return this.GetTable<tb_venda>();
 			}
 		}
 		
@@ -153,11 +153,11 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		public System.Data.Linq.Table<tb_venda> tb_venda
+		public System.Data.Linq.Table<tb_usuario> tb_usuario
 		{
 			get
 			{
-				return this.GetTable<tb_venda>();
+				return this.GetTable<tb_usuario>();
 			}
 		}
 	}
@@ -300,116 +300,220 @@ namespace EletricoSistema.DataAccess
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_usuario")]
-	public partial class tb_usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_venda")]
+	public partial class tb_venda : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _usuario;
+		private int _id_venda;
 		
-		private string _senha;
+		private string _valor;
 		
-		private int _id_user;
+		private string _desconto;
 		
-		private int _id_pessoas;
+		private System.Nullable<int> _cod_venda;
+		
+		private System.Nullable<int> _id_pessoa_cliente;
+		
+		private System.Nullable<int> _id_pessoa_funcionario;
+		
+		private System.Nullable<int> _cod_prod;
+		
+		private EntitySet<tb_contas_receber> _tb_contas_receber;
+		
+		private EntitySet<tb_itens_venda> _tb_itens_venda;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnusuarioChanging(string value);
-    partial void OnusuarioChanged();
-    partial void OnsenhaChanging(string value);
-    partial void OnsenhaChanged();
-    partial void Onid_userChanging(int value);
-    partial void Onid_userChanged();
-    partial void Onid_pessoasChanging(int value);
-    partial void Onid_pessoasChanged();
+    partial void Onid_vendaChanging(int value);
+    partial void Onid_vendaChanged();
+    partial void OnvalorChanging(string value);
+    partial void OnvalorChanged();
+    partial void OndescontoChanging(string value);
+    partial void OndescontoChanged();
+    partial void Oncod_vendaChanging(System.Nullable<int> value);
+    partial void Oncod_vendaChanged();
+    partial void Onid_pessoa_clienteChanging(System.Nullable<int> value);
+    partial void Onid_pessoa_clienteChanged();
+    partial void Onid_pessoa_funcionarioChanging(System.Nullable<int> value);
+    partial void Onid_pessoa_funcionarioChanged();
+    partial void Oncod_prodChanging(System.Nullable<int> value);
+    partial void Oncod_prodChanged();
     #endregion
 		
-		public tb_usuario()
+		public tb_venda()
 		{
+			this._tb_contas_receber = new EntitySet<tb_contas_receber>(new Action<tb_contas_receber>(this.attach_tb_contas_receber), new Action<tb_contas_receber>(this.detach_tb_contas_receber));
+			this._tb_itens_venda = new EntitySet<tb_itens_venda>(new Action<tb_itens_venda>(this.attach_tb_itens_venda), new Action<tb_itens_venda>(this.detach_tb_itens_venda));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string usuario
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_venda", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_venda
 		{
 			get
 			{
-				return this._usuario;
+				return this._id_venda;
 			}
 			set
 			{
-				if ((this._usuario != value))
+				if ((this._id_venda != value))
 				{
-					this.OnusuarioChanging(value);
+					this.Onid_vendaChanging(value);
 					this.SendPropertyChanging();
-					this._usuario = value;
-					this.SendPropertyChanged("usuario");
-					this.OnusuarioChanged();
+					this._id_venda = value;
+					this.SendPropertyChanged("id_venda");
+					this.Onid_vendaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string senha
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string valor
 		{
 			get
 			{
-				return this._senha;
+				return this._valor;
 			}
 			set
 			{
-				if ((this._senha != value))
+				if ((this._valor != value))
 				{
-					this.OnsenhaChanging(value);
+					this.OnvalorChanging(value);
 					this.SendPropertyChanging();
-					this._senha = value;
-					this.SendPropertyChanged("senha");
-					this.OnsenhaChanged();
+					this._valor = value;
+					this.SendPropertyChanged("valor");
+					this.OnvalorChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_user
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_desconto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string desconto
 		{
 			get
 			{
-				return this._id_user;
+				return this._desconto;
 			}
 			set
 			{
-				if ((this._id_user != value))
+				if ((this._desconto != value))
 				{
-					this.Onid_userChanging(value);
+					this.OndescontoChanging(value);
 					this.SendPropertyChanging();
-					this._id_user = value;
-					this.SendPropertyChanged("id_user");
-					this.Onid_userChanged();
+					this._desconto = value;
+					this.SendPropertyChanged("desconto");
+					this.OndescontoChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoas", DbType="Int NOT NULL")]
-		public int id_pessoas
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cod_venda", DbType="Int")]
+		public System.Nullable<int> cod_venda
 		{
 			get
 			{
-				return this._id_pessoas;
+				return this._cod_venda;
 			}
 			set
 			{
-				if ((this._id_pessoas != value))
+				if ((this._cod_venda != value))
 				{
-					this.Onid_pessoasChanging(value);
+					this.Oncod_vendaChanging(value);
 					this.SendPropertyChanging();
-					this._id_pessoas = value;
-					this.SendPropertyChanged("id_pessoas");
-					this.Onid_pessoasChanged();
+					this._cod_venda = value;
+					this.SendPropertyChanged("cod_venda");
+					this.Oncod_vendaChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoa_cliente", DbType="Int")]
+		public System.Nullable<int> id_pessoa_cliente
+		{
+			get
+			{
+				return this._id_pessoa_cliente;
+			}
+			set
+			{
+				if ((this._id_pessoa_cliente != value))
+				{
+					this.Onid_pessoa_clienteChanging(value);
+					this.SendPropertyChanging();
+					this._id_pessoa_cliente = value;
+					this.SendPropertyChanged("id_pessoa_cliente");
+					this.Onid_pessoa_clienteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoa_funcionario", DbType="Int")]
+		public System.Nullable<int> id_pessoa_funcionario
+		{
+			get
+			{
+				return this._id_pessoa_funcionario;
+			}
+			set
+			{
+				if ((this._id_pessoa_funcionario != value))
+				{
+					this.Onid_pessoa_funcionarioChanging(value);
+					this.SendPropertyChanging();
+					this._id_pessoa_funcionario = value;
+					this.SendPropertyChanged("id_pessoa_funcionario");
+					this.Onid_pessoa_funcionarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cod_prod", DbType="Int")]
+		public System.Nullable<int> cod_prod
+		{
+			get
+			{
+				return this._cod_prod;
+			}
+			set
+			{
+				if ((this._cod_prod != value))
+				{
+					this.Oncod_prodChanging(value);
+					this.SendPropertyChanging();
+					this._cod_prod = value;
+					this.SendPropertyChanged("cod_prod");
+					this.Oncod_prodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_contas_receber", Storage="_tb_contas_receber", ThisKey="id_venda", OtherKey="id_venda")]
+		public EntitySet<tb_contas_receber> tb_contas_receber
+		{
+			get
+			{
+				return this._tb_contas_receber;
+			}
+			set
+			{
+				this._tb_contas_receber.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_itens_venda", Storage="_tb_itens_venda", ThisKey="id_venda", OtherKey="id_venda")]
+		public EntitySet<tb_itens_venda> tb_itens_venda
+		{
+			get
+			{
+				return this._tb_itens_venda;
+			}
+			set
+			{
+				this._tb_itens_venda.Assign(value);
 			}
 		}
 		
@@ -432,6 +536,30 @@ namespace EletricoSistema.DataAccess
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_tb_contas_receber(tb_contas_receber entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_venda = this;
+		}
+		
+		private void detach_tb_contas_receber(tb_contas_receber entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_venda = null;
+		}
+		
+		private void attach_tb_itens_venda(tb_itens_venda entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_venda = this;
+		}
+		
+		private void detach_tb_itens_venda(tb_itens_venda entity)
+		{
+			this.SendPropertyChanging();
+			entity.tb_venda = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_contas_receber")]
@@ -452,9 +580,9 @@ namespace EletricoSistema.DataAccess
 		
 		private int _id_venda;
 		
-		private EntityRef<tb_status> _tb_status;
-		
 		private EntityRef<tb_venda> _tb_venda;
+		
+		private EntityRef<tb_status> _tb_status;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -476,8 +604,8 @@ namespace EletricoSistema.DataAccess
 		
 		public tb_contas_receber()
 		{
-			this._tb_status = default(EntityRef<tb_status>);
 			this._tb_venda = default(EntityRef<tb_venda>);
+			this._tb_status = default(EntityRef<tb_status>);
 			OnCreated();
 		}
 		
@@ -609,40 +737,6 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_status_tb_contas_receber", Storage="_tb_status", ThisKey="id_status", OtherKey="id_status", IsForeignKey=true)]
-		public tb_status tb_status
-		{
-			get
-			{
-				return this._tb_status.Entity;
-			}
-			set
-			{
-				tb_status previousValue = this._tb_status.Entity;
-				if (((previousValue != value) 
-							|| (this._tb_status.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tb_status.Entity = null;
-						previousValue.tb_contas_receber.Remove(this);
-					}
-					this._tb_status.Entity = value;
-					if ((value != null))
-					{
-						value.tb_contas_receber.Add(this);
-						this._id_status = value.id_status;
-					}
-					else
-					{
-						this._id_status = default(int);
-					}
-					this.SendPropertyChanged("tb_status");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_contas_receber", Storage="_tb_venda", ThisKey="id_venda", OtherKey="id_venda", IsForeignKey=true)]
 		public tb_venda tb_venda
 		{
@@ -673,6 +767,40 @@ namespace EletricoSistema.DataAccess
 						this._id_venda = default(int);
 					}
 					this.SendPropertyChanged("tb_venda");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_status_tb_contas_receber", Storage="_tb_status", ThisKey="id_status", OtherKey="id_status", IsForeignKey=true)]
+		public tb_status tb_status
+		{
+			get
+			{
+				return this._tb_status.Entity;
+			}
+			set
+			{
+				tb_status previousValue = this._tb_status.Entity;
+				if (((previousValue != value) 
+							|| (this._tb_status.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tb_status.Entity = null;
+						previousValue.tb_contas_receber.Remove(this);
+					}
+					this._tb_status.Entity = value;
+					if ((value != null))
+					{
+						value.tb_contas_receber.Add(this);
+						this._id_status = value.id_status;
+					}
+					else
+					{
+						this._id_status = default(int);
+					}
+					this.SendPropertyChanged("tb_status");
 				}
 			}
 		}
@@ -714,9 +842,9 @@ namespace EletricoSistema.DataAccess
 		
 		private int _quantidade;
 		
-		private EntityRef<tb_produto> _tb_produto;
-		
 		private EntityRef<tb_venda> _tb_venda;
+		
+		private EntityRef<tb_produto> _tb_produto;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -736,8 +864,8 @@ namespace EletricoSistema.DataAccess
 		
 		public tb_itens_venda()
 		{
-			this._tb_produto = default(EntityRef<tb_produto>);
 			this._tb_venda = default(EntityRef<tb_venda>);
+			this._tb_produto = default(EntityRef<tb_produto>);
 			OnCreated();
 		}
 		
@@ -849,40 +977,6 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_produto_tb_itens_venda", Storage="_tb_produto", ThisKey="id_produto", OtherKey="id_produto", IsForeignKey=true)]
-		public tb_produto tb_produto
-		{
-			get
-			{
-				return this._tb_produto.Entity;
-			}
-			set
-			{
-				tb_produto previousValue = this._tb_produto.Entity;
-				if (((previousValue != value) 
-							|| (this._tb_produto.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tb_produto.Entity = null;
-						previousValue.tb_itens_venda.Remove(this);
-					}
-					this._tb_produto.Entity = value;
-					if ((value != null))
-					{
-						value.tb_itens_venda.Add(this);
-						this._id_produto = value.id_produto;
-					}
-					else
-					{
-						this._id_produto = default(int);
-					}
-					this.SendPropertyChanged("tb_produto");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_itens_venda", Storage="_tb_venda", ThisKey="id_venda", OtherKey="id_venda", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public tb_venda tb_venda
 		{
@@ -913,6 +1007,40 @@ namespace EletricoSistema.DataAccess
 						this._id_venda = default(int);
 					}
 					this.SendPropertyChanged("tb_venda");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_produto_tb_itens_venda", Storage="_tb_produto", ThisKey="id_produto", OtherKey="id_produto", IsForeignKey=true)]
+		public tb_produto tb_produto
+		{
+			get
+			{
+				return this._tb_produto.Entity;
+			}
+			set
+			{
+				tb_produto previousValue = this._tb_produto.Entity;
+				if (((previousValue != value) 
+							|| (this._tb_produto.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tb_produto.Entity = null;
+						previousValue.tb_itens_venda.Remove(this);
+					}
+					this._tb_produto.Entity = value;
+					if ((value != null))
+					{
+						value.tb_itens_venda.Add(this);
+						this._id_produto = value.id_produto;
+					}
+					else
+					{
+						this._id_produto = default(int);
+					}
+					this.SendPropertyChanged("tb_produto");
 				}
 			}
 		}
@@ -970,10 +1098,6 @@ namespace EletricoSistema.DataAccess
 		
 		private System.Nullable<System.DateTime> _data_admissao;
 		
-		private string _tipo_endereco;
-		
-		private EntitySet<tb_venda> _tb_venda;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1004,13 +1128,10 @@ namespace EletricoSistema.DataAccess
     partial void OnemailChanged();
     partial void Ondata_admissaoChanging(System.Nullable<System.DateTime> value);
     partial void Ondata_admissaoChanged();
-    partial void Ontipo_enderecoChanging(string value);
-    partial void Ontipo_enderecoChanged();
     #endregion
 		
 		public tb_pessoas()
 		{
-			this._tb_venda = new EntitySet<tb_venda>(new Action<tb_venda>(this.attach_tb_venda), new Action<tb_venda>(this.detach_tb_venda));
 			OnCreated();
 		}
 		
@@ -1274,39 +1395,6 @@ namespace EletricoSistema.DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo_endereco", DbType="VarChar(12)")]
-		public string tipo_endereco
-		{
-			get
-			{
-				return this._tipo_endereco;
-			}
-			set
-			{
-				if ((this._tipo_endereco != value))
-				{
-					this.Ontipo_enderecoChanging(value);
-					this.SendPropertyChanging();
-					this._tipo_endereco = value;
-					this.SendPropertyChanged("tipo_endereco");
-					this.Ontipo_enderecoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_pessoas_tb_venda", Storage="_tb_venda", ThisKey="id_pessoas", OtherKey="id_pessoa")]
-		public EntitySet<tb_venda> tb_venda
-		{
-			get
-			{
-				return this._tb_venda;
-			}
-			set
-			{
-				this._tb_venda.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1325,18 +1413,6 @@ namespace EletricoSistema.DataAccess
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_tb_venda(tb_venda entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_pessoas = this;
-		}
-		
-		private void detach_tb_venda(tb_venda entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_pessoas = null;
 		}
 	}
 	
@@ -1887,212 +1963,115 @@ namespace EletricoSistema.DataAccess
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_venda")]
-	public partial class tb_venda : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_usuario")]
+	public partial class tb_usuario : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_venda;
+		private string _usuario;
 		
-		private string _valor;
+		private string _senha;
 		
-		private string _desconto;
+		private int _id_user;
 		
-		private string _valor_pago;
-		
-		private int _id_pessoa;
-		
-		private EntitySet<tb_contas_receber> _tb_contas_receber;
-		
-		private EntitySet<tb_itens_venda> _tb_itens_venda;
-		
-		private EntityRef<tb_pessoas> _tb_pessoas;
+		private int _id_pessoas;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_vendaChanging(int value);
-    partial void Onid_vendaChanged();
-    partial void OnvalorChanging(string value);
-    partial void OnvalorChanged();
-    partial void OndescontoChanging(string value);
-    partial void OndescontoChanged();
-    partial void Onvalor_pagoChanging(string value);
-    partial void Onvalor_pagoChanged();
-    partial void Onid_pessoaChanging(int value);
-    partial void Onid_pessoaChanged();
+    partial void OnusuarioChanging(string value);
+    partial void OnusuarioChanged();
+    partial void OnsenhaChanging(string value);
+    partial void OnsenhaChanged();
+    partial void Onid_userChanging(int value);
+    partial void Onid_userChanged();
+    partial void Onid_pessoasChanging(int value);
+    partial void Onid_pessoasChanged();
     #endregion
 		
-		public tb_venda()
+		public tb_usuario()
 		{
-			this._tb_contas_receber = new EntitySet<tb_contas_receber>(new Action<tb_contas_receber>(this.attach_tb_contas_receber), new Action<tb_contas_receber>(this.detach_tb_contas_receber));
-			this._tb_itens_venda = new EntitySet<tb_itens_venda>(new Action<tb_itens_venda>(this.attach_tb_itens_venda), new Action<tb_itens_venda>(this.detach_tb_itens_venda));
-			this._tb_pessoas = default(EntityRef<tb_pessoas>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_venda", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_venda
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string usuario
 		{
 			get
 			{
-				return this._id_venda;
+				return this._usuario;
 			}
 			set
 			{
-				if ((this._id_venda != value))
+				if ((this._usuario != value))
 				{
-					this.Onid_vendaChanging(value);
+					this.OnusuarioChanging(value);
 					this.SendPropertyChanging();
-					this._id_venda = value;
-					this.SendPropertyChanged("id_venda");
-					this.Onid_vendaChanged();
+					this._usuario = value;
+					this.SendPropertyChanged("usuario");
+					this.OnusuarioChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string valor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_senha", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string senha
 		{
 			get
 			{
-				return this._valor;
+				return this._senha;
 			}
 			set
 			{
-				if ((this._valor != value))
+				if ((this._senha != value))
 				{
-					this.OnvalorChanging(value);
+					this.OnsenhaChanging(value);
 					this.SendPropertyChanging();
-					this._valor = value;
-					this.SendPropertyChanged("valor");
-					this.OnvalorChanged();
+					this._senha = value;
+					this.SendPropertyChanged("senha");
+					this.OnsenhaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_desconto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string desconto
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_user
 		{
 			get
 			{
-				return this._desconto;
+				return this._id_user;
 			}
 			set
 			{
-				if ((this._desconto != value))
+				if ((this._id_user != value))
 				{
-					this.OndescontoChanging(value);
+					this.Onid_userChanging(value);
 					this.SendPropertyChanging();
-					this._desconto = value;
-					this.SendPropertyChanged("desconto");
-					this.OndescontoChanged();
+					this._id_user = value;
+					this.SendPropertyChanged("id_user");
+					this.Onid_userChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valor_pago", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string valor_pago
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoas", DbType="Int NOT NULL")]
+		public int id_pessoas
 		{
 			get
 			{
-				return this._valor_pago;
+				return this._id_pessoas;
 			}
 			set
 			{
-				if ((this._valor_pago != value))
+				if ((this._id_pessoas != value))
 				{
-					this.Onvalor_pagoChanging(value);
+					this.Onid_pessoasChanging(value);
 					this.SendPropertyChanging();
-					this._valor_pago = value;
-					this.SendPropertyChanged("valor_pago");
-					this.Onvalor_pagoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pessoa", DbType="Int NOT NULL")]
-		public int id_pessoa
-		{
-			get
-			{
-				return this._id_pessoa;
-			}
-			set
-			{
-				if ((this._id_pessoa != value))
-				{
-					if (this._tb_pessoas.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_pessoaChanging(value);
-					this.SendPropertyChanging();
-					this._id_pessoa = value;
-					this.SendPropertyChanged("id_pessoa");
-					this.Onid_pessoaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_contas_receber", Storage="_tb_contas_receber", ThisKey="id_venda", OtherKey="id_venda")]
-		public EntitySet<tb_contas_receber> tb_contas_receber
-		{
-			get
-			{
-				return this._tb_contas_receber;
-			}
-			set
-			{
-				this._tb_contas_receber.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_venda_tb_itens_venda", Storage="_tb_itens_venda", ThisKey="id_venda", OtherKey="id_venda")]
-		public EntitySet<tb_itens_venda> tb_itens_venda
-		{
-			get
-			{
-				return this._tb_itens_venda;
-			}
-			set
-			{
-				this._tb_itens_venda.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tb_pessoas_tb_venda", Storage="_tb_pessoas", ThisKey="id_pessoa", OtherKey="id_pessoas", IsForeignKey=true)]
-		public tb_pessoas tb_pessoas
-		{
-			get
-			{
-				return this._tb_pessoas.Entity;
-			}
-			set
-			{
-				tb_pessoas previousValue = this._tb_pessoas.Entity;
-				if (((previousValue != value) 
-							|| (this._tb_pessoas.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tb_pessoas.Entity = null;
-						previousValue.tb_venda.Remove(this);
-					}
-					this._tb_pessoas.Entity = value;
-					if ((value != null))
-					{
-						value.tb_venda.Add(this);
-						this._id_pessoa = value.id_pessoas;
-					}
-					else
-					{
-						this._id_pessoa = default(int);
-					}
-					this.SendPropertyChanged("tb_pessoas");
+					this._id_pessoas = value;
+					this.SendPropertyChanged("id_pessoas");
+					this.Onid_pessoasChanged();
 				}
 			}
 		}
@@ -2115,30 +2094,6 @@ namespace EletricoSistema.DataAccess
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_tb_contas_receber(tb_contas_receber entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_venda = this;
-		}
-		
-		private void detach_tb_contas_receber(tb_contas_receber entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_venda = null;
-		}
-		
-		private void attach_tb_itens_venda(tb_itens_venda entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_venda = this;
-		}
-		
-		private void detach_tb_itens_venda(tb_itens_venda entity)
-		{
-			this.SendPropertyChanging();
-			entity.tb_venda = null;
 		}
 	}
 }
