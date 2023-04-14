@@ -60,7 +60,16 @@ namespace EletricoSistema.DataAccess
             {
                 EletricoSistemaDataClassesDataContext oDB = new EletricoSistemaDataClassesDataContext();
                 tb_usuario oUser = (from Selecao in oDB.tb_usuario where Selecao.usuario == usuario select Selecao).SingleOrDefault();
-                return oUser.id_pessoas;
+                //TRATAR QUANDO FOR NULO, NO CASO PRIMEIRO CADASTRO.
+                if(oUser == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return oUser.id_pessoas;
+                }
+
             }
             catch (Exception ex)
             {

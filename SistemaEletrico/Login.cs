@@ -133,5 +133,13 @@ namespace SistemaEletrico
         {
 
         }
+
+        private void mbl_registrar(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirCadastro);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
     }    
 }

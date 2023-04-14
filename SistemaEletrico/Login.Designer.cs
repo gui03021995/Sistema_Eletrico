@@ -35,9 +35,9 @@ namespace SistemaEletrico
             this.RBtn_Login = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.mtlb_esqueceu_senha = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mb_registrar = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,21 +138,6 @@ namespace SistemaEletrico
             this.mtlb_esqueceu_senha.Text = "Esqueceu a senha ?";
             this.mtlb_esqueceu_senha.Click += new System.EventHandler(this.mtlb_esqueceu_senha_Click);
             // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(263, 465);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(69, 19);
-            this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Registrar";
-            // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
@@ -177,14 +162,30 @@ namespace SistemaEletrico
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // mb_registrar
+            // 
+            this.mb_registrar.AutoSize = true;
+            this.mb_registrar.BackColor = System.Drawing.Color.Transparent;
+            this.mb_registrar.Depth = 0;
+            this.mb_registrar.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mb_registrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mb_registrar.Location = new System.Drawing.Point(263, 465);
+            this.mb_registrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mb_registrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mb_registrar.Name = "mb_registrar";
+            this.mb_registrar.Size = new System.Drawing.Size(69, 19);
+            this.mb_registrar.TabIndex = 8;
+            this.mb_registrar.Text = "Registrar";
+            this.mb_registrar.Click += new System.EventHandler(this.mbl_registrar);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 545);
+            this.Controls.Add(this.mb_registrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.mtlb_esqueceu_senha);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.RBtn_Login);
@@ -212,8 +213,8 @@ namespace SistemaEletrico
         private MaterialSkin.Controls.MaterialRaisedButton RBtn_Login;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialLabel mtlb_esqueceu_senha;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialLabel mb_registrar;
     }
 }

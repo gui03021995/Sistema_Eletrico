@@ -11,6 +11,9 @@ using EletricoSistema.DataAccess;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
+//Utilizado para encerrar forms atual quando abrir outro forms
+using System.Threading;
+
 namespace SistemaEletrico
 {
     public partial class CadastroLogin : MaterialSkin.Controls.MaterialForm
@@ -18,6 +21,7 @@ namespace SistemaEletrico
         List<tb_pessoas> ListaPessoa = new List<tb_pessoas>();
         List<tb_usuario> ListaUser = new List<tb_usuario>();
 
+        Thread t1;
         public CadastroLogin()
         {
             InitializeComponent();
@@ -37,15 +41,40 @@ namespace SistemaEletrico
             
         }
 
+        private void abrirLogin(Object obj)
+        {
+            Application.Run(new Login());
+            //CadastroLogin clg = new CadastroLogin();
+            //clg.Show();
+        }
+
+        public void ClearCampo()
+        {
+            mtxtb_Nome.Clear();
+            cb_Sexo.SelectedItem = 0;
+            mtxt_Cpf_Cnpj.Clear();
+            mtxt_Contato.Clear();
+            mtxt_Email.Clear();
+            mtbox_endereco1.Clear();
+            mtbox_endereco2.Clear();
+            cb_setor.SelectedItem = 0;
+            cb_tp_cadastro.SelectedItem = 0;
+            mlb_endereco2.SelectedItem = 0;
+            cb_setor.SelectedItem = 0;
+            txt_Cargo.Clear();
+            SLT_User.Clear();
+            ms_Senha.Clear();
+        }
+
         private void mbt_salvar_Click(object sender, EventArgs e)
         {
             if (ValidarForms())
-            {                
-                Salvar();
+            {
+              Salvar();
             }
             else
             {
-                Application.Exit();
+                //Application.Exit();
             }
         }
         public void Salvar()
@@ -94,7 +123,13 @@ namespace SistemaEletrico
                     MessageBox.Show("Falha ao tentar inserir o novo Usuário no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                     MessageBox.Show("Usuario inserido com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //loadData();               
+                    ClearCampo();
+                    //chamar a tela de login inicial 
+                    this.Close();
+                    t1 = new Thread(abrirLogin);
+                    t1.SetApartmentState(ApartmentState.STA);
+                    t1.Start();
+
             }
             else
             {
@@ -106,63 +141,63 @@ namespace SistemaEletrico
         {
             if (mtxt_Cpf_Cnpj.Text == "")
             {
-                MessageBox.Show("Informe o CPF no cadastro");
+                MessageBox.Show("Informe o CPF no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxt_Cpf_Cnpj.Focus();
                 return false;
             }                                   
             
             else if (mtxtb_Nome.Text == "")
             {
-                MessageBox.Show("Informe o NOME no cadastro");
+                MessageBox.Show("Informe o NOME no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxtb_Nome.Focus();
                 return false;
             }           
             else if (cb_Sexo.Text == "")
             {
-                MessageBox.Show("Informe o SEXO no cadastro");
+                MessageBox.Show("Informe o SEXO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cb_Sexo.Focus();
                 return false;
             }
             else if (dt_dt_nasc.Text == "")
             {
-                MessageBox.Show("Informe a DATA DE NASCIMENTO no cadastro");
+                MessageBox.Show("Informe a DATA DE NASCIMENTO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dt_dt_nasc.Focus();
                 return false;
             }
             else if (mt_dt_admissao.Text == "")
             {
-                MessageBox.Show("Informe a DATA DE ADMISSAO no cadastro");
+                MessageBox.Show("Informe a DATA DE ADMISSAO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dt_dt_nasc.Focus();
                 return false;
             }
             else if (cb_tp_cadastro.Text == "")
             {
-                MessageBox.Show("Informe o TIPO DE CADASTRO no cadastro");
+                MessageBox.Show("Informe o TIPO DE CADASTRO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cb_tp_cadastro.Focus();
                 return false;
             }
             else if (mtxt_Contato.Text == "")
             {
-                MessageBox.Show("Informe o CONTATO no cadastro");
+                MessageBox.Show("Informe o CONTATO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxt_Contato.Focus();
                 return false;
             }
             else if (mtxt_Email.Text == "")
             {
-                MessageBox.Show("Informe o EMAIL no cadastro");
+                MessageBox.Show("Informe o EMAIL no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtxt_Email.Focus();
                 return false;
             }        
 
             else if (SLT_User.Text == "")
             {
-                MessageBox.Show("Informe o USUÁRIO no cadastro");
+                MessageBox.Show("Informe o USUÁRIO no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 SLT_User.Focus();
                 return false;
             }
             else if (ms_Senha.Text == "")
             {
-                MessageBox.Show("Informe a SENHA no cadastro");
+                MessageBox.Show("Informe a SENHA no cadastro", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ms_Senha.Focus();
                 return false;
             }
@@ -197,21 +232,6 @@ namespace SistemaEletrico
             //var valorComboBox = comboBox.SelectedValue;
             // Definir o valor fixo para "ON = 1" e "OFF = 0"
             int valorFixo = metroToggle1.Checked ? 1 : 0;
-        }
-
-        private void mtxt_Cpf_Cnpj_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mlb_Cpf_Cnpj_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cb_tp_cadastro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

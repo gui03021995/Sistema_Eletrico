@@ -30,21 +30,21 @@ namespace SistemaEletrico
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.Produto = new System.Windows.Forms.TabPage();
@@ -91,9 +91,13 @@ namespace SistemaEletrico
             this.mtb_venda_orcamento = new MaterialSkin.Controls.MaterialTabControl();
             this.tp_venda = new System.Windows.Forms.TabPage();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.gb_venda = new System.Windows.Forms.GroupBox();
+            this.bt_f_compra = new MaterialSkin.Controls.MaterialFlatButton();
+            this.mt_vl_compra = new MetroFramework.Controls.MetroTextBox();
             this.mfbt_alterar_venda = new MaterialSkin.Controls.MaterialFlatButton();
             this.mfbt_cadastrar_venda = new MaterialSkin.Controls.MaterialFlatButton();
-            this.gb_venda = new System.Windows.Forms.GroupBox();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.mcb_valor = new MetroFramework.Controls.MetroComboBox();
             this.tbprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -179,9 +183,17 @@ namespace SistemaEletrico
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbvendaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.mt_vl_compra = new MetroFramework.Controls.MetroTextBox();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.mlb_endereco2 = new MetroFramework.Controls.MetroComboBox();
+            this.mtbox_endereco2 = new MetroFramework.Controls.MetroTextBox();
+            this.mlb_end2 = new MaterialSkin.Controls.MaterialLabel();
+            this.mlb_endereco1 = new MetroFramework.Controls.MetroComboBox();
+            this.mtbox_endereco1 = new MetroFramework.Controls.MetroTextBox();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.mlb_end1 = new MaterialSkin.Controls.MaterialLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ms_Senha = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.SLT_User = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialTabControl1.SuspendLayout();
             this.Produto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
@@ -207,6 +219,7 @@ namespace SistemaEletrico
             this.Consultar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbvendaBindingSource1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabSelector1
@@ -214,10 +227,10 @@ namespace SistemaEletrico
             this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
             this.materialTabSelector1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 51);
+            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 57);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(1178, 43);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1188, 43);
             this.materialTabSelector1.TabIndex = 11;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -237,7 +250,7 @@ namespace SistemaEletrico
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1168, 526);
+            this.materialTabControl1.Size = new System.Drawing.Size(1173, 509);
             this.materialTabControl1.TabIndex = 10;
             // 
             // Produto
@@ -594,14 +607,14 @@ namespace SistemaEletrico
             // 
             this.dtgProdutos.AutoGenerateColumns = false;
             this.dtgProdutos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle136.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle136.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle136.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle136.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle136.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle136;
             this.dtgProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idprodutoDataGridViewTextBoxColumn,
@@ -611,25 +624,25 @@ namespace SistemaEletrico
             this.idcategoriaDataGridViewTextBoxColumn,
             this.quantidadeDataGridViewTextBoxColumn});
             this.dtgProdutos.DataSource = this.tbprodutoBindingSource1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle137.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle137.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle137.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle137.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle137.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle137;
             this.dtgProdutos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgProdutos.Location = new System.Drawing.Point(498, 140);
             this.dtgProdutos.Name = "dtgProdutos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle138.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle138.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle138.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle138.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle138.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle138;
             this.dtgProdutos.RowHeadersWidth = 51;
             this.dtgProdutos.Size = new System.Drawing.Size(656, 336);
             this.dtgProdutos.TabIndex = 22;
@@ -903,33 +916,33 @@ namespace SistemaEletrico
             // dtgCategorias
             // 
             this.dtgCategorias.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle139.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle139.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle139.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle139.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle139.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle139;
             this.dtgCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCategorias.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle140.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle140.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle140.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle140.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle140.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle140.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCategorias.DefaultCellStyle = dataGridViewCellStyle140;
             this.dtgCategorias.Location = new System.Drawing.Point(671, 115);
             this.dtgCategorias.Name = "dtgCategorias";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle141.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle141.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle141.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle141.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle141.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle141.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle141;
             this.dtgCategorias.RowHeadersWidth = 51;
             this.dtgCategorias.Size = new System.Drawing.Size(354, 331);
             this.dtgCategorias.TabIndex = 29;
@@ -971,8 +984,6 @@ namespace SistemaEletrico
             // tp_venda
             // 
             this.tp_venda.Controls.Add(this.materialLabel2);
-            this.tp_venda.Controls.Add(this.mfbt_alterar_venda);
-            this.tp_venda.Controls.Add(this.mfbt_cadastrar_venda);
             this.tp_venda.Controls.Add(this.gb_venda);
             this.tp_venda.Controls.Add(this.cb_client_venda);
             this.tp_venda.Location = new System.Drawing.Point(4, 22);
@@ -996,42 +1007,12 @@ namespace SistemaEletrico
             this.materialLabel2.TabIndex = 52;
             this.materialLabel2.Text = "Cliente";
             // 
-            // mfbt_alterar_venda
-            // 
-            this.mfbt_alterar_venda.AutoSize = true;
-            this.mfbt_alterar_venda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mfbt_alterar_venda.Depth = 0;
-            this.mfbt_alterar_venda.Icon = null;
-            this.mfbt_alterar_venda.Location = new System.Drawing.Point(787, 6);
-            this.mfbt_alterar_venda.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mfbt_alterar_venda.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mfbt_alterar_venda.Name = "mfbt_alterar_venda";
-            this.mfbt_alterar_venda.Primary = false;
-            this.mfbt_alterar_venda.Size = new System.Drawing.Size(80, 36);
-            this.mfbt_alterar_venda.TabIndex = 51;
-            this.mfbt_alterar_venda.Text = "Alterar";
-            this.mfbt_alterar_venda.UseVisualStyleBackColor = true;
-            // 
-            // mfbt_cadastrar_venda
-            // 
-            this.mfbt_cadastrar_venda.AutoSize = true;
-            this.mfbt_cadastrar_venda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mfbt_cadastrar_venda.Depth = 0;
-            this.mfbt_cadastrar_venda.Icon = null;
-            this.mfbt_cadastrar_venda.Location = new System.Drawing.Point(910, 6);
-            this.mfbt_cadastrar_venda.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.mfbt_cadastrar_venda.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mfbt_cadastrar_venda.Name = "mfbt_cadastrar_venda";
-            this.mfbt_cadastrar_venda.Primary = false;
-            this.mfbt_cadastrar_venda.Size = new System.Drawing.Size(72, 36);
-            this.mfbt_cadastrar_venda.TabIndex = 50;
-            this.mfbt_cadastrar_venda.Text = "Salvar";
-            this.mfbt_cadastrar_venda.UseVisualStyleBackColor = true;
-            this.mfbt_cadastrar_venda.Click += new System.EventHandler(this.mfbt_cadastrar_venda_Click);
-            // 
             // gb_venda
             // 
+            this.gb_venda.Controls.Add(this.bt_f_compra);
             this.gb_venda.Controls.Add(this.mt_vl_compra);
+            this.gb_venda.Controls.Add(this.mfbt_alterar_venda);
+            this.gb_venda.Controls.Add(this.mfbt_cadastrar_venda);
             this.gb_venda.Controls.Add(this.materialLabel8);
             this.gb_venda.Controls.Add(this.materialDivider1);
             this.gb_venda.Controls.Add(this.mcb_valor);
@@ -1053,6 +1034,111 @@ namespace SistemaEletrico
             this.gb_venda.TabIndex = 11;
             this.gb_venda.TabStop = false;
             this.gb_venda.Text = "Nova Venda";
+            // 
+            // bt_f_compra
+            // 
+            this.bt_f_compra.AutoSize = true;
+            this.bt_f_compra.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_f_compra.Depth = 0;
+            this.bt_f_compra.Icon = null;
+            this.bt_f_compra.Location = new System.Drawing.Point(830, 305);
+            this.bt_f_compra.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_f_compra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_f_compra.Name = "bt_f_compra";
+            this.bt_f_compra.Primary = false;
+            this.bt_f_compra.Size = new System.Drawing.Size(149, 36);
+            this.bt_f_compra.TabIndex = 57;
+            this.bt_f_compra.Text = "Finalizar Compra";
+            this.bt_f_compra.UseVisualStyleBackColor = true;
+            // 
+            // mt_vl_compra
+            // 
+            // 
+            // 
+            // 
+            this.mt_vl_compra.CustomButton.Image = null;
+            this.mt_vl_compra.CustomButton.Location = new System.Drawing.Point(114, 1);
+            this.mt_vl_compra.CustomButton.Name = "";
+            this.mt_vl_compra.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mt_vl_compra.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mt_vl_compra.CustomButton.TabIndex = 1;
+            this.mt_vl_compra.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mt_vl_compra.CustomButton.UseSelectable = true;
+            this.mt_vl_compra.CustomButton.Visible = false;
+            this.mt_vl_compra.Lines = new string[0];
+            this.mt_vl_compra.Location = new System.Drawing.Point(728, 252);
+            this.mt_vl_compra.MaxLength = 32767;
+            this.mt_vl_compra.Name = "mt_vl_compra";
+            this.mt_vl_compra.PasswordChar = '\0';
+            this.mt_vl_compra.PromptText = "Valor da Compra";
+            this.mt_vl_compra.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mt_vl_compra.SelectedText = "";
+            this.mt_vl_compra.SelectionLength = 0;
+            this.mt_vl_compra.SelectionStart = 0;
+            this.mt_vl_compra.ShortcutsEnabled = true;
+            this.mt_vl_compra.Size = new System.Drawing.Size(136, 23);
+            this.mt_vl_compra.TabIndex = 56;
+            this.mt_vl_compra.UseSelectable = true;
+            this.mt_vl_compra.WaterMark = "Valor da Compra";
+            this.mt_vl_compra.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mt_vl_compra.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mfbt_alterar_venda
+            // 
+            this.mfbt_alterar_venda.AutoSize = true;
+            this.mfbt_alterar_venda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mfbt_alterar_venda.Depth = 0;
+            this.mfbt_alterar_venda.Icon = null;
+            this.mfbt_alterar_venda.Location = new System.Drawing.Point(803, 115);
+            this.mfbt_alterar_venda.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mfbt_alterar_venda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mfbt_alterar_venda.Name = "mfbt_alterar_venda";
+            this.mfbt_alterar_venda.Primary = false;
+            this.mfbt_alterar_venda.Size = new System.Drawing.Size(80, 36);
+            this.mfbt_alterar_venda.TabIndex = 51;
+            this.mfbt_alterar_venda.Text = "Alterar";
+            this.mfbt_alterar_venda.UseVisualStyleBackColor = true;
+            // 
+            // mfbt_cadastrar_venda
+            // 
+            this.mfbt_cadastrar_venda.AutoSize = true;
+            this.mfbt_cadastrar_venda.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mfbt_cadastrar_venda.Depth = 0;
+            this.mfbt_cadastrar_venda.Icon = null;
+            this.mfbt_cadastrar_venda.Location = new System.Drawing.Point(926, 115);
+            this.mfbt_cadastrar_venda.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mfbt_cadastrar_venda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mfbt_cadastrar_venda.Name = "mfbt_cadastrar_venda";
+            this.mfbt_cadastrar_venda.Primary = false;
+            this.mfbt_cadastrar_venda.Size = new System.Drawing.Size(72, 36);
+            this.mfbt_cadastrar_venda.TabIndex = 50;
+            this.mfbt_cadastrar_venda.Text = "Salvar";
+            this.mfbt_cadastrar_venda.UseVisualStyleBackColor = true;
+            this.mfbt_cadastrar_venda.Click += new System.EventHandler(this.mfbt_cadastrar_venda_Click);
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(724, 213);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(83, 19);
+            this.materialLabel8.TabIndex = 55;
+            this.materialLabel8.Text = "Valor Pago";
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(728, 172);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(370, 23);
+            this.materialDivider1.TabIndex = 54;
+            this.materialDivider1.Text = "materialDivider1";
             // 
             // mcb_valor
             // 
@@ -1099,7 +1185,7 @@ namespace SistemaEletrico
             this.mtxt_deconto.CustomButton.UseSelectable = true;
             this.mtxt_deconto.CustomButton.Visible = false;
             this.mtxt_deconto.Lines = new string[0];
-            this.mtxt_deconto.Location = new System.Drawing.Point(881, 113);
+            this.mtxt_deconto.Location = new System.Drawing.Point(879, 83);
             this.mtxt_deconto.MaxLength = 32767;
             this.mtxt_deconto.Name = "mtxt_deconto";
             this.mtxt_deconto.PasswordChar = '\0';
@@ -1189,7 +1275,7 @@ namespace SistemaEletrico
             "Pix",
             "Cartão Débito",
             "Cartão Crédito"});
-            this.mcb_forma_pag.Location = new System.Drawing.Point(728, 254);
+            this.mcb_forma_pag.Location = new System.Drawing.Point(922, 246);
             this.mcb_forma_pag.Name = "mcb_forma_pag";
             this.mcb_forma_pag.Size = new System.Drawing.Size(176, 29);
             this.mcb_forma_pag.TabIndex = 25;
@@ -1201,7 +1287,7 @@ namespace SistemaEletrico
             this.mlb_forma_pag.Depth = 0;
             this.mlb_forma_pag.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_forma_pag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_forma_pag.Location = new System.Drawing.Point(742, 221);
+            this.mlb_forma_pag.Location = new System.Drawing.Point(946, 213);
             this.mlb_forma_pag.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_forma_pag.Name = "mlb_forma_pag";
             this.mlb_forma_pag.Size = new System.Drawing.Size(152, 19);
@@ -1214,7 +1300,7 @@ namespace SistemaEletrico
             this.mlb_desconto.Depth = 0;
             this.mlb_desconto.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_desconto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_desconto.Location = new System.Drawing.Point(801, 113);
+            this.mlb_desconto.Location = new System.Drawing.Point(799, 83);
             this.mlb_desconto.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_desconto.Name = "mlb_desconto";
             this.mlb_desconto.Size = new System.Drawing.Size(74, 19);
@@ -1276,14 +1362,14 @@ namespace SistemaEletrico
             // dtgVenda
             // 
             this.dtgVenda.AutoGenerateColumns = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle142.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle142.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle142.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle142.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle142.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle142;
             this.dtgVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgVenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codvendaDataGridViewTextBoxColumn,
@@ -1292,24 +1378,24 @@ namespace SistemaEletrico
             this.idpessoaclienteDataGridViewTextBoxColumn,
             this.idpessoafuncionarioDataGridViewTextBoxColumn});
             this.dtgVenda.DataSource = this.tbvendaBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle143.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle143.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle143.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle143.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle143.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle143.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgVenda.DefaultCellStyle = dataGridViewCellStyle143;
             this.dtgVenda.Location = new System.Drawing.Point(38, 70);
             this.dtgVenda.Name = "dtgVenda";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVenda.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle144.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle144.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle144.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle144.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle144.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVenda.RowHeadersDefaultCellStyle = dataGridViewCellStyle144;
             this.dtgVenda.RowHeadersWidth = 51;
             this.dtgVenda.Size = new System.Drawing.Size(653, 306);
             this.dtgVenda.TabIndex = 10;
@@ -1544,38 +1630,38 @@ namespace SistemaEletrico
             // 
             // dataGridView2
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle145.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle145.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle145.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle145.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle145.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle145;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle146.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle146.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle146.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle146.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle146.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle146;
             this.dataGridView2.Location = new System.Drawing.Point(38, 70);
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle147.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle147.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle147.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle147.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle147.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle147;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(771, 325);
             this.dataGridView2.TabIndex = 10;
@@ -1643,26 +1729,27 @@ namespace SistemaEletrico
             // 
             // Cadastrar
             // 
+            this.Cadastrar.BackColor = System.Drawing.Color.White;
             this.Cadastrar.Controls.Add(this.groupBox2);
             this.Cadastrar.ImageKey = "icons8-add-user-male-32.png";
             this.Cadastrar.Location = new System.Drawing.Point(4, 23);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.Cadastrar.Size = new System.Drawing.Size(1160, 499);
+            this.Cadastrar.Size = new System.Drawing.Size(1165, 482);
             this.Cadastrar.TabIndex = 5;
             this.Cadastrar.Text = "CADASTRAR";
-            this.Cadastrar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.gb_Pessoal);
             this.groupBox2.Controls.Add(this.mbt_alterar_cad);
             this.groupBox2.Controls.Add(this.materialCheckBox1);
             this.groupBox2.Controls.Add(this.mbt_salvar);
-            this.groupBox2.Location = new System.Drawing.Point(16, 17);
+            this.groupBox2.Location = new System.Drawing.Point(9, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1130, 459);
+            this.groupBox2.Size = new System.Drawing.Size(1150, 471);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Novo Cadastro";
@@ -1724,9 +1811,9 @@ namespace SistemaEletrico
             // metroDateTime2
             // 
             this.metroDateTime2.Location = new System.Drawing.Point(871, 30);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(4, 30);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(206, 30);
+            this.metroDateTime2.Size = new System.Drawing.Size(206, 29);
             this.metroDateTime2.TabIndex = 57;
             // 
             // txt_Cargo
@@ -1739,15 +1826,24 @@ namespace SistemaEletrico
             // cb_setor
             // 
             this.cb_setor.FormattingEnabled = true;
-            this.cb_setor.ItemHeight = 24;
+            this.cb_setor.ItemHeight = 23;
             this.cb_setor.Location = new System.Drawing.Point(92, 28);
             this.cb_setor.Name = "cb_setor";
-            this.cb_setor.Size = new System.Drawing.Size(196, 30);
+            this.cb_setor.Size = new System.Drawing.Size(196, 29);
             this.cb_setor.TabIndex = 53;
             this.cb_setor.UseSelectable = true;
             // 
             // gb_Pessoal
             // 
+            this.gb_Pessoal.BackColor = System.Drawing.Color.White;
+            this.gb_Pessoal.Controls.Add(this.mlb_endereco2);
+            this.gb_Pessoal.Controls.Add(this.mtbox_endereco2);
+            this.gb_Pessoal.Controls.Add(this.mlb_end2);
+            this.gb_Pessoal.Controls.Add(this.mlb_endereco1);
+            this.gb_Pessoal.Controls.Add(this.mtbox_endereco1);
+            this.gb_Pessoal.Controls.Add(this.materialLabel9);
+            this.gb_Pessoal.Controls.Add(this.materialLabel10);
+            this.gb_Pessoal.Controls.Add(this.mlb_end1);
             this.gb_Pessoal.Controls.Add(this.mlb_situacao_cadastro);
             this.gb_Pessoal.Controls.Add(this.mtxt_Email);
             this.gb_Pessoal.Controls.Add(this.mlb_Email);
@@ -1766,9 +1862,9 @@ namespace SistemaEletrico
             this.gb_Pessoal.Controls.Add(this.cb_Sexo);
             this.gb_Pessoal.Controls.Add(this.dt_dt_nasc);
             this.gb_Pessoal.Controls.Add(this.metroDateTime1);
-            this.gb_Pessoal.Location = new System.Drawing.Point(17, 32);
+            this.gb_Pessoal.Location = new System.Drawing.Point(17, 19);
             this.gb_Pessoal.Name = "gb_Pessoal";
-            this.gb_Pessoal.Size = new System.Drawing.Size(1094, 228);
+            this.gb_Pessoal.Size = new System.Drawing.Size(1116, 228);
             this.gb_Pessoal.TabIndex = 51;
             this.gb_Pessoal.TabStop = false;
             this.gb_Pessoal.Text = "Pessoal";
@@ -1779,7 +1875,7 @@ namespace SistemaEletrico
             this.mlb_situacao_cadastro.Depth = 0;
             this.mlb_situacao_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_situacao_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(898, 155);
+            this.mlb_situacao_cadastro.Location = new System.Drawing.Point(961, 126);
             this.mlb_situacao_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_situacao_cadastro.Name = "mlb_situacao_cadastro";
             this.mlb_situacao_cadastro.Size = new System.Drawing.Size(133, 19);
@@ -1792,7 +1888,7 @@ namespace SistemaEletrico
             // 
             // 
             this.mtxt_Email.CustomButton.Image = null;
-            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(304, 1);
+            this.mtxt_Email.CustomButton.Location = new System.Drawing.Point(210, 1);
             this.mtxt_Email.CustomButton.Name = "";
             this.mtxt_Email.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxt_Email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1801,7 +1897,7 @@ namespace SistemaEletrico
             this.mtxt_Email.CustomButton.UseSelectable = true;
             this.mtxt_Email.CustomButton.Visible = false;
             this.mtxt_Email.Lines = new string[0];
-            this.mtxt_Email.Location = new System.Drawing.Point(466, 172);
+            this.mtxt_Email.Location = new System.Drawing.Point(403, 122);
             this.mtxt_Email.MaxLength = 32767;
             this.mtxt_Email.Name = "mtxt_Email";
             this.mtxt_Email.PasswordChar = '\0';
@@ -1810,7 +1906,7 @@ namespace SistemaEletrico
             this.mtxt_Email.SelectionLength = 0;
             this.mtxt_Email.SelectionStart = 0;
             this.mtxt_Email.ShortcutsEnabled = true;
-            this.mtxt_Email.Size = new System.Drawing.Size(326, 23);
+            this.mtxt_Email.Size = new System.Drawing.Size(232, 23);
             this.mtxt_Email.TabIndex = 69;
             this.mtxt_Email.UseSelectable = true;
             this.mtxt_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1822,7 +1918,7 @@ namespace SistemaEletrico
             this.mlb_Email.Depth = 0;
             this.mlb_Email.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Email.Location = new System.Drawing.Point(398, 176);
+            this.mlb_Email.Location = new System.Drawing.Point(335, 126);
             this.mlb_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Email.Name = "mlb_Email";
             this.mlb_Email.Size = new System.Drawing.Size(47, 19);
@@ -1844,7 +1940,7 @@ namespace SistemaEletrico
             this.mtxt_Contato.CustomButton.UseSelectable = true;
             this.mtxt_Contato.CustomButton.Visible = false;
             this.mtxt_Contato.Lines = new string[0];
-            this.mtxt_Contato.Location = new System.Drawing.Point(130, 172);
+            this.mtxt_Contato.Location = new System.Drawing.Point(869, 63);
             this.mtxt_Contato.MaxLength = 32767;
             this.mtxt_Contato.Name = "mtxt_Contato";
             this.mtxt_Contato.PasswordChar = '\0';
@@ -1865,7 +1961,7 @@ namespace SistemaEletrico
             this.mlb_Contato.Depth = 0;
             this.mlb_Contato.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Contato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Contato.Location = new System.Drawing.Point(36, 176);
+            this.mlb_Contato.Location = new System.Drawing.Point(788, 67);
             this.mlb_Contato.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Contato.Name = "mlb_Contato";
             this.mlb_Contato.Size = new System.Drawing.Size(63, 19);
@@ -1878,7 +1974,7 @@ namespace SistemaEletrico
             this.mlb_tp_cadastro.Depth = 0;
             this.mlb_tp_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_tp_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_tp_cadastro.Location = new System.Drawing.Point(750, 112);
+            this.mlb_tp_cadastro.Location = new System.Drawing.Point(25, 126);
             this.mlb_tp_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_tp_cadastro.Name = "mlb_tp_cadastro";
             this.mlb_tp_cadastro.Size = new System.Drawing.Size(104, 19);
@@ -1891,7 +1987,7 @@ namespace SistemaEletrico
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(719, 38);
+            this.materialLabel1.Location = new System.Drawing.Point(736, 23);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(146, 19);
@@ -1904,7 +2000,7 @@ namespace SistemaEletrico
             this.mlb_Sexo.Depth = 0;
             this.mlb_Sexo.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Sexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Sexo.Location = new System.Drawing.Point(462, 38);
+            this.mlb_Sexo.Location = new System.Drawing.Point(452, 29);
             this.mlb_Sexo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Sexo.Name = "mlb_Sexo";
             this.mlb_Sexo.Size = new System.Drawing.Size(42, 19);
@@ -1917,7 +2013,7 @@ namespace SistemaEletrico
             this.mlb_Dt_Cadastro.Depth = 0;
             this.mlb_Dt_Cadastro.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Dt_Cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(369, 112);
+            this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(365, 73);
             this.mlb_Dt_Cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Dt_Cadastro.Name = "mlb_Dt_Cadastro";
             this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(126, 19);
@@ -1939,7 +2035,7 @@ namespace SistemaEletrico
             this.mtxt_Cpf_Cnpj.CustomButton.UseSelectable = true;
             this.mtxt_Cpf_Cnpj.CustomButton.Visible = false;
             this.mtxt_Cpf_Cnpj.Lines = new string[0];
-            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(130, 108);
+            this.mtxt_Cpf_Cnpj.Location = new System.Drawing.Point(116, 69);
             this.mtxt_Cpf_Cnpj.MaxLength = 32767;
             this.mtxt_Cpf_Cnpj.Name = "mtxt_Cpf_Cnpj";
             this.mtxt_Cpf_Cnpj.PasswordChar = '\0';
@@ -1960,7 +2056,7 @@ namespace SistemaEletrico
             this.mlb_Cpf_Cnpj.Depth = 0;
             this.mlb_Cpf_Cnpj.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Cpf_Cnpj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(36, 112);
+            this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(22, 73);
             this.mlb_Cpf_Cnpj.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cpf_Cnpj.Name = "mlb_Cpf_Cnpj";
             this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(88, 19);
@@ -1982,7 +2078,7 @@ namespace SistemaEletrico
             this.mtxtb_Nome.CustomButton.UseSelectable = true;
             this.mtxtb_Nome.CustomButton.Visible = false;
             this.mtxtb_Nome.Lines = new string[0];
-            this.mtxtb_Nome.Location = new System.Drawing.Point(92, 38);
+            this.mtxtb_Nome.Location = new System.Drawing.Point(82, 29);
             this.mtxtb_Nome.MaxLength = 32767;
             this.mtxtb_Nome.Name = "mtxtb_Nome";
             this.mtxtb_Nome.PasswordChar = '\0';
@@ -2003,7 +2099,7 @@ namespace SistemaEletrico
             this.mlb_Nome.Depth = 0;
             this.mlb_Nome.Font = new System.Drawing.Font("Roboto", 11F);
             this.mlb_Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.mlb_Nome.Location = new System.Drawing.Point(36, 38);
+            this.mlb_Nome.Location = new System.Drawing.Point(26, 29);
             this.mlb_Nome.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Nome.Name = "mlb_Nome";
             this.mlb_Nome.Size = new System.Drawing.Size(50, 19);
@@ -2013,17 +2109,17 @@ namespace SistemaEletrico
             // cb_tp_cadastro
             // 
             this.cb_tp_cadastro.FormattingEnabled = true;
-            this.cb_tp_cadastro.ItemHeight = 24;
-            this.cb_tp_cadastro.Location = new System.Drawing.Point(871, 102);
+            this.cb_tp_cadastro.ItemHeight = 23;
+            this.cb_tp_cadastro.Location = new System.Drawing.Point(146, 116);
             this.cb_tp_cadastro.Name = "cb_tp_cadastro";
-            this.cb_tp_cadastro.Size = new System.Drawing.Size(196, 30);
+            this.cb_tp_cadastro.Size = new System.Drawing.Size(152, 29);
             this.cb_tp_cadastro.TabIndex = 56;
             this.cb_tp_cadastro.UseSelectable = true;
             // 
             // metroToggle1
             // 
             this.metroToggle1.AutoSize = true;
-            this.metroToggle1.Location = new System.Drawing.Point(920, 184);
+            this.metroToggle1.Location = new System.Drawing.Point(988, 167);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 17);
             this.metroToggle1.TabIndex = 53;
@@ -2033,28 +2129,28 @@ namespace SistemaEletrico
             // cb_Sexo
             // 
             this.cb_Sexo.FormattingEnabled = true;
-            this.cb_Sexo.ItemHeight = 24;
-            this.cb_Sexo.Location = new System.Drawing.Point(566, 29);
+            this.cb_Sexo.ItemHeight = 23;
+            this.cb_Sexo.Location = new System.Drawing.Point(556, 20);
             this.cb_Sexo.Name = "cb_Sexo";
-            this.cb_Sexo.Size = new System.Drawing.Size(121, 30);
+            this.cb_Sexo.Size = new System.Drawing.Size(121, 29);
             this.cb_Sexo.TabIndex = 40;
             this.cb_Sexo.UseSelectable = true;
             // 
             // dt_dt_nasc
             // 
-            this.dt_dt_nasc.Location = new System.Drawing.Point(871, 28);
-            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(4, 30);
+            this.dt_dt_nasc.Location = new System.Drawing.Point(888, 13);
+            this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 29);
             this.dt_dt_nasc.Name = "dt_dt_nasc";
-            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 30);
+            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 29);
             this.dt_dt_nasc.TabIndex = 39;
             // 
             // metroDateTime1
             // 
             this.metroDateTime1.Enabled = false;
-            this.metroDateTime1.Location = new System.Drawing.Point(501, 102);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 30);
+            this.metroDateTime1.Location = new System.Drawing.Point(497, 63);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(206, 30);
+            this.metroDateTime1.Size = new System.Drawing.Size(206, 29);
             this.metroDateTime1.TabIndex = 44;
             this.metroDateTime1.Value = new System.DateTime(2023, 3, 9, 10, 41, 50, 0);
             // 
@@ -2064,7 +2160,7 @@ namespace SistemaEletrico
             this.mbt_alterar_cad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbt_alterar_cad.Depth = 0;
             this.mbt_alterar_cad.Icon = null;
-            this.mbt_alterar_cad.Location = new System.Drawing.Point(931, 403);
+            this.mbt_alterar_cad.Location = new System.Drawing.Point(836, 403);
             this.mbt_alterar_cad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbt_alterar_cad.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbt_alterar_cad.Name = "mbt_alterar_cad";
@@ -2079,7 +2175,7 @@ namespace SistemaEletrico
             this.materialCheckBox1.AutoSize = true;
             this.materialCheckBox1.Depth = 0;
             this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(570, 407);
+            this.materialCheckBox1.Location = new System.Drawing.Point(634, 407);
             this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2098,7 +2194,7 @@ namespace SistemaEletrico
             this.mbt_salvar.Depth = 0;
             this.mbt_salvar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.mbt_salvar.Icon = null;
-            this.mbt_salvar.Location = new System.Drawing.Point(1039, 403);
+            this.mbt_salvar.Location = new System.Drawing.Point(1022, 403);
             this.mbt_salvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbt_salvar.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbt_salvar.Name = "mbt_salvar";
@@ -2107,6 +2203,7 @@ namespace SistemaEletrico
             this.mbt_salvar.TabIndex = 51;
             this.mbt_salvar.Text = "Salvar";
             this.mbt_salvar.UseVisualStyleBackColor = false;
+            this.mbt_salvar.Click += new System.EventHandler(this.mbt_salvar_Click);
             // 
             // Consultar
             // 
@@ -2127,38 +2224,38 @@ namespace SistemaEletrico
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle148.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle148.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle148.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle148.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle148;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_produtos,
             this.desc_prod,
             this.vl});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle149.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle149.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle149.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle149.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle149;
             this.dataGridView4.Location = new System.Drawing.Point(91, 73);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle150.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle150.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle150.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle150.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle150.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle150;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.Size = new System.Drawing.Size(845, 382);
             this.dataGridView4.TabIndex = 19;
@@ -2236,67 +2333,200 @@ namespace SistemaEletrico
             // 
             this.tbvendaBindingSource1.DataSource = typeof(EletricoSistema.DataAccess.tb_venda);
             // 
-            // materialDivider1
+            // mlb_endereco2
             // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(728, 178);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(370, 23);
-            this.materialDivider1.TabIndex = 54;
-            this.materialDivider1.Text = "materialDivider1";
+            this.mlb_endereco2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mlb_endereco2.FormattingEnabled = true;
+            this.mlb_endereco2.ItemHeight = 23;
+            this.mlb_endereco2.Items.AddRange(new object[] {
+            "Comercial",
+            "Residencial"});
+            this.mlb_endereco2.Location = new System.Drawing.Point(819, 116);
+            this.mlb_endereco2.Name = "mlb_endereco2";
+            this.mlb_endereco2.Size = new System.Drawing.Size(106, 29);
+            this.mlb_endereco2.Sorted = true;
+            this.mlb_endereco2.TabIndex = 89;
+            this.mlb_endereco2.UseSelectable = true;
             // 
-            // mt_vl_compra
+            // mtbox_endereco2
             // 
             // 
             // 
             // 
-            this.mt_vl_compra.CustomButton.Image = null;
-            this.mt_vl_compra.CustomButton.Location = new System.Drawing.Point(114, 1);
-            this.mt_vl_compra.CustomButton.Name = "";
-            this.mt_vl_compra.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.mt_vl_compra.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mt_vl_compra.CustomButton.TabIndex = 1;
-            this.mt_vl_compra.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mt_vl_compra.CustomButton.UseSelectable = true;
-            this.mt_vl_compra.CustomButton.Visible = false;
-            this.mt_vl_compra.Lines = new string[0];
-            this.mt_vl_compra.Location = new System.Drawing.Point(945, 309);
-            this.mt_vl_compra.MaxLength = 32767;
-            this.mt_vl_compra.Name = "mt_vl_compra";
-            this.mt_vl_compra.PasswordChar = '\0';
-            this.mt_vl_compra.PromptText = "Valor da Compra";
-            this.mt_vl_compra.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mt_vl_compra.SelectedText = "";
-            this.mt_vl_compra.SelectionLength = 0;
-            this.mt_vl_compra.SelectionStart = 0;
-            this.mt_vl_compra.ShortcutsEnabled = true;
-            this.mt_vl_compra.Size = new System.Drawing.Size(136, 23);
-            this.mt_vl_compra.TabIndex = 56;
-            this.mt_vl_compra.UseSelectable = true;
-            this.mt_vl_compra.WaterMark = "Valor da Compra";
-            this.mt_vl_compra.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mt_vl_compra.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbox_endereco2.CustomButton.Image = null;
+            this.mtbox_endereco2.CustomButton.Location = new System.Drawing.Point(152, 1);
+            this.mtbox_endereco2.CustomButton.Name = "";
+            this.mtbox_endereco2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtbox_endereco2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtbox_endereco2.CustomButton.TabIndex = 1;
+            this.mtbox_endereco2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtbox_endereco2.CustomButton.UseSelectable = true;
+            this.mtbox_endereco2.CustomButton.Visible = false;
+            this.mtbox_endereco2.Lines = new string[0];
+            this.mtbox_endereco2.Location = new System.Drawing.Point(751, 178);
+            this.mtbox_endereco2.MaxLength = 32767;
+            this.mtbox_endereco2.Name = "mtbox_endereco2";
+            this.mtbox_endereco2.PasswordChar = '\0';
+            this.mtbox_endereco2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtbox_endereco2.SelectedText = "";
+            this.mtbox_endereco2.SelectionLength = 0;
+            this.mtbox_endereco2.SelectionStart = 0;
+            this.mtbox_endereco2.ShortcutsEnabled = true;
+            this.mtbox_endereco2.Size = new System.Drawing.Size(174, 23);
+            this.mtbox_endereco2.TabIndex = 87;
+            this.mtbox_endereco2.UseSelectable = true;
+            this.mtbox_endereco2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtbox_endereco2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // materialLabel8
+            // mlb_end2
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(854, 311);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(83, 19);
-            this.materialLabel8.TabIndex = 55;
-            this.materialLabel8.Text = "Valor Pago";
+            this.mlb_end2.AutoSize = true;
+            this.mlb_end2.Depth = 0;
+            this.mlb_end2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_end2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mlb_end2.Location = new System.Drawing.Point(661, 183);
+            this.mlb_end2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlb_end2.Name = "mlb_end2";
+            this.mlb_end2.Size = new System.Drawing.Size(84, 19);
+            this.mlb_end2.TabIndex = 88;
+            this.mlb_end2.Text = "Endereco 2";
+            // 
+            // mlb_endereco1
+            // 
+            this.mlb_endereco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mlb_endereco1.FormattingEnabled = true;
+            this.mlb_endereco1.ItemHeight = 23;
+            this.mlb_endereco1.Items.AddRange(new object[] {
+            "Comercial",
+            "Residencial"});
+            this.mlb_endereco1.Location = new System.Drawing.Point(145, 173);
+            this.mlb_endereco1.Name = "mlb_endereco1";
+            this.mlb_endereco1.Size = new System.Drawing.Size(95, 29);
+            this.mlb_endereco1.Sorted = true;
+            this.mlb_endereco1.TabIndex = 85;
+            this.mlb_endereco1.UseSelectable = true;
+            // 
+            // mtbox_endereco1
+            // 
+            // 
+            // 
+            // 
+            this.mtbox_endereco1.CustomButton.Image = null;
+            this.mtbox_endereco1.CustomButton.Location = new System.Drawing.Point(202, 1);
+            this.mtbox_endereco1.CustomButton.Name = "";
+            this.mtbox_endereco1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtbox_endereco1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtbox_endereco1.CustomButton.TabIndex = 1;
+            this.mtbox_endereco1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtbox_endereco1.CustomButton.UseSelectable = true;
+            this.mtbox_endereco1.CustomButton.Visible = false;
+            this.mtbox_endereco1.Lines = new string[0];
+            this.mtbox_endereco1.Location = new System.Drawing.Point(369, 179);
+            this.mtbox_endereco1.MaxLength = 32767;
+            this.mtbox_endereco1.Name = "mtbox_endereco1";
+            this.mtbox_endereco1.PasswordChar = '\0';
+            this.mtbox_endereco1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtbox_endereco1.SelectedText = "";
+            this.mtbox_endereco1.SelectionLength = 0;
+            this.mtbox_endereco1.SelectionStart = 0;
+            this.mtbox_endereco1.ShortcutsEnabled = true;
+            this.mtbox_endereco1.Size = new System.Drawing.Size(224, 23);
+            this.mtbox_endereco1.TabIndex = 83;
+            this.mtbox_endereco1.UseSelectable = true;
+            this.mtbox_endereco1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtbox_endereco1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel9.Location = new System.Drawing.Point(279, 183);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(84, 19);
+            this.materialLabel9.TabIndex = 84;
+            this.materialLabel9.Text = "Endereco 1";
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel10.Location = new System.Drawing.Point(695, 126);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(118, 19);
+            this.materialLabel10.TabIndex = 86;
+            this.materialLabel10.Text = "Tipo Endereco 2";
+            // 
+            // mlb_end1
+            // 
+            this.mlb_end1.AutoSize = true;
+            this.mlb_end1.Depth = 0;
+            this.mlb_end1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_end1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mlb_end1.Location = new System.Drawing.Point(21, 182);
+            this.mlb_end1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlb_end1.Name = "mlb_end1";
+            this.mlb_end1.Size = new System.Drawing.Size(118, 19);
+            this.mlb_end1.TabIndex = 82;
+            this.mlb_end1.Text = "Tipo Endereco 1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ms_Senha);
+            this.groupBox1.Controls.Add(this.SLT_User);
+            this.groupBox1.Location = new System.Drawing.Point(17, 371);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(537, 86);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Usuario";
+            // 
+            // ms_Senha
+            // 
+            this.ms_Senha.Depth = 0;
+            this.ms_Senha.Hint = "SENHA";
+            this.ms_Senha.Location = new System.Drawing.Point(311, 36);
+            this.ms_Senha.Margin = new System.Windows.Forms.Padding(2);
+            this.ms_Senha.MaxLength = 32767;
+            this.ms_Senha.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ms_Senha.Name = "ms_Senha";
+            this.ms_Senha.PasswordChar = '*';
+            this.ms_Senha.SelectedText = "";
+            this.ms_Senha.SelectionLength = 0;
+            this.ms_Senha.SelectionStart = 0;
+            this.ms_Senha.Size = new System.Drawing.Size(163, 23);
+            this.ms_Senha.TabIndex = 15;
+            this.ms_Senha.TabStop = false;
+            this.ms_Senha.UseSystemPasswordChar = false;
+            // 
+            // SLT_User
+            // 
+            this.SLT_User.Depth = 0;
+            this.SLT_User.Hint = "USUÁRIO";
+            this.SLT_User.Location = new System.Drawing.Point(14, 36);
+            this.SLT_User.Margin = new System.Windows.Forms.Padding(2);
+            this.SLT_User.MaxLength = 32767;
+            this.SLT_User.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SLT_User.Name = "SLT_User";
+            this.SLT_User.PasswordChar = '\0';
+            this.SLT_User.SelectedText = "";
+            this.SLT_User.SelectionLength = 0;
+            this.SLT_User.SelectionStart = 0;
+            this.SLT_User.Size = new System.Drawing.Size(163, 23);
+            this.SLT_User.TabIndex = 14;
+            this.SLT_User.TabStop = false;
+            this.SLT_User.UseSystemPasswordChar = false;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 630);
+            this.ClientSize = new System.Drawing.Size(1174, 605);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.HelpButton = true;
@@ -2342,6 +2572,7 @@ namespace SistemaEletrico
             this.Consultar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbvendaBindingSource1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2486,6 +2717,18 @@ namespace SistemaEletrico
         private MetroFramework.Controls.MetroTextBox mt_vl_compra;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialFlatButton bt_f_compra;
+        public MetroFramework.Controls.MetroComboBox mlb_endereco2;
+        private MetroFramework.Controls.MetroTextBox mtbox_endereco2;
+        private MaterialSkin.Controls.MaterialLabel mlb_end2;
+        public MetroFramework.Controls.MetroComboBox mlb_endereco1;
+        private MetroFramework.Controls.MetroTextBox mtbox_endereco1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private MaterialSkin.Controls.MaterialLabel materialLabel10;
+        private MaterialSkin.Controls.MaterialLabel mlb_end1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField ms_Senha;
+        private MaterialSkin.Controls.MaterialSingleLineTextField SLT_User;
     }
 }
 

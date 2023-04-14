@@ -428,6 +428,11 @@ namespace SistemaEletrico
 
             }
         }
+
+        private void mbt_salvar_Click(object sender, EventArgs e)
+        {
+
+        }
         //private void txtCategoria_Prod_SelectionChangeCommitted(object sender, EventArgs e)
         //{
         //    //tb_categoria obj = txtCategoria_Prod.SelectedItem as tb_categoria;
