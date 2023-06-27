@@ -1524,7 +1524,7 @@ namespace SistemaEletrico
             this.Vendas.Location = new System.Drawing.Point(4, 23);
             this.Vendas.Name = "Vendas";
             this.Vendas.Padding = new System.Windows.Forms.Padding(3);
-            this.Vendas.Size = new System.Drawing.Size(1160, 499);
+            this.Vendas.Size = new System.Drawing.Size(1184, 503);
             this.Vendas.TabIndex = 2;
             this.Vendas.Text = "VENDAS";
             this.Vendas.UseVisualStyleBackColor = true;
@@ -1538,7 +1538,7 @@ namespace SistemaEletrico
             this.mtb_venda_orcamento.MouseState = MaterialSkin.MouseState.HOVER;
             this.mtb_venda_orcamento.Name = "mtb_venda_orcamento";
             this.mtb_venda_orcamento.SelectedIndex = 0;
-            this.mtb_venda_orcamento.Size = new System.Drawing.Size(1149, 463);
+            this.mtb_venda_orcamento.Size = new System.Drawing.Size(1169, 467);
             this.mtb_venda_orcamento.TabIndex = 14;
             // 
             // tp_venda
@@ -1552,7 +1552,7 @@ namespace SistemaEletrico
             this.tp_venda.Location = new System.Drawing.Point(4, 22);
             this.tp_venda.Name = "tp_venda";
             this.tp_venda.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_venda.Size = new System.Drawing.Size(1141, 437);
+            this.tp_venda.Size = new System.Drawing.Size(1161, 441);
             this.tp_venda.TabIndex = 0;
             this.tp_venda.Text = "Venda";
             this.tp_venda.UseVisualStyleBackColor = true;
@@ -1617,7 +1617,7 @@ namespace SistemaEletrico
             this.gb_venda.Controls.Add(this.txtb_cod_venda);
             this.gb_venda.Location = new System.Drawing.Point(6, 49);
             this.gb_venda.Name = "gb_venda";
-            this.gb_venda.Size = new System.Drawing.Size(1129, 382);
+            this.gb_venda.Size = new System.Drawing.Size(1129, 385);
             this.gb_venda.TabIndex = 11;
             this.gb_venda.TabStop = false;
             this.gb_venda.Text = "Nova Venda";
@@ -1854,6 +1854,7 @@ namespace SistemaEletrico
             this.cb_client_venda.Size = new System.Drawing.Size(413, 21);
             this.cb_client_venda.TabIndex = 10;
             this.cb_client_venda.ValueMember = "id_pessoa";
+            this.cb_client_venda.SelectedIndexChanged += new System.EventHandler(this.cb_client_venda_SelectedIndexChanged);
             // 
             // tbpessoasBindingSource
             // 
@@ -1875,7 +1876,7 @@ namespace SistemaEletrico
             this.tp_orcamento.Location = new System.Drawing.Point(4, 22);
             this.tp_orcamento.Name = "tp_orcamento";
             this.tp_orcamento.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_orcamento.Size = new System.Drawing.Size(1141, 437);
+            this.tp_orcamento.Size = new System.Drawing.Size(1179, 441);
             this.tp_orcamento.TabIndex = 1;
             this.tp_orcamento.Text = "Orçamento";
             this.tp_orcamento.UseVisualStyleBackColor = true;
@@ -2113,7 +2114,7 @@ namespace SistemaEletrico
             this.mt_s_orcamento_venda.Location = new System.Drawing.Point(-22, -1);
             this.mt_s_orcamento_venda.MouseState = MaterialSkin.MouseState.HOVER;
             this.mt_s_orcamento_venda.Name = "mt_s_orcamento_venda";
-            this.mt_s_orcamento_venda.Size = new System.Drawing.Size(1196, 33);
+            this.mt_s_orcamento_venda.Size = new System.Drawing.Size(1206, 33);
             this.mt_s_orcamento_venda.TabIndex = 12;
             this.mt_s_orcamento_venda.Text = "mt_s_orcamento_venda";
             // 
@@ -2129,7 +2130,7 @@ namespace SistemaEletrico
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1168, 526);
+            this.materialTabControl1.Size = new System.Drawing.Size(1192, 530);
             this.materialTabControl1.TabIndex = 10;
             // 
             // materialTabSelector1
@@ -2140,7 +2141,7 @@ namespace SistemaEletrico
             this.materialTabSelector1.Location = new System.Drawing.Point(-1, 51);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(1178, 43);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1209, 43);
             this.materialTabSelector1.TabIndex = 11;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -2156,7 +2157,7 @@ namespace SistemaEletrico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 626);
+            this.ClientSize = new System.Drawing.Size(1192, 629);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.HelpButton = true;

@@ -97,7 +97,7 @@ namespace SistemaEletrico
             this.mt_tp_docu.Controls.Add(this.groupBox3);
             this.mt_tp_docu.Controls.Add(this.gb_Pessoal);
             this.mt_tp_docu.Controls.Add(this.mbt_salvar);
-            this.mt_tp_docu.Location = new System.Drawing.Point(21, 15);
+            this.mt_tp_docu.Location = new System.Drawing.Point(18, 10);
             this.mt_tp_docu.Name = "mt_tp_docu";
             this.mt_tp_docu.Size = new System.Drawing.Size(1130, 485);
             this.mt_tp_docu.TabIndex = 7;
@@ -736,7 +736,6 @@ namespace SistemaEletrico
             this.mbt_salvar.TabIndex = 51;
             this.mbt_salvar.Text = "Salvar";
             this.mbt_salvar.UseVisualStyleBackColor = false;
-            this.mbt_salvar.Click += new System.EventHandler(this.mbt_salvar_Click);
             // 
             // materialTabControl1
             // 

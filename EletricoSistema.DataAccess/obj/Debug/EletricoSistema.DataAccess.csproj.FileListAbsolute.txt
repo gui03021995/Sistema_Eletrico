@@ -40,4 +40,3 @@ C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.cs
 C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.CopyComplete
 C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.dll
 C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.pdb
-C:\Unimed\sys\EletricoSistema.DataAccess\obj\Debug\EletricoSistema.DataAccess.csproj.AssemblyReference.cache

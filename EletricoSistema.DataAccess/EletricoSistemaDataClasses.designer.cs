@@ -318,8 +318,6 @@ namespace EletricoSistema.DataAccess
 		
 		private System.Nullable<int> _id_pessoa_funcionario;
 		
-		private System.Nullable<int> _cod_prod;
-		
 		private EntitySet<tb_contas_receber> _tb_contas_receber;
 		
 		private EntitySet<tb_itens_venda> _tb_itens_venda;
@@ -340,8 +338,6 @@ namespace EletricoSistema.DataAccess
     partial void Onid_pessoa_clienteChanged();
     partial void Onid_pessoa_funcionarioChanging(System.Nullable<int> value);
     partial void Onid_pessoa_funcionarioChanged();
-    partial void Oncod_prodChanging(System.Nullable<int> value);
-    partial void Oncod_prodChanged();
     #endregion
 		
 		public tb_venda()
@@ -467,26 +463,6 @@ namespace EletricoSistema.DataAccess
 					this._id_pessoa_funcionario = value;
 					this.SendPropertyChanged("id_pessoa_funcionario");
 					this.Onid_pessoa_funcionarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cod_prod", DbType="Int")]
-		public System.Nullable<int> cod_prod
-		{
-			get
-			{
-				return this._cod_prod;
-			}
-			set
-			{
-				if ((this._cod_prod != value))
-				{
-					this.Oncod_prodChanging(value);
-					this.SendPropertyChanging();
-					this._cod_prod = value;
-					this.SendPropertyChanged("cod_prod");
-					this.Oncod_prodChanged();
 				}
 			}
 		}

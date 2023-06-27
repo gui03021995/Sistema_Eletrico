@@ -14,6 +14,8 @@ using MaterialSkin.Controls;
 //Utilizado para encerrar forms atual quando abrir outro forms
 using System.Threading;
 
+using EletricoSistema.DataAccess.DataAccess;
+
 namespace SistemaEletrico
 {
     public partial class CadastroLogin : MaterialSkin.Controls.MaterialForm
@@ -66,17 +68,31 @@ namespace SistemaEletrico
             ms_Senha.Clear();
         }
 
-        private void mbt_salvar_Click(object sender, EventArgs e)
-        {
-            if (ValidarForms())
-            {
-              Salvar();
-            }
-            else
-            {
-                //Application.Exit();
-            }
-        }
+        //private void mbt_salvar_Click(object sender, EventArgs e)
+        //{
+        //    tb_pessoas pessoa = preencherDados();
+        //    Processing_validation validar_salvar = new Processing_validation();
+        //    string erros = Processing_validation.Validar_Pessoa(pessoa);          
+        //    if (ValidarForms())
+        //    {
+        //      Salvar();
+        //    }
+        //    else
+        //    {
+        //        //Application.Exit();
+        //    }
+        //}
+
+        //tb_pessoas preencherDados()
+        //{          
+        //        tb_pessoas p = new tb_pessoas();
+        //        p.nome_pessoa = mtxtb_Nome.Text;
+        //        p.sexo = cb_Sexo.Text;
+        //        return p;            
+        //}
+
+
+
         public void Salvar()
         {
             if (mtxtb_Nome.Text != "" && mtxt_Cpf_Cnpj.Text != "" && SLT_User.Text != "" && ms_Senha.Text != "")

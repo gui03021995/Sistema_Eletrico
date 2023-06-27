@@ -134,5 +134,10 @@ namespace SistemaEletrico
             }
 
         }
+
+        private void cb_client_venda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

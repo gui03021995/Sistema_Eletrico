@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\Processing_validation.cs" />
     <Compile Include="DataAccess\VendaDataAccess.cs" />
     <Compile Include="DataAccess\EnderecoDataAccess.cs" />
     <Compile Include="DataAccess\UsuarioDataAccess.cs" />

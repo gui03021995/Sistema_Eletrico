@@ -16,7 +16,6 @@
       <Column Name="cod_venda" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="id_pessoa_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="id_pessoa_funcionario" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cod_prod" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="tb_venda_tb_contas_receber" Member="tb_contas_receber" ThisKey="id_venda" OtherKey="id_venda" Type="tb_contas_receber" />
       <Association Name="tb_venda_tb_itens_venda" Member="tb_itens_venda" ThisKey="id_venda" OtherKey="id_venda" Type="tb_itens_venda" />
     </Type>

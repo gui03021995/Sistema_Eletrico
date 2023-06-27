@@ -16,7 +16,7 @@ namespace SistemaEletrico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroLogin());
+            Application.Run(new Menu());
 
         }
     }

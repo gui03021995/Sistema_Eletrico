@@ -56,18 +56,7 @@ namespace SistemaEletrico
             this.txtNome_Produto = new System.Windows.Forms.TextBox();
             this.lb_nome_prod = new System.Windows.Forms.Label();
             this.dtgProdutos = new System.Windows.Forms.DataGridView();
-            this.id_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tb_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idprodutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbprodutoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tbcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_excluir_produtos_1 = new System.Windows.Forms.Button();
             this.btn_cadastrar_produto_1 = new System.Windows.Forms.Button();
@@ -86,7 +75,6 @@ namespace SistemaEletrico
             this.txt_desc_categoria = new System.Windows.Forms.TextBox();
             this.lb_desc_categoria = new System.Windows.Forms.Label();
             this.dtgCategorias = new System.Windows.Forms.DataGridView();
-            this.idcategoriaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alterar_categoria_1 = new System.Windows.Forms.Button();
             this.btn_excluir_Categoria_1 = new System.Windows.Forms.Button();
             this.btn_buscar_categoria_1 = new System.Windows.Forms.Button();
@@ -177,14 +165,23 @@ namespace SistemaEletrico
             this.Conf = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tbprodutoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tbcategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tbcategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idcategoriaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tbprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idprodutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialTabControl1.SuspendLayout();
             this.Produto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
             this.Categoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategorias)).BeginInit();
             this.Vendas.SuspendLayout();
@@ -202,6 +199,7 @@ namespace SistemaEletrico
             this.Consultar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -370,8 +368,6 @@ namespace SistemaEletrico
             this.id_produto,
             this.nome,
             this.valor,
-            this.tb_categoria,
-            this.id_categoria,
             this.idprodutoDataGridViewTextBoxColumn,
             this.valorDataGridViewTextBoxColumn,
             this.idcategoriaDataGridViewTextBoxColumn,
@@ -387,7 +383,7 @@ namespace SistemaEletrico
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgProdutos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgProdutos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgProdutos.Location = new System.Drawing.Point(8, 146);
+            this.dtgProdutos.Location = new System.Drawing.Point(9, 157);
             this.dtgProdutos.Name = "dtgProdutos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -402,99 +398,10 @@ namespace SistemaEletrico
             this.dtgProdutos.TabIndex = 22;
             this.dtgProdutos.TabStop = false;
             // 
-            // id_produto
-            // 
-            this.id_produto.DataPropertyName = "id_produto";
-            this.id_produto.HeaderText = "id_produto";
-            this.id_produto.MinimumWidth = 6;
-            this.id_produto.Name = "id_produto";
-            this.id_produto.ReadOnly = true;
-            this.id_produto.Width = 125;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "nome";
-            this.nome.HeaderText = "nome";
-            this.nome.MinimumWidth = 6;
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 125;
-            // 
-            // valor
-            // 
-            this.valor.DataPropertyName = "valor";
-            this.valor.HeaderText = "valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 125;
-            // 
-            // tb_categoria
-            // 
-            this.tb_categoria.DataPropertyName = "tb_categoria";
-            this.tb_categoria.HeaderText = "tb_categoria";
-            this.tb_categoria.MinimumWidth = 6;
-            this.tb_categoria.Name = "tb_categoria";
-            this.tb_categoria.ReadOnly = true;
-            this.tb_categoria.Width = 125;
-            // 
-            // id_categoria
-            // 
-            this.id_categoria.DataPropertyName = "id_categoria";
-            this.id_categoria.HeaderText = "id_categoria";
-            this.id_categoria.MinimumWidth = 6;
-            this.id_categoria.Name = "id_categoria";
-            this.id_categoria.ReadOnly = true;
-            this.id_categoria.Width = 125;
-            // 
-            // idprodutoDataGridViewTextBoxColumn
-            // 
-            this.idprodutoDataGridViewTextBoxColumn.DataPropertyName = "id_produto";
-            this.idprodutoDataGridViewTextBoxColumn.HeaderText = "id_produto";
-            this.idprodutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idprodutoDataGridViewTextBoxColumn.Name = "idprodutoDataGridViewTextBoxColumn";
-            this.idprodutoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "valor";
-            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            this.valorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idcategoriaDataGridViewTextBoxColumn
-            // 
-            this.idcategoriaDataGridViewTextBoxColumn.DataPropertyName = "id_categoria";
-            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "id_categoria";
-            this.idcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idcategoriaDataGridViewTextBoxColumn.Name = "idcategoriaDataGridViewTextBoxColumn";
-            this.idcategoriaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tbcategoriaDataGridViewTextBoxColumn
-            // 
-            this.tbcategoriaDataGridViewTextBoxColumn.DataPropertyName = "tb_categoria";
-            this.tbcategoriaDataGridViewTextBoxColumn.HeaderText = "tb_categoria";
-            this.tbcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tbcategoriaDataGridViewTextBoxColumn.Name = "tbcategoriaDataGridViewTextBoxColumn";
-            this.tbcategoriaDataGridViewTextBoxColumn.Width = 125;
-            // 
             // tbprodutoBindingSource2
             // 
             this.tbprodutoBindingSource2.DataMember = "tb_produto";
             this.tbprodutoBindingSource2.DataSource = this.tbcategoriaBindingSource;
-            // 
-            // tbcategoriaBindingSource
-            // 
-            this.tbcategoriaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
             // 
             // btn_alterar
             // 
@@ -731,14 +638,6 @@ namespace SistemaEletrico
             this.dtgCategorias.Size = new System.Drawing.Size(354, 331);
             this.dtgCategorias.TabIndex = 29;
             // 
-            // idcategoriaDataGridViewTextBoxColumn1
-            // 
-            this.idcategoriaDataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
-            this.idcategoriaDataGridViewTextBoxColumn1.HeaderText = "id_categoria";
-            this.idcategoriaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.idcategoriaDataGridViewTextBoxColumn1.Name = "idcategoriaDataGridViewTextBoxColumn1";
-            this.idcategoriaDataGridViewTextBoxColumn1.Width = 125;
-            // 
             // btn_alterar_categoria_1
             // 
             this.btn_alterar_categoria_1.Location = new System.Drawing.Point(20, 295);
@@ -838,12 +737,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(35, 17);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(56, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(53, 18);
             this.materialLabel2.TabIndex = 52;
             this.materialLabel2.Text = "Cliente";
             // 
@@ -913,12 +812,12 @@ namespace SistemaEletrico
             // 
             this.mlb_forma_pag.AutoSize = true;
             this.mlb_forma_pag.Depth = 0;
-            this.mlb_forma_pag.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_forma_pag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_forma_pag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_forma_pag.Location = new System.Drawing.Point(900, 112);
             this.mlb_forma_pag.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_forma_pag.Name = "mlb_forma_pag";
-            this.mlb_forma_pag.Size = new System.Drawing.Size(152, 19);
+            this.mlb_forma_pag.Size = new System.Drawing.Size(152, 18);
             this.mlb_forma_pag.TabIndex = 24;
             this.mlb_forma_pag.Text = "Forma de Pagamento";
             // 
@@ -957,12 +856,12 @@ namespace SistemaEletrico
             // 
             this.mlb_desconto.AutoSize = true;
             this.mlb_desconto.Depth = 0;
-            this.mlb_desconto.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_desconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_desconto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_desconto.Location = new System.Drawing.Point(865, 28);
             this.mlb_desconto.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_desconto.Name = "mlb_desconto";
-            this.mlb_desconto.Size = new System.Drawing.Size(74, 19);
+            this.mlb_desconto.Size = new System.Drawing.Size(73, 18);
             this.mlb_desconto.TabIndex = 22;
             this.mlb_desconto.Text = "Desconto";
             // 
@@ -1001,12 +900,12 @@ namespace SistemaEletrico
             // 
             this.mlb_qt.AutoSize = true;
             this.mlb_qt.Depth = 0;
-            this.mlb_qt.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_qt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_qt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_qt.Location = new System.Drawing.Point(634, 26);
             this.mlb_qt.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_qt.Name = "mlb_qt";
-            this.mlb_qt.Size = new System.Drawing.Size(84, 19);
+            this.mlb_qt.Size = new System.Drawing.Size(83, 18);
             this.mlb_qt.TabIndex = 20;
             this.mlb_qt.Text = "Quantidade";
             // 
@@ -1024,12 +923,12 @@ namespace SistemaEletrico
             // 
             this.mlb_produto.AutoSize = true;
             this.mlb_produto.Depth = 0;
-            this.mlb_produto.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_produto.Location = new System.Drawing.Point(283, 28);
             this.mlb_produto.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_produto.Name = "mlb_produto";
-            this.mlb_produto.Size = new System.Drawing.Size(62, 19);
+            this.mlb_produto.Size = new System.Drawing.Size(61, 18);
             this.mlb_produto.TabIndex = 18;
             this.mlb_produto.Text = "Produto";
             // 
@@ -1037,12 +936,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel3.Location = new System.Drawing.Point(19, 28);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(103, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(101, 18);
             this.materialLabel3.TabIndex = 17;
             this.materialLabel3.Text = "Codigo Venda";
             // 
@@ -1181,12 +1080,12 @@ namespace SistemaEletrico
             // 
             this.mlb_cliente.AutoSize = true;
             this.mlb_cliente.Depth = 0;
-            this.mlb_cliente.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_cliente.Location = new System.Drawing.Point(34, 15);
             this.mlb_cliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_cliente.Name = "mlb_cliente";
-            this.mlb_cliente.Size = new System.Drawing.Size(56, 19);
+            this.mlb_cliente.Size = new System.Drawing.Size(53, 18);
             this.mlb_cliente.TabIndex = 16;
             this.mlb_cliente.Text = "Cliente";
             // 
@@ -1252,12 +1151,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(627, 27);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(84, 19);
+            this.materialLabel5.Size = new System.Drawing.Size(83, 18);
             this.materialLabel5.TabIndex = 28;
             this.materialLabel5.Text = "Quantidade";
             // 
@@ -1275,12 +1174,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel6.Location = new System.Drawing.Point(276, 29);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(62, 19);
+            this.materialLabel6.Size = new System.Drawing.Size(61, 18);
             this.materialLabel6.TabIndex = 26;
             this.materialLabel6.Text = "Produto";
             // 
@@ -1288,12 +1187,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel7.Location = new System.Drawing.Point(12, 29);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(135, 19);
+            this.materialLabel7.Size = new System.Drawing.Size(135, 18);
             this.materialLabel7.TabIndex = 25;
             this.materialLabel7.Text = "Codigo Orcamento";
             // 
@@ -1438,12 +1337,12 @@ namespace SistemaEletrico
             // 
             this.mlb_dt_admissao.AutoSize = true;
             this.mlb_dt_admissao.Depth = 0;
-            this.mlb_dt_admissao.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_dt_admissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_dt_admissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_dt_admissao.Location = new System.Drawing.Point(719, 38);
             this.mlb_dt_admissao.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_dt_admissao.Name = "mlb_dt_admissao";
-            this.mlb_dt_admissao.Size = new System.Drawing.Size(132, 19);
+            this.mlb_dt_admissao.Size = new System.Drawing.Size(129, 18);
             this.mlb_dt_admissao.TabIndex = 69;
             this.mlb_dt_admissao.Text = "Data de Admissão";
             // 
@@ -1451,12 +1350,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Cargo.AutoSize = true;
             this.mlb_Cargo.Depth = 0;
-            this.mlb_Cargo.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Cargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Cargo.Location = new System.Drawing.Point(347, 34);
             this.mlb_Cargo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cargo.Name = "mlb_Cargo";
-            this.mlb_Cargo.Size = new System.Drawing.Size(49, 19);
+            this.mlb_Cargo.Size = new System.Drawing.Size(49, 18);
             this.mlb_Cargo.TabIndex = 68;
             this.mlb_Cargo.Text = "Cargo";
             // 
@@ -1464,12 +1363,12 @@ namespace SistemaEletrico
             // 
             this.mlb_setor.AutoSize = true;
             this.mlb_setor.Depth = 0;
-            this.mlb_setor.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_setor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_setor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_setor.Location = new System.Drawing.Point(36, 35);
             this.mlb_setor.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_setor.Name = "mlb_setor";
-            this.mlb_setor.Size = new System.Drawing.Size(45, 19);
+            this.mlb_setor.Size = new System.Drawing.Size(44, 18);
             this.mlb_setor.TabIndex = 67;
             this.mlb_setor.Text = "Setor";
             // 
@@ -1478,7 +1377,7 @@ namespace SistemaEletrico
             this.metroDateTime2.Location = new System.Drawing.Point(871, 30);
             this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(206, 30);
+            this.metroDateTime2.Size = new System.Drawing.Size(206, 29);
             this.metroDateTime2.TabIndex = 57;
             // 
             // txt_Cargo
@@ -1529,12 +1428,12 @@ namespace SistemaEletrico
             // 
             this.mlb_situacao_cadastro.AutoSize = true;
             this.mlb_situacao_cadastro.Depth = 0;
-            this.mlb_situacao_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_situacao_cadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_situacao_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_situacao_cadastro.Location = new System.Drawing.Point(898, 155);
             this.mlb_situacao_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_situacao_cadastro.Name = "mlb_situacao_cadastro";
-            this.mlb_situacao_cadastro.Size = new System.Drawing.Size(133, 19);
+            this.mlb_situacao_cadastro.Size = new System.Drawing.Size(131, 18);
             this.mlb_situacao_cadastro.TabIndex = 70;
             this.mlb_situacao_cadastro.Text = "Situação Cadastro";
             // 
@@ -1572,12 +1471,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Email.AutoSize = true;
             this.mlb_Email.Depth = 0;
-            this.mlb_Email.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Email.Location = new System.Drawing.Point(398, 176);
             this.mlb_Email.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Email.Name = "mlb_Email";
-            this.mlb_Email.Size = new System.Drawing.Size(47, 19);
+            this.mlb_Email.Size = new System.Drawing.Size(45, 18);
             this.mlb_Email.TabIndex = 68;
             this.mlb_Email.Text = "Email";
             // 
@@ -1615,12 +1514,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Contato.AutoSize = true;
             this.mlb_Contato.Depth = 0;
-            this.mlb_Contato.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Contato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Contato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Contato.Location = new System.Drawing.Point(36, 176);
             this.mlb_Contato.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Contato.Name = "mlb_Contato";
-            this.mlb_Contato.Size = new System.Drawing.Size(63, 19);
+            this.mlb_Contato.Size = new System.Drawing.Size(61, 18);
             this.mlb_Contato.TabIndex = 66;
             this.mlb_Contato.Text = "Contato";
             // 
@@ -1628,12 +1527,12 @@ namespace SistemaEletrico
             // 
             this.mlb_tp_cadastro.AutoSize = true;
             this.mlb_tp_cadastro.Depth = 0;
-            this.mlb_tp_cadastro.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_tp_cadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_tp_cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_tp_cadastro.Location = new System.Drawing.Point(750, 112);
             this.mlb_tp_cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_tp_cadastro.Name = "mlb_tp_cadastro";
-            this.mlb_tp_cadastro.Size = new System.Drawing.Size(104, 19);
+            this.mlb_tp_cadastro.Size = new System.Drawing.Size(102, 18);
             this.mlb_tp_cadastro.TabIndex = 65;
             this.mlb_tp_cadastro.Text = "Tipo Cadastro";
             // 
@@ -1641,12 +1540,12 @@ namespace SistemaEletrico
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(719, 38);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(143, 18);
             this.materialLabel1.TabIndex = 64;
             this.materialLabel1.Text = "Data de Nascimento";
             // 
@@ -1654,12 +1553,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Sexo.AutoSize = true;
             this.mlb_Sexo.Depth = 0;
-            this.mlb_Sexo.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Sexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Sexo.Location = new System.Drawing.Point(462, 38);
             this.mlb_Sexo.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Sexo.Name = "mlb_Sexo";
-            this.mlb_Sexo.Size = new System.Drawing.Size(42, 19);
+            this.mlb_Sexo.Size = new System.Drawing.Size(42, 18);
             this.mlb_Sexo.TabIndex = 63;
             this.mlb_Sexo.Text = "Sexo";
             // 
@@ -1667,12 +1566,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Dt_Cadastro.AutoSize = true;
             this.mlb_Dt_Cadastro.Depth = 0;
-            this.mlb_Dt_Cadastro.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Dt_Cadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Dt_Cadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Dt_Cadastro.Location = new System.Drawing.Point(369, 112);
             this.mlb_Dt_Cadastro.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Dt_Cadastro.Name = "mlb_Dt_Cadastro";
-            this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(126, 19);
+            this.mlb_Dt_Cadastro.Size = new System.Drawing.Size(125, 18);
             this.mlb_Dt_Cadastro.TabIndex = 62;
             this.mlb_Dt_Cadastro.Text = "Data do Cadastro";
             // 
@@ -1710,12 +1609,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Cpf_Cnpj.AutoSize = true;
             this.mlb_Cpf_Cnpj.Depth = 0;
-            this.mlb_Cpf_Cnpj.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Cpf_Cnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Cpf_Cnpj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Cpf_Cnpj.Location = new System.Drawing.Point(36, 112);
             this.mlb_Cpf_Cnpj.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Cpf_Cnpj.Name = "mlb_Cpf_Cnpj";
-            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(88, 19);
+            this.mlb_Cpf_Cnpj.Size = new System.Drawing.Size(90, 18);
             this.mlb_Cpf_Cnpj.TabIndex = 59;
             this.mlb_Cpf_Cnpj.Text = "CPF / CNPJ";
             // 
@@ -1753,12 +1652,12 @@ namespace SistemaEletrico
             // 
             this.mlb_Nome.AutoSize = true;
             this.mlb_Nome.Depth = 0;
-            this.mlb_Nome.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mlb_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mlb_Nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mlb_Nome.Location = new System.Drawing.Point(36, 38);
             this.mlb_Nome.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlb_Nome.Name = "mlb_Nome";
-            this.mlb_Nome.Size = new System.Drawing.Size(50, 19);
+            this.mlb_Nome.Size = new System.Drawing.Size(49, 18);
             this.mlb_Nome.TabIndex = 57;
             this.mlb_Nome.Text = "Nome";
             // 
@@ -1798,7 +1697,7 @@ namespace SistemaEletrico
             this.dt_dt_nasc.Location = new System.Drawing.Point(871, 28);
             this.dt_dt_nasc.MinimumSize = new System.Drawing.Size(0, 29);
             this.dt_dt_nasc.Name = "dt_dt_nasc";
-            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 30);
+            this.dt_dt_nasc.Size = new System.Drawing.Size(206, 29);
             this.dt_dt_nasc.TabIndex = 39;
             // 
             // metroDateTime1
@@ -1807,7 +1706,7 @@ namespace SistemaEletrico
             this.metroDateTime1.Location = new System.Drawing.Point(501, 102);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(206, 30);
+            this.metroDateTime1.Size = new System.Drawing.Size(206, 29);
             this.metroDateTime1.TabIndex = 44;
             this.metroDateTime1.Value = new System.DateTime(2023, 3, 9, 10, 41, 50, 0);
             // 
@@ -1831,7 +1730,7 @@ namespace SistemaEletrico
             // 
             this.materialCheckBox1.AutoSize = true;
             this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.materialCheckBox1.Location = new System.Drawing.Point(570, 407);
             this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -1990,6 +1889,18 @@ namespace SistemaEletrico
             this.tbprodutoBindingSource1.DataMember = "tb_produto";
             this.tbprodutoBindingSource1.DataSource = this.tbcategoriaBindingSource1;
             // 
+            // tbcategoriaBindingSource
+            // 
+            this.tbcategoriaBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
+            // 
+            // idcategoriaDataGridViewTextBoxColumn1
+            // 
+            this.idcategoriaDataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn1.HeaderText = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idcategoriaDataGridViewTextBoxColumn1.Name = "idcategoriaDataGridViewTextBoxColumn1";
+            this.idcategoriaDataGridViewTextBoxColumn1.Width = 125;
+            // 
             // tbcategoriaBindingSource1
             // 
             this.tbcategoriaBindingSource1.DataSource = typeof(EletricoSistema.DataAccess.tb_categoria);
@@ -1998,6 +1909,73 @@ namespace SistemaEletrico
             // tbprodutoBindingSource
             // 
             this.tbprodutoBindingSource.DataSource = typeof(EletricoSistema.DataAccess.tb_produto);
+            // 
+            // id_produto
+            // 
+            this.id_produto.DataPropertyName = "id_produto";
+            this.id_produto.HeaderText = "id_produto";
+            this.id_produto.MinimumWidth = 6;
+            this.id_produto.Name = "id_produto";
+            this.id_produto.ReadOnly = true;
+            this.id_produto.Width = 125;
+            // 
+            // nome
+            // 
+            this.nome.DataPropertyName = "nome";
+            this.nome.HeaderText = "nome";
+            this.nome.MinimumWidth = 6;
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Width = 125;
+            // 
+            // valor
+            // 
+            this.valor.DataPropertyName = "valor";
+            this.valor.HeaderText = "valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 125;
+            // 
+            // idprodutoDataGridViewTextBoxColumn
+            // 
+            this.idprodutoDataGridViewTextBoxColumn.DataPropertyName = "id_produto";
+            this.idprodutoDataGridViewTextBoxColumn.HeaderText = "id_produto";
+            this.idprodutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idprodutoDataGridViewTextBoxColumn.Name = "idprodutoDataGridViewTextBoxColumn";
+            this.idprodutoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "valor";
+            this.valorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            this.valorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idcategoriaDataGridViewTextBoxColumn
+            // 
+            this.idcategoriaDataGridViewTextBoxColumn.DataPropertyName = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.HeaderText = "id_categoria";
+            this.idcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idcategoriaDataGridViewTextBoxColumn.Name = "idcategoriaDataGridViewTextBoxColumn";
+            this.idcategoriaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tbcategoriaDataGridViewTextBoxColumn
+            // 
+            this.tbcategoriaDataGridViewTextBoxColumn.DataPropertyName = "tb_categoria";
+            this.tbcategoriaDataGridViewTextBoxColumn.HeaderText = "tb_categoria";
+            this.tbcategoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tbcategoriaDataGridViewTextBoxColumn.Name = "tbcategoriaDataGridViewTextBoxColumn";
+            this.tbcategoriaDataGridViewTextBoxColumn.Width = 125;
             // 
             // MenuFun_one
             // 
@@ -2019,7 +1997,6 @@ namespace SistemaEletrico
             this.Produto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).EndInit();
             this.Categoria.ResumeLayout(false);
             this.Categoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategorias)).EndInit();
@@ -2046,6 +2023,7 @@ namespace SistemaEletrico
             this.Consultar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcategoriaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbprodutoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -2166,21 +2144,11 @@ namespace SistemaEletrico
         private System.Windows.Forms.TextBox txt_cod_orca;
         private MaterialSkin.Controls.MaterialFlatButton mf_btn_buscar;
         private System.Windows.Forms.BindingSource tbprodutoBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_produto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tb_categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_categoria;
         private System.Windows.Forms.BindingSource tbprodutoBindingSource2;
         private System.Windows.Forms.BindingSource tbprodutoBindingSource1;
         private System.Windows.Forms.TextBox txt_cod_categoria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idprodutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbcategoriaDataGridViewTextBoxColumn;
         private MaterialSkin.Controls.MaterialFlatButton btn_cadastrar_Categoria;
         private MaterialSkin.Controls.MaterialFlatButton btn_buscar_categoria;
         private MaterialSkin.Controls.MaterialFlatButton btn_excluir_Categoria;
@@ -2189,6 +2157,14 @@ namespace SistemaEletrico
         private MaterialSkin.Controls.MaterialFlatButton btn_alterar_prod;
         private MaterialSkin.Controls.MaterialRaisedButton btn_excluir_produtos;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_produto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idprodutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcategoriaDataGridViewTextBoxColumn;
     }
 }
 

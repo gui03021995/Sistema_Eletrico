@@ -62,7 +62,7 @@ namespace SistemaEletrico
             Txt_nome_categoria.Enabled = pNovoStatus;
         }
         //----------------------------------------------------------------------- PRODUTO ---------------------------------------------------------------------------//
-        //----------------------------------------------------------------------- CAMPOS PAG - PROD ---------------------------------------------------------------------------//
+        //----------------------------------------------------------------------- CAMPOS PAG - PROD -------------------------------------------------------------------//
         public void campos_prod()
         {
             txtNome_Produto.Clear();
@@ -129,18 +129,15 @@ namespace SistemaEletrico
                 NovoProduto.valor = txt_valor_produto.Text;
                 NovoProduto.nome = txtNome_Produto.Text;
                 NovoProduto.desc_produto = Txt_descricao_produto.Text;
-                NovoProduto.id_categoria = Convert.ToInt32(txtCategoria_Prod.Text);
+                NovoProduto.id_categoria = (int)txtCategoria_Prod.SelectedValue ;
                 NovoProduto.quantidade = Convert.ToInt32(mtxt_qt_prod.Text);
-
 
                 if (!ProdutoDataAccess.Insere(NovoProduto))
                     MessageBox.Show("Falha ao tentar inserir o novo Produto no banco de dados!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                     MessageBox.Show("Cliente inserido com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                campos_venda();
-                loadData();
-
+                    campos_prod();
+                    loadData();
             }
             else
             {
@@ -195,15 +192,15 @@ namespace SistemaEletrico
                     MessageBox.Show("Falha ao tentar buscar o Produto " + txt_cod_prod.Text + " . Codigo do Produto não existe no Sistema", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 else
+                {
                     MessageBox.Show("Produto encontrada com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                               
                     txtNome_Produto.Text = tt.nome;
                     Txt_descricao_produto.Text = tt.desc_produto;
                     txt_valor_produto.Text = tt.valor;
                     txtCategoria_Prod.Text = tt.id_categoria.ToString();
-                    mtxt_qt_prod.Text =  tt.quantidade.ToString();
-
-                    txt_cod_prod.ReadOnly = true;       
+                    mtxt_qt_prod.Text = tt.quantidade.ToString();
+                    txt_cod_prod.ReadOnly = true;
+                }
 
             }
             else
@@ -215,16 +212,17 @@ namespace SistemaEletrico
         //----------------------------------------------------------------------- Limpar Campos ---------------------------------------------------------------------------//
         private void mtb_Limpar_Prod_Click(object sender, EventArgs e)
         {
+            campos_prod();
             //campos_prod();
-            txtNome_Produto.Clear();
-            Txt_descricao_produto.Clear();
-            txt_cod_prod.Clear();
-            txt_valor_produto.Clear();
-            mtxt_qt_prod.Clear();
+            //txtNome_Produto.Clear();
+            //Txt_descricao_produto.Clear();
+            //txt_cod_prod.Clear();
+            //txt_valor_produto.Clear();
+            //mtxt_qt_prod.Clear();
         }
 
         //----------------------------------------------------------------------- CATEGORIA ---------------------------------------------------------------------------//
-        //----------------------------------------------------------------------- CAMPOS PAG - PROD ---------------------------------------------------------------------------//
+        //----------------------------------------------------------------------- CAMPOS PAG - PROD ---------------------------------------------------------------------//
         public void campos_cat()
         {
             txt_desc_categoria.Clear();
@@ -265,7 +263,6 @@ namespace SistemaEletrico
 
             }
         }
-
         //----------------------------------------------------------------------- Excluir ---------------------------------------------------------------------------//
         private void btn_excluir_Categoria_Click(object sender, EventArgs e)
         {
@@ -331,7 +328,6 @@ namespace SistemaEletrico
             else
             {
                 MessageBox.Show("Por Favor, preencha todos os campos obrigatórios", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
         //----------------------------------------------------------------------- Limpar Campos ---------------------------------------------------------------------------//
@@ -347,29 +343,18 @@ namespace SistemaEletrico
         {
             try
             {
-                //var scat = CategoriaDataAccess.ObterCategoria();
-                //var sprod = ProdutoDataAccess.ObterProduto();
-                //dtgCategorias.DataSource = scat;
-                //dtgProdutos.DataSource = sprod;
-                //dtgCategorias.Refresh();    
                 using (EletricoSistemaDataClassesDataContext db = new EletricoSistemaDataClassesDataContext())
                 {
                     tbcategoriaBindingSource.DataSource = db.tb_categoria.ToList();
                     tbpessoasBindingSource.DataSource = db.tb_pessoas.Where(x => x.tipo_cadastro == "Cliente");
                     tbprodutoBindingSource.DataSource = db.tb_produto.ToList();
                 }
-                loadData();
-                //using( Eletrica db = new EletricoSistema())
-                //{
-
-                //}
-
+                loadData();             
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }            
         }
 
         //----------------------------------------------------------------------- Recarregar Grid ---------------------------------------------------------------------------//
@@ -378,7 +363,7 @@ namespace SistemaEletrico
             var scat = CategoriaDataAccess.ObterCategoria();
             var sprod = ProdutoDataAccess.ObterProduto();
             var svenda = VendaDataAccess.ObterVenda();
-            dtgVenda.DataSource = svenda;
+            //dtgVenda.DataSource = svenda;
             dtgCategorias.DataSource = scat;
             dtgProdutos.DataSource = sprod;
             dtgCategorias.Refresh();
@@ -389,49 +374,246 @@ namespace SistemaEletrico
         public void campos_venda()
         {
             cb_client_venda.SelectedItem = 1;
-            txtb_cod_venda.Clear();
+            //txtb_cod_venda.Clear();
             mcb_prod_venda.SelectedItem = 1;
             mtxt_qt.Clear();
             mtxt_deconto.Clear();
 
-            mfbt_alterar_venda.Enabled = true;
+            mfbt_deletar_item.Enabled = true;
             mfbt_cadastrar_venda.Enabled = true;
         }
 
-        //----------------------------------------------------------------------- Lançar Venda---------------------------------------------------------------------------//
-        private void mfbt_cadastrar_venda_Click(object sender, EventArgs e)
+        //----------------------------------------------------------------------- Lançar Item----------------------------------------------------------------------//
+        public class ItemVenda
         {
-            if(txtb_cod_venda.Text != "" && mcb_prod_venda.Text != "" && mcb_prod_venda.Text != "" && mtxt_qt.Text != "")
+            public int qtd { get; set; }
+            public int desconto { get; set; }
+            public float valor { get; set; }
+            public string desc_item { get; set; } = string.Empty;
+            
+            public ItemVenda() { }
+
+            public ItemVenda( int quantidade, int desc,  float vl, string desc_prod)
             {
-                tb_venda NovaVenda = new tb_venda();
-
-                NovaVenda.valor = lb_valor_prod.Text;
-                NovaVenda.desconto = mlb_desconto.Text;
-                NovaVenda.cod_venda = Convert.ToInt32(txtb_cod_venda.Text);                
-                NovaVenda.cod_prod = Convert.ToInt32(mcb_prod_venda.SelectedValue);
-                NovaVenda.id_pessoa_cliente = Convert.ToInt32(cb_client_venda.SelectedValue);
-
-                if (!VendaDataAccess.Insere(NovaVenda))
-                    MessageBox.Show("Falha ao tentar realizar lançamento de Venda!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                //---PAREI AQUI-----------
-
-                else
-                    MessageBox.Show("Venda lançada com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txt_cod_categoria.Clear();
-                    campos_cat();
-                    loadData();
-            }
-            else
-            {
-                MessageBox.Show("Por Favor, preencha todos os campos obrigatórios", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                qtd = quantidade;
+                desconto = desc;
+                valor = vl;
+                desc_item = desc_prod;
             }
         }
 
-        private void mbt_salvar_Click(object sender, EventArgs e)
+        public List<ItemVenda> GetItemVendas()
         {
 
+            var listaItemVenda = new List<ItemVenda>();
+            listaItemVenda.AddRange(new[]
+            { new ItemVenda(Convert.ToInt32(mtxt_qt.Text), Convert.ToInt32(mtxt_deconto.Text) , Convert.ToInt32(lb_valor_prod.Text),  mcb_prod_venda.SelectedValue.ToString() )
+
+            });
+            return listaItemVenda;
+        }
+
+
+        //private void formataGridView()
+        //{
+        //    var grade = dtgVenda;
+        //    grade.AutoGenerateColumns = false;
+        //    grade.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+        //    grade.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+        //    //altera a cor das linhas alternadas no grid
+        //    grade.RowsDefaultCellStyle.BackColor = Color.White;
+        //    grade.AlternatingRowsDefaultCellStyle.BackColor = Color.Cyan;
+        //    //altera o nome das colunas
+        //    grade.Columns[0].HeaderText = "codigo_item";
+        //    grade.Columns[1].HeaderText = "Descricao_item";
+        //    grade.Columns[2].HeaderText = "valor_item";
+        //    grade.Columns[3].HeaderText = "Quantidade";
+        //    grade.Columns[0].Width = 70;
+        //    grade.Columns[1].Width = 150;
+        //    //formata as colunas valor, vencimento e pagamento
+        //    grade.Columns[2].DefaultCellStyle.Format = "c";
+        //    //seleciona a linha inteira
+        //    grade.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        //    //não permite seleção de multiplas linhas    
+        //    grade.MultiSelect = false;
+        //    // exibe nulos formatados
+        //    //grade.DefaultCellStyle.NullValue = " - ";
+        //    //permite que o texto maior que célula não seja truncado
+        //    grade.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+        //    //define o alinhamento à direita
+        //    grade.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+        //    grade.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+        //}
+
+        private void mfbt_cadastrar_venda_Click(object sender, EventArgs e)
+        {
+            EletricoSistemaDataClassesDataContext db = new EletricoSistemaDataClassesDataContext();
+
+            int idselecionado = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+            var ProdutoSelecionada = db.tb_produto.FirstOrDefault(p => p.id_produto == idselecionado);
+            // Crie um objeto DataTable para armazenar os dados
+            DataTable dt = new DataTable();
+
+            // Adicione as colunas ao DataTable
+            dt.Columns.Add("codigo_item");
+            dt.Columns.Add("descricao_ite");
+            dt.Columns.Add("valor");
+            dt.Columns.Add("qt");
+
+            // Verifica se o DataGridView já possui linhas
+            if (dtgVenda.Rows.Count > 0)
+            {
+                // Obtém a última linha do DataGridView
+                DataGridViewRow lastRow = dtgVenda.Rows[dtgVenda.Rows.Count - 1];
+
+                // Verifica se a última linha está vazia
+                if (lastRow.Cells["codigo_item"].Value == null || string.IsNullOrEmpty(lastRow.Cells["codigo_item"].Value.ToString()))
+                {
+                    // Preenche a última linha vazia com os valores dos Labels
+                    lastRow.Cells["codigo_item"].Value = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+                    lastRow.Cells["descricao_ite"].Value = ProdutoSelecionada.nome;
+                    lastRow.Cells["valor"].Value = Convert.ToInt32(mcb_valor.SelectedValue);
+                    lastRow.Cells["qt"].Value = Convert.ToInt32(mtxt_qt.Text);
+                }
+                else
+                {
+                    // Cria uma nova linha e adiciona os valores dos Labels
+                    DataRow row = ((DataTable)dtgVenda.DataSource).NewRow();
+                    row["codigo_item"] = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+                    row["descricao_ite"] = ProdutoSelecionada.nome;
+                    row["valor"] = Convert.ToInt32(mcb_valor.SelectedValue);
+                    row["qt"] = Convert.ToInt32(mtxt_qt.Text);
+
+                    int qt_grid = Convert.ToInt32(mtxt_qt.Text);
+
+                    //verificar se a quantidade adicionada é igual ou maior a quantidade existente do produto.
+                    if (ProdutoSelecionada.quantidade < qt_grid)
+                    {
+                        MessageBox.Show("Quantidade menor que a quantidade existente do Produto", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else{
+                        // Adiciona a nova linha ao DataTable
+                        ((DataTable)dtgVenda.DataSource).Rows.Add(row);                        
+                    }
+                }
+                decimal xr = 0;
+                foreach (DataGridViewRow row in dtgVenda.Rows.Cast<DataGridViewRow>()
+                        .Where(t => !string.IsNullOrEmpty(t.Cells["valor"].Value?.ToString())))
+                {
+                    xr += Convert.ToDecimal(row.Cells["valor"].Value);    
+                }
+                mt_vl_compra_ant.Text = xr.ToString();
+            }
+            else
+            {
+
+                DataRow row = dt.NewRow();
+                row["codigo_item"] = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+                row["descricao_ite"] = ProdutoSelecionada.nome;
+                row["valor"] = Convert.ToInt32(mcb_valor.SelectedValue);
+                row["qt"] = Convert.ToInt32(mtxt_qt.Text);
+
+                // Adiciona a nova linha ao DataTable
+                dt.Rows.Add(row);
+
+                // Define o DataTable como a fonte de dados do DataGridView
+                dtgVenda.DataSource = dt;
+
+            }
+            // Limpa os campos de entrada de texto
+            campos_venda();
+            txtb_cod_venda.Enabled = false;
+        }
+
+
+        public void SalvarDados()
+        {
+            try
+            {
+                if (dtgVenda.Rows.Count > 1)
+                {
+                    for (int i = 0; i <= dtgVenda.Rows.Count - 1; i++)
+                    {
+                        int col1 = Convert.ToInt32(dtgVenda.Rows[i].Cells[0].Value); //codigo_item
+                        string col2 = dtgVenda.Rows[i].Cells[1].Value.ToString(); //Descricao_item 
+                        decimal col3 = Convert.ToDecimal(dtgVenda.Rows[i].Cells[2].Value); //valor_item
+                        int col4 = Convert.ToInt32(dtgVenda.Rows[i].Cells[3].Value); //Quantidade
+                        //decimal col5 = Convert.ToDecimal(gdvItens.Rows[i].Cells[4].Value); //Total                       
+                    }
+                }
+                MessageBox.Show("Dados incluídos com sucesso !!", "Inclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+            }
+        }
+
+
+        //List<ItemVenda> Carrinho = new List<ItemVenda>();
+
+        //if (Carrinho.Count > 0)
+        //{
+        //    MessageBox.Show("Por inserir o item", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //}
+        //else
+        //{
+        //    MessageBox.Show("Item adicionado à venda com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //}
+
+        //{
+        //    if(txtb_cod_venda.Text != "" && mcb_prod_venda.Text != "" && mcb_prod_venda.Text != "" && mtxt_qt.Text != "")
+        //    {
+        //        tb_venda NovaVenda = new tb_venda();
+
+        //        NovaVenda.valor = lb_valor_prod.Text;
+        //        NovaVenda.desconto = mlb_desconto.Text;
+        //        NovaVenda.cod_venda = Convert.ToInt32(txtb_cod_venda.Text);                
+        //        NovaVenda.cod_prod = Convert.ToInt32(mcb_prod_venda.SelectedValue);
+        //        NovaVenda.id_pessoa_cliente = Convert.ToInt32(cb_client_venda.SelectedValue);
+
+        //        if (!VendaDataAccess.Insere(NovaVenda))
+        //            MessageBox.Show("Falha ao tentar realizar lançamento de Venda!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        //        //---PAREI AQUI-----------
+
+        //        else
+        //            MessageBox.Show("Item adicionado à venda com sucesso", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            //txt_cod_categoria.Clear();
+
+        //            txtb_cod_venda.Clear();
+        //            mcb_prod_venda.SelectedItem = null;
+        //            mtxt_qt.Clear();
+        //            mcb_valor.SelectedItem = null;
+        //            mcb_forma_pag.SelectedItem = null;
+        //            mt_vl_compra.Clear();
+        //            mtxt_deconto.Clear();                
+
+        //            campos_cat();
+        //            loadData();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Por Favor, preencha todos os campos obrigatórios", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        //    }
+
+        private void mbt_salvar_Click(object sender, EventArgs e)
+        {
+            //if (ValidarForms())
+            //{
+            //    Salvar();
+            //}
+            //else
+            //{
+            //    //Application.Exit();
+            //}
+        }
+
+        private void dtgVenda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Desassocia o DataGridView da fonte de dados
+            dtgVenda.DataSource = null;
         }
         //private void txtCategoria_Prod_SelectionChangeCommitted(object sender, EventArgs e)
         //{
