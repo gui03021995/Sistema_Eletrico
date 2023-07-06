@@ -66,7 +66,7 @@ namespace SistemaEletrico
         }
         private void logar_adm(Object obj)
         {
-            Application.Run(new Menu());
+            Application.Run(new tb_recebe_descont());
         }
         private void logar_func_one(Object obj)
         {

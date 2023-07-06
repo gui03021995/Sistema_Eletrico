@@ -59,7 +59,6 @@ C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.LoginEsqueceuSenha.resou
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.Login.resources
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.MenuFun_two.resources
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.MenuFun_one.resources
-C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.Menu.resources
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.Properties.Resources.resources
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.csproj.GenerateResource.cache
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.csproj.CoreCompileInputs.cache
@@ -76,3 +75,5 @@ C:\Unimed\sys\SistemaEletrico\bin\Debug\EletricoSistema.DataAccess.dll.config
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.csproj.CopyComplete
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.exe
 C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.pdb
+C:\Unimed\sys\SistemaEletrico\bin\Debug\FontAwesome.Sharp.dll
+C:\Unimed\sys\SistemaEletrico\obj\Debug\SistemaEletrico.tb_recebe_descont.resources

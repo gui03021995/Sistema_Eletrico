@@ -16,13 +16,13 @@ using MaterialSkin.Controls;
 
 namespace SistemaEletrico
 {
-    public partial class Menu : MaterialSkin.Controls.MaterialForm
+    public partial class tb_recebe_descont : MaterialSkin.Controls.MaterialForm
     {
         List<tb_produto> ListaProdutos = new List<tb_produto>();
         List<tb_categoria> ListaCategorias = new List<tb_categoria>();
 
         //-----------------------------------------------------------------------INICIALIZAÇÃO------------------------------------------------------------------------------------//
-        public Menu()
+        public tb_recebe_descont()
         {
 
             InitializeComponent();
@@ -33,11 +33,12 @@ namespace SistemaEletrico
             //Fundo do sistema Claro
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             // Definindo um esquema de Cor para formulário com tom Azul
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue500, Accent.LightBlue200, TextShade.WHITE);
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple700, Primary.Purple700, Primary.Purple300, Accent.LightBlue200, TextShade.WHITE);
             string user;
             string senha;
             // Definindo um esquema de Cor para formulário com tom Azul agua
             //materialSkinManager.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Cyan200, TextShade.WHITE);
+            materialTabControl3.DrawItem += new DrawItemEventHandler(materialTabControl3_DrawItem);
         }
         //-----------------------------------------------------------------------Metodo Limpar os campos---------------------------------------------------------------------------//
         private void LimpaTela()
@@ -377,7 +378,6 @@ namespace SistemaEletrico
             //txtb_cod_venda.Clear();
             mcb_prod_venda.SelectedItem = 1;
             mtxt_qt.Clear();
-            mtxt_deconto.Clear();
 
             mfbt_deletar_item.Enabled = true;
             mfbt_cadastrar_venda.Enabled = true;
@@ -407,12 +407,40 @@ namespace SistemaEletrico
 
             var listaItemVenda = new List<ItemVenda>();
             listaItemVenda.AddRange(new[]
-            { new ItemVenda(Convert.ToInt32(mtxt_qt.Text), Convert.ToInt32(mtxt_deconto.Text) , Convert.ToInt32(lb_valor_prod.Text),  mcb_prod_venda.SelectedValue.ToString() )
+            { new ItemVenda(Convert.ToInt32(mtxt_qt.Text), Convert.ToInt32(lb_config_descontos.SelectedText.ToString()), Convert.ToInt32(lb_valor_prod.Text),  mcb_prod_venda.SelectedValue.ToString() )
 
             });
             return listaItemVenda;
         }
 
+
+        private void cb_confi_desconto_venda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            DataRow row = ((DataTable)dtgVenda.DataSource).NewRow();
+            // Crie um objeto DataTable para armazenar os dados
+            DataTable dt = new DataTable();
+
+            // Adicione as colunas ao DataTable
+            dt.Columns.Add("codigo_item");
+            dt.Columns.Add("descricao_ite");
+            dt.Columns.Add("valor");
+            dt.Columns.Add("qt");
+
+            string desc = cb_confi_desconto_venda.SelectedItem.ToString();
+            decimal desc_final = Convert.ToDecimal(desc) / 100;
+
+            // Desassocia o DataGridView da fonte de dados
+            // Preenche a última linha vazia com os valores dos Labels
+            row["codigo_item"] = "XXXX";
+            row["descricao_ite"] = "DESCONTO";
+            row["qt"] =  " ";
+            row["valor"] = desc_final;
+
+            mt_vl_compra_ant.Text = (Convert.ToDecimal(mt_vl_compra_ant.Text) * desc_final).ToString();
+            // Adiciona a nova linha ao DataTable
+            ((DataTable)dtgVenda.DataSource).Rows.Add(row);
+        }
 
         //private void formataGridView()
         //{
@@ -615,6 +643,98 @@ namespace SistemaEletrico
             // Desassocia o DataGridView da fonte de dados
             dtgVenda.DataSource = null;
         }
+
+        private void materialTabControl3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush _textBrush;
+
+            // Get the item from the collection.
+            TabPage _tabPage = materialTabControl3.TabPages[e.Index];
+
+            // Get the real bounds for the tab rectangle.
+            Rectangle _tabBounds = materialTabControl3.GetTabRect(e.Index);
+
+            if (e.State == DrawItemState.Selected)
+            {
+
+                // Draw a different background color, and don't paint a focus rectangle.
+                _textBrush = new SolidBrush(Color.Red);
+                g.FillRectangle(Brushes.Gray, e.Bounds);
+            }
+            else
+            {
+                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
+                e.DrawBackground();
+            }
+
+            // Use our own font.
+            Font _tabFont = new Font("Arial", 10.0f, FontStyle.Bold, GraphicsUnit.Pixel);
+
+            // Draw string. Center the text.
+            StringFormat _stringFlags = new StringFormat();
+            _stringFlags.Alignment = StringAlignment.Center;
+            _stringFlags.LineAlignment = StringAlignment.Center;
+            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+        }
+
+
+
+
+
+
+
+
+
+
+        //----------------------------------------------------------------------- CONFIGURAÇÃO----------------------------------------------------------------------//
+        //----------------------------------------------------------------------- MOVIMENTACAO  PAGES----------------------------------------------------------------------//
+        public void ic_Vendas_Click(object sender, EventArgs e)
+        {
+            materialTabControl3.SelectTab(0);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            materialTabControl3.SelectTab(1);
+        }
+
+        private void ic_Consultar_Click(object sender, EventArgs e)
+        {
+            materialTabControl3.SelectTab(2);
+        }
+
+        private void ic_financeiro_Click(object sender, EventArgs e)
+        {
+            materialTabControl3.SelectTab(3);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            materialTabControl3.SelectTab(4);
+        }
+        //----------------------------------------------------------------------- Venda / Orcamento ----------------------------------------------------------------------//
+
+
+        private void cb_confi_desconto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lb_config_descontos.Text = cb_confi_desconto.Text;
+        }
+
+        private void btn_add_desconto_Click(object sender, EventArgs e)
+        {
+            if(lb_config_descontos.Text != "")
+            {
+                if (cb_confi_desconto.FindString(lb_config_descontos.Text) < 0)
+                    cb_confi_desconto.Items.Add( lb_config_descontos.Text);
+                    cb_confi_desconto_venda.Items.Add(lb_config_descontos.Text);
+                lb_config_descontos.Clear();
+            }
+        }
+
+
+
+
         //private void txtCategoria_Prod_SelectionChangeCommitted(object sender, EventArgs e)
         //{
         //    //tb_categoria obj = txtCategoria_Prod.SelectedItem as tb_categoria;

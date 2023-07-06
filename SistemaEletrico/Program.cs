@@ -16,7 +16,7 @@ namespace SistemaEletrico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new tb_recebe_descont());
 
         }
     }
